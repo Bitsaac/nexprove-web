@@ -61,47 +61,49 @@ const team = [
     title: 'Leadership',
     people: [
       {
-        name: 'Leslie Alexander',
+        name: 'David Olatunji',
         role: 'Co-Founder / CEO',
         image: { src: imageLeslieAlexander },
       },
       {
-        name: 'Michael Foster',
+        name: 'Bill Lawrence',
         role: 'Co-Founder / CTO',
         image: { src: imageMichaelFoster },
       },
       {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
+        name: 'Oluwaseun Adedoyin',
+        role: 'Co-Founder / CMM',
         image: { src: imageDriesVincent },
       },
+      
     ],
   },
   {
     title: 'Team',
     people: [
       {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
+        name: 'Bill Lawrence',
+        role: 'Lead Developer',
         image: { src: imageChelseaHagon },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
+        name: 'John Olatunji',
+        role: 'CPO / Lead Designer',
         image: { src: imageEmmaDorsey },
       },
+
       {
-        name: 'Leonard Krasner',
+        name: 'Nneoma Jilaga',
         role: 'VP, User Experience',
         image: { src: imageLeonardKrasner },
       },
       {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
+        name: 'Blessing Nkem',
+        role: 'Product Marketing manager',
         image: { src: imageBlakeReid },
       },
       {
-        name: 'Kathryn Murphy',
+        name: 'Ada Obi',
         role: 'VP, Human Resources',
         image: { src: imageKathrynMurphy },
       },
@@ -110,21 +112,21 @@ const team = [
         role: 'Content Specialist',
         image: { src: imageWhitneyFrancis },
       },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
+      // {
+      //   name: 'Jeffrey Webb',
+      //   role: 'Account Coordinator',
+      //   image: { src: imageJeffreyWebb },
+      // },
+      // {
+      //   name: 'Benjamin Russel',
+      //   role: 'Senior Developer',
+      //   image: { src: imageBenjaminRussel },
+      // },
+      // {
+      //   name: 'Angela Fisher',
+      //   role: 'Front-end Developer',
+      //   image: { src: imageAngelaFisher },
+      // },
     ],
   },
 ]
@@ -196,13 +198,13 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
+            NexProve was started by three friends who noticed that developer
             studios were charging clients double what an in-house team would
             cost. Since the beginning, we have been committed to doing things
             differently by charging triple instead.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
+            At NexProve, we’re more than just colleagues — we’re a family. This
             means we pay very little and expect people to work late. We want our
             employees to bring their whole selves to work. In return, we just
             ask that they keep themselves there until at least 6:30pm.
