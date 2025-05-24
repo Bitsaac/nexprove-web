@@ -180,7 +180,7 @@ export default async function Home() {
             From Our Studio <br/>  Africa to the World
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We’re a growing tech collective focused on solving problems for startups and businesses with AI, design, development, and a strong community of rising talent. YES, we are building next-gen experiences.
+            We are a growing tech collective focused on solving problems for startups and businesses with AI, design, development, and a strong community of rising talent. YES, we are building next-gen experiences.
           </p>
         </FadeIn>
       </Container>
@@ -193,7 +193,7 @@ export default async function Home() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Bassse3', logo: logoPhobiaDark }}
       >
-        "The BitSAC team exceeded expectations. Working with their interns was like having a full-time junior squad, well guided and ready."
+        {'The BitSAC team exceeded expectations. Working with their interns was like having a full-time junior squad, well guided and ready.'}
       </Testimonial>
 
       <Services />
