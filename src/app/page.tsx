@@ -18,6 +18,7 @@ import logoSeiChat from '@/images/clients/SeiChat/logo-light.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/r&d/logo-dark.svg'
 import logoUnseal from '@/images/clients/Simoles/logo-light.svg'
+import logoRidgle from '@/images/clients/Ridgle/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -29,7 +30,8 @@ const clients = [
   ['r&d', logoRnD],
   ['SeiChat', logoSeiChat],
   ['Simoles', logoSimoles],
-  ['Unseal', logoUnseal], // Keeping one old as placeholder if needed
+  ['Ridgle', logoRidgle],
+  // Keeping one old as placeholder if needed
 ]
 
 function Clients() {

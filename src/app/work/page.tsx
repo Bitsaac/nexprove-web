@@ -17,6 +17,7 @@ import logoEvUsa from '@/images/clients/ev-usa/logo-dark.svg'
 import logoRnD from '@/images/clients/r&d/logo-dark.svg'
 import logoSeiChat from '@/images/clients/SeiChat/logo-dark.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-dark.svg'
+import logoRidgle from '@/images/clients/Ridgle/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -103,6 +104,7 @@ const clients = [
   ['r&d', logoRnD],
   ['SeiChat', logoSeiChat],
   ['Simoles', logoSimoles],
+  ['Ridgle', logoRidgle],
 ]
 
 function Clients() {

@@ -12,6 +12,7 @@ const navigation = [
       { title: 'Bassse3', href: '/work/bassse3' },
       { title: 'Ellum', href: '/work/ellum' },
       { title: 'BlueTide', href: '/work/bluetide' },
+      { title: 'Ridgle', href: '/work/ridgle' },
       {
         title: (
           <>
