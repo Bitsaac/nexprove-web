@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { AnimatedText } from '@/components/AnimatedText'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -12,12 +13,8 @@ import { Testimonial } from '@/components/Testimonial'
 import logoBassse3 from '@/images/clients/Bassse3/logo-light.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-light.svg'
 import logoEllum from '@/images/clients/Ellum/logo-light.svg'
-import logoEvUsa from '@/images/clients/ev-usa/logo-light.svg'
-import logoRnD from '@/images/clients/r&d/logo-light.svg'
 import logoSeiChat from '@/images/clients/SeiChat/logo-light.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/r&d/logo-dark.svg'
-import logoUnseal from '@/images/clients/Simoles/logo-light.svg'
 import logoRidgle from '@/images/clients/Ridgle/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -26,8 +23,6 @@ const clients = [
   ['Bassse3', logoBassse3],
   ['BlueTide', logoBlueTide],
   ['Ellum', logoEllum],
-  ['ev-usa', logoEvUsa],
-  ['r&d', logoRnD],
   ['SeiChat', logoSeiChat],
   ['Simoles', logoSimoles],
   ['Ridgle', logoRidgle],
@@ -179,7 +174,7 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            From Our Studio <br/>  Africa to the World
+            From  <b> <AnimatedText words={['Our Studio', 'Africa', "Our Kitchen"]} /> </b>to the World
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
             We are a growing tech collective focused on solving problems for startups and businesses with AI, design, development, and a strong community of rising talent. YES, we are building next-gen experiences.
@@ -193,7 +188,7 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Bassse3', logo: logoPhobiaDark }}
+        client={{ name: 'Bassse3', logo: logoBlueTide }}
       >
         {'The BitSAC team exceeded expectations. Working with their interns was like having a full-time junior squad, well guided and ready.'}
       </Testimonial>

@@ -13,8 +13,6 @@ import { Testimonial } from '@/components/Testimonial'
 import logoBassse3 from '@/images/clients/Bassse3/logo-dark.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-dark.svg'
 import logoEllum from '@/images/clients/Ellum/logo-dark.svg'
-import logoEvUsa from '@/images/clients/ev-usa/logo-dark.svg'
-import logoRnD from '@/images/clients/r&d/logo-dark.svg'
 import logoSeiChat from '@/images/clients/SeiChat/logo-dark.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-dark.svg'
 import logoRidgle from '@/images/clients/Ridgle/logo-dark.svg'
@@ -100,8 +98,6 @@ const clients = [
   ['Bassse3', logoBassse3],
   ['BlueTide', logoBlueTide],
   ['Ellum', logoEllum],
-  ['ev-usa', logoEvUsa],
-  ['r&d', logoRnD],
   ['SeiChat', logoSeiChat],
   ['Simoles', logoSimoles],
   ['Ridgle', logoRidgle],
