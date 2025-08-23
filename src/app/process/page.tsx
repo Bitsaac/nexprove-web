@@ -60,7 +60,7 @@ function Discover() {
         <p>
           We begin every partnership with deep discovery to understand your{' '}
           <strong className="font-semibold text-neutral-950">vision</strong>,
-          challenges, and market position. Whether you're seeking agency services
+          challenges, and market position. Whether you&apos;re seeking agency services
           or venture building support, we align our expertise with your objectives.
         </p>
         <p>
@@ -112,7 +112,7 @@ function Build() {
           like React, Next.js, and blockchain frameworks when appropriate.
         </p>
         <p>
-          Whether we're building an MVP, scaling an existing platform, or creating
+          Whether we&apos;re building an MVP, scaling an existing platform, or creating
           brand assets, our{' '}
           <strong className="font-semibold text-neutral-950">collaborative approach</strong>{' '}
           ensures regular check-ins, iterative feedback, and alignment with your
@@ -124,7 +124,7 @@ function Build() {
         author={{ name: 'John Olatunji', role: 'Founder of SIMOLES' }}
         className="mt-12"
       >
-        Nexprove's development process was incredibly transparent. They kept us
+        Nexprove&apos;s development process was incredibly transparent. They kept us
         informed at every step and delivered exactly what we envisioned for our
         Web3 platform.
       </Blockquote>
