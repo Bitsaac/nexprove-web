@@ -13,9 +13,9 @@ import { Testimonial } from '@/components/Testimonial'
 import logoBassse3 from '@/images/clients/Bassse3/logo-dark.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-dark.svg'
 import logoEllum from '@/images/clients/Ellum/logo-dark.svg'
+import logoRebrand from '@/images/clients/rebrand/logo-dark.svg'
 import logoSeiChat from '@/images/clients/SeiChat/logo-dark.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-dark.svg'
-import logoRidgle from '@/images/clients/Ridgle/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -95,12 +95,12 @@ function CaseStudies({
 }
 
 const clients = [
-  ['Bassse3', logoBassse3],
-  ['BlueTide', logoBlueTide],
-  ['Ellum', logoEllum],
+  ['BASSSE3', logoBassse3],
+  ['BLUETIDE', logoBlueTide],
+  ['ELLUM', logoEllum],
+  ['REBRAND CLIENT', logoRebrand],
   ['SeiChat', logoSeiChat],
-  ['Simoles', logoSimoles],
-  ['Ridgle', logoRidgle],
+  ['SIMOLES', logoSimoles],
 ]
 
 function Clients() {
@@ -158,10 +158,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Bassse3', logo: logoBassse3 }}
+        client={{ name: 'BASSSE3', logo: logoBassse3 }}
       >
-        We approached <em>NexProve</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        We approached <em>Nexprove</em> because we needed partners who understood both technical excellence and the Web3 ecosystem. They delivered a comprehensive mentorship platform that perfectly bridges the knowledge gap in our industry.
       </Testimonial>
 
       <Clients />

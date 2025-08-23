@@ -58,24 +58,23 @@ function Discover() {
     <Section title="Discover" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
+          We begin every partnership with deep discovery to understand your{' '}
+          <strong className="font-semibold text-neutral-950">vision</strong>,
+          challenges, and market position. Whether you're seeking agency services
+          or venture building support, we align our expertise with your objectives.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
+          Our team conducts comprehensive research into your industry, target audience,
+          and competitive landscape while evaluating technical requirements and growth
+          opportunities across{' '}
+          <strong className="font-semibold text-neutral-950">Web2 and Web3</strong>{' '}
+          ecosystems.
         </p>
         <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          Through collaborative workshops and strategic sessions, we develop a clear{' '}
+          <strong className="font-semibold text-neutral-950">roadmap</strong> that
+          balances innovation with practical execution, ensuring sustainable growth
+          and measurable results.
         </p>
       </div>
 
@@ -83,12 +82,12 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
+        <TagListItem>Strategic consultations</TagListItem>
+        <TagListItem>Market analysis</TagListItem>
+        <TagListItem>Technical assessments</TagListItem>
+        <TagListItem>Competitive research</TagListItem>
+        <TagListItem>Proof of concepts</TagListItem>
+        <TagListItem>Partnership structuring</TagListItem>
       </TagList>
     </Section>
   )
@@ -99,32 +98,35 @@ function Build() {
     <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          Our development phase leverages the combined expertise of our leadership team
+          and the{' '}
+          <strong className="font-semibold text-neutral-950">Bitsaac talent network</strong>.
+          We execute with modern tech stacks, agile methodologies, and transparent
+          communication throughout the build process.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
+          Every project benefits from our structured approach: dedicated project managers
+          maintain clear communication, while our technical teams focus on delivering
+          high-quality solutions using{' '}
+          <strong className="font-semibold text-neutral-950">proven technologies</strong>{' '}
+          like React, Next.js, and blockchain frameworks when appropriate.
         </p>
         <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          Whether we're building an MVP, scaling an existing platform, or creating
+          brand assets, our{' '}
+          <strong className="font-semibold text-neutral-950">collaborative approach</strong>{' '}
+          ensures regular check-ins, iterative feedback, and alignment with your
+          evolving business needs.
         </p>
       </div>
 
       <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
+        author={{ name: 'John Olatunji', role: 'Founder of SIMOLES' }}
         className="mt-12"
       >
-        NexProve were so regular with their progress updates we almost began to
-        think they were automated!
+        Nexprove's development process was incredibly transparent. They kept us
+        informed at every step and delivered exactly what we envisioned for our
+        Web3 platform.
       </Blockquote>
     </Section>
   )
@@ -135,31 +137,29 @@ function Deliver() {
     <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
+          Our delivery process focuses on seamless{' '}
           <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+            deployment
+          </strong>{' '}
+          and comprehensive handover. We ensure every project launches with full
+          functionality, proper documentation, and clear next steps for ongoing success.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
+          Beyond technical delivery, we provide strategic{' '}
+          <strong className="font-semibold text-neutral-950">launch support</strong>{' '}
+          including marketing guidance, user onboarding strategies, and performance
+          monitoring to ensure your solution achieves its intended impact in the market.
         </p>
         <p>
-          We ensure that the main pages of the site are{' '}
+          For venture partnerships, delivery includes{' '}
           <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
+            equity structuring
+          </strong>,
+          shared resource allocation, and integration into the Nexprove ecosystem
+          for continued{' '}
           <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
-          retainer.
+            growth support
+          </strong>.
         </p>
       </div>
 
@@ -167,17 +167,17 @@ function Deliver() {
         Included in this phase
       </h3>
       <List className="mt-8">
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
+        <ListItem title="Quality Assurance">
+          Comprehensive testing across all platforms and devices to ensure
+          reliable performance and user experience.
         </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
+        <ListItem title="Scalable Infrastructure">
+          Production-ready deployment with monitoring, security, and scalability
+          built in from day one.
         </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
+        <ListItem title="Ongoing Partnership">
+          Continued collaboration through our ecosystem, with access to talent,
+          resources, and strategic guidance as you grow.
         </ListItem>
       </List>
     </Section>
@@ -196,42 +196,40 @@ function Values() {
 
       <SectionIntro
         eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        title="Balancing innovation with sustainable growth"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          We navigate the intersection of Web2 and Web3 technologies while maintaining
+          focus on practical solutions that drive real business value. Our approach
+          combines cutting-edge innovation with proven methodologies.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="Technical Excellence">
+            Our vetted talent network brings deep expertise across modern
+            development stacks, ensuring high-quality solutions that scale.
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Strategic Partnership">
+            We go beyond service delivery to become true partners, sharing in
+            both the challenges and successes of every venture we support.
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+          <GridListItem title="Ecosystem Thinking">
+            Every project benefits from our broader network of talent, resources,
+            and cross-venture learning opportunities.
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="Transparency">
+            Open communication, clear processes, and shared decision-making
+            ensure alignment throughout every partnership.
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+          <GridListItem title="Sustainable Growth">
+            We build for long-term success, creating solutions and partnerships
+            that thrive as businesses scale and evolve.
           </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+          <GridListItem title="Continuous Innovation">
+            We stay ahead of technological trends while maintaining practical
+            focus on solutions that solve real problems for real users.
           </GridListItem>
         </GridList>
       </Container>
@@ -242,7 +240,7 @@ function Values() {
 export const metadata: Metadata = {
   title: 'Our Process',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Our proven methodology combines strategic thinking, technical expertise, and collaborative partnerships to deliver exceptional results.',
 }
 
 export default function Process() {
@@ -250,9 +248,7 @@ export default function Process() {
     <>
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          Our proven methodology combines strategic thinking, technical expertise, and collaborative partnerships to deliver exceptional results across agency services, venture building, and talent development.
         </p>
       </PageIntro>
 

@@ -13,20 +13,19 @@ import { Testimonial } from '@/components/Testimonial'
 import logoBassse3 from '@/images/clients/Bassse3/logo-light.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-light.svg'
 import logoEllum from '@/images/clients/Ellum/logo-light.svg'
+import logoRebrand from '@/images/clients/rebrand/logo-light.svg'
 import logoSeiChat from '@/images/clients/SeiChat/logo-light.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-light.svg'
-import logoRidgle from '@/images/clients/Ridgle/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
-  ['Bassse3', logoBassse3],
-  ['BlueTide', logoBlueTide],
-  ['Ellum', logoEllum],
+  ['BASSSE3', logoBassse3],
+  ['BLUETIDE', logoBlueTide],
+  ['ELLUM', logoEllum],
+  ['REBRAND CLIENT', logoRebrand],
   ['SeiChat', logoSeiChat],
-  ['Simoles', logoSimoles],
-  ['Ridgle', logoRidgle],
-  // Keeping one old as placeholder if needed
+  ['SIMOLES', logoSimoles],
 ]
 
 function Clients() {
@@ -188,9 +187,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Bassse3', logo: logoBlueTide }}
+        client={{ name: 'BASSSE3', logo: logoBassse3 }}
       >
-        {'The BitSAC team exceeded expectations. Working with their interns was like having a full-time junior squad, well guided and ready.'}
+        {'Nexprove transformed our Web3 mentorship vision into reality. Their deep understanding of blockchain technology and platform development made BASSSE3 the specialized solution our community needed.'}
       </Testimonial>
 
       <Services />

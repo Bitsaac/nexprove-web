@@ -29,26 +29,23 @@ function Culture() {
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
+        title="Openness, experimentation, and shared success."
         invert
       >
         <p>
-          We are a group of like-minded people who share the same core values.
+          We believe in openness, experimentation, and shared success. Every project is an opportunity to learn, innovate, and empower both our team and partners.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
+          <GridListItem title="Deep Technical Expertise" invert>
+            Our bench of vetted technical and creative talent brings years of experience across Web2 and Web3 ecosystems.
           </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
+          <GridListItem title="Flexible Partnership" invert>
+            We maintain a structured yet flexible approach to venture partnerships, ensuring both autonomy and collective growth.
           </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
+          <GridListItem title="Collaborative Growth" invert>
+            Strong culture of collaboration where every team member and partner contributes to our shared success.
           </GridListItem>
         </GridList>
       </Container>
@@ -61,72 +58,50 @@ const team = [
     title: 'Leadership',
     people: [
       {
-        name: 'David Olatunji',
-        role: 'Co-Founder / CEO',
+        name: 'Avi',
+        role: 'Co-founder, Strategy & Product',
         image: { src: imageLeslieAlexander },
       },
       {
-        name: 'Bill Lawrence',
-        role: 'Co-Founder / CTO',
+        name: 'Seun',
+        role: 'Co-founder, Operations & Growth',
         image: { src: imageMichaelFoster },
       },
       {
-        name: 'Oluwaseun Adedoyin',
-        role: 'Co-Founder / CMM',
+        name: 'John',
+        role: 'Partner, Web3 & Client Development',
         image: { src: imageDriesVincent },
       },
-      
+      {
+        name: 'Michelle',
+        role: 'Partner, Business Development & Culture',
+        image: { src: imageEmmaDorsey },
+      },
     ],
   },
   {
-    title: 'Team',
+    title: 'The Team',
     people: [
       {
-        name: 'Bill Lawrence',
-        role: 'Lead Developer',
+        name: 'Bitsaac Community',
+        role: 'Developers & Designers',
         image: { src: imageChelseaHagon },
       },
       {
-        name: 'John Olatunji',
-        role: 'CPO / Lead Designer',
-        image: { src: imageEmmaDorsey },
-      },
-
-      {
-        name: 'Nneoma Jilaga',
-        role: 'VP, User Experience',
+        name: 'Creative Professionals',
+        role: 'Content & Strategy',
         image: { src: imageLeonardKrasner },
       },
       {
-        name: 'Blessing Nkem',
-        role: 'Product Marketing manager',
+        name: 'Technical Specialists',
+        role: 'Web2 & Web3 Development',
         image: { src: imageBlakeReid },
       },
       {
-        name: 'Ada Obi',
-        role: 'VP, Human Resources',
+        name: 'Growing Network',
+        role: 'Vetted Talent Pool',
         image: { src: imageKathrynMurphy },
       },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      // {
-      //   name: 'Jeffrey Webb',
-      //   role: 'Account Coordinator',
-      //   image: { src: imageJeffreyWebb },
-      // },
-      // {
-      //   name: 'Benjamin Russel',
-      //   role: 'Senior Developer',
-      //   image: { src: imageBenjaminRussel },
-      // },
-      // {
-      //   name: 'Angela Fisher',
-      //   role: 'Front-end Developer',
-      //   image: { src: imageAngelaFisher },
-      // },
     ],
   },
 ]
@@ -191,32 +166,50 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="Building the future, one venture at a time">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          Nexprove is a forward-thinking venture group at the intersection of technology, talent, and innovation. We build, partner, and scale ideas into sustainable businesses across digital, Web2, and Web3 ecosystems.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            NexProve was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            We operate as a group company, with each venture or brand under our umbrella retaining its own leadership while contributing a small share to the group. This ensures both autonomy and collective growth.
           </p>
           <p>
-            At NexProve, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            Our approach combines agency services, venture building, and talent development through Bitsaac — creating an ecosystem where ideas can thrive, talent can grow, and businesses can scale globally.
           </p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="4" label="Core services" />
+          <StatListItem value="Growing" label="Talent network" />
+          <StatListItem value="Web2+Web3" label="Ecosystems" />
         </StatList>
+      </Container>
+
+      <SectionIntro
+        title="What We Do"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+        <p>
+          Our diverse service offerings span the entire spectrum of modern business needs, from creative solutions to venture building.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <GridList>
+          <GridListItem title="Agency & Client Solutions">
+            Delivering creative, technical, and strategic services for brands and enterprises across all digital touchpoints.
+          </GridListItem>
+          <GridListItem title="Talent Network (Bitsaac)">
+            A growing pool of skilled developers, designers, and creators building both internal products and client solutions.
+          </GridListItem>
+          <GridListItem title="Venture Building">
+            Supporting founders and co-founders in launching products under the Nexprove umbrella with shared equity and resources.
+          </GridListItem>
+          <GridListItem title="Content & Community">
+            Creating engaging content, studios, and programs that educate and connect people in our ecosystem.
+          </GridListItem>
+        </GridList>
       </Container>
 
       <Culture />
@@ -226,7 +219,7 @@ export default async function About() {
       <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
+        intro="We share insights, learnings, and stories from our journey building ventures, developing talent, and navigating the intersection of Web2 and Web3 ecosystems."
         pages={blogArticles}
       />
 

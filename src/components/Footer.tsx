@@ -9,10 +9,10 @@ const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'Bassse3', href: '/work/bassse3' },
-      { title: 'Ellum', href: '/work/ellum' },
-      { title: 'BlueTide', href: '/work/bluetide' },
-      { title: 'Ridgle', href: '/work/ridgle' },
+      { title: 'BASSSE3', href: '/work/bassse3' },
+      { title: 'ELLUM', href: '/work/ellum' },
+      { title: 'BLUETIDE', href: '/work/bluetide' },
+      { title: 'SIMOLES', href: '/work/simoles' },
       {
         title: (
           <>
