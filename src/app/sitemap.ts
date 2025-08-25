@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     
-    // Blog posts - New high-traffic content
+    // Blog posts
     {
       url: `${baseUrl}/blog/complete-mvp-development-guide-30-days`,
       lastModified: new Date('2025-01-15'),
@@ -100,24 +100,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     
-    // Blog posts - Existing content
-    {
-      url: `${baseUrl}/blog/future-of-web-development`,
-      lastModified: new Date('2024-06-01'),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/blog/a-short-guide-to-component-naming`,
-      lastModified: new Date('2024-05-01'),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/blog/3-lessons-we-learned-going-back-to-the-office`,
-      lastModified: new Date('2024-04-01'),
-      changeFrequency: 'yearly',
-      priority: 0.5,
-    },
   ]
 }
