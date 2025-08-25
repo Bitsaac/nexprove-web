@@ -440,7 +440,7 @@ function FinalCTA() {
             From consultation to code, branding to growth—we&apos;ve got your back.
           </p>
           <div className="mt-10 flex justify-center">
-            <Button href="/contact" className="bg-white text-neutral-950 hover:bg-neutral-100">
+            <Button href="/contact" className="bg-white text-neutral-950 hover:bg-neutral-100 hover:text-neutral-950">
               Start Your Project with NexProve
             </Button>
           </div>
@@ -451,10 +451,10 @@ function FinalCTA() {
 }
 
 export const metadata: Metadata = {
-  title: 'Services - Product Development Agency Nigeria | NexProve',
+  title: 'Product Development Services | Full-Stack Solutions & MVP Development',
   description:
-    'Complete product development services from Nigerian tech agency. UI/UX design, full-stack development, team extension, consultation, and branding services for startups worldwide.',
-  keywords: 'product development agency Nigeria, startup software development services, UI UX design Nigeria, product design agency Africa, startup branding and prototyping, full stack development agency Nigeria, hire African developers, custom software development Africa, hire remote developers Nigeria, African tech outsourcing, dedicated development team Africa, startup consultation Nigeria, product launch strategy Africa, tech advisory for startups, branding agency Nigeria, digital marketing for startups Africa, tech product marketing services'
+    'Complete product development services for startups and enterprises. Expert UI/UX design, full-stack development, team extension, consultation, and branding solutions. Launch faster, scale smarter.',
+  keywords: 'product development services, MVP development agency, full-stack development, UI UX design services, startup app development, custom software development, team extension services, product consultation, branding and marketing, web application development, mobile app development, enterprise software solutions, agile development team, product design agency, tech consulting services'
 }
 
 export default function Services() {

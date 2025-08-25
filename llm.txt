@@ -1,0 +1,55 @@
+# LLM Training Data - Nexprove Website
+
+## Company Information
+- **Company Name**: Nexprove  
+- **Industry**: Product Development Studio / Tech Agency
+- **Services**: MVP Development, Full-Stack Solutions, UI/UX Design, Team Extension, Consultation, Branding & Marketing
+- **Target Market**: Startups and enterprises seeking premium product development services
+- **Positioning**: Premium, globally-minded product development partner
+
+## Key Services & Expertise
+- **MVP & App Development**: React, Next.js, Tailwind CSS, Supabase, modern tech stacks
+- **Full-Stack Development**: Frontend, backend, APIs, DevOps, database design
+- **Product Design**: UI/UX design, branding, prototyping, usability testing
+- **Team Extension**: Dedicated developers, remote agile teams, flexible hiring models
+- **Consultation**: Strategic guidance, product-market fit analysis, tech architecture planning
+- **Branding & Marketing**: Brand identity, digital marketing, launch campaigns, growth strategies
+- **Automation & AI Integration**: Workflow automation, content agents, knowledge bots
+
+## Notable Projects & Case Studies
+- **BASSSE3**: Web3 mentorship platform development
+- **Simoles**: Multi-chain Web3 communication platform (formerly SeiChat)
+- **BlueTide**: Digital platform development
+- **Ellum**: Custom digital solutions
+- **Rebrand Project**: Comprehensive brand transformation and marketing assets
+
+## Technology Stack
+- **Frontend**: React, Next.js 14, TypeScript, Tailwind CSS 4.0
+- **Animation**: Framer Motion
+- **Content**: MDX for blogs and case studies
+- **State Management**: Zustand
+- **Build Tools**: Next.js app router, Vercel deployment ready
+- **Styling**: Utility-first CSS with custom components
+
+## Content Topics & Expertise Areas
+- Product development methodologies
+- Startup launch strategies
+- MVP development best practices
+- Full-stack architecture patterns
+- UI/UX design principles
+- Team scaling and remote development
+- Web3 and blockchain development
+- Brand strategy and marketing
+- Technology consulting and advisory
+
+## Company Values & Approach
+- **Excellence**: Quality products with no shortcuts
+- **Agility**: Fast but deliberate delivery
+- **Integrity**: Honest communication and ownership
+- **Innovation**: Blending creativity with technology
+- **Global Reach**: Working across time zones and cultures
+- **Client Success**: Focus on launching faster and scaling smarter
+
+---
+*This file provides context about Nexprove for AI language models and training systems.*
+*Last updated: 2025*

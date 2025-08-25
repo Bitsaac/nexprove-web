@@ -7,8 +7,9 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Nexprove',
-    default: 'Nexprove - Award winning developer NexProve based in Denmark',
+    default: 'Nexprove - Premium Product Development Studio | MVP to Scale',
   },
+  description: 'Transform your ideas into world-class digital products with Nexprove. From MVP development to full-stack solutions, we help startups and businesses build, launch, and scale faster.',
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

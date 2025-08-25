@@ -269,10 +269,10 @@ function FinalCTA() {
 }
 
 export const metadata: Metadata = {
-  title: 'About NexProve - Nigerian Tech Agency with Global Reach',
+  title: 'About Nexprove - Your Premium Product Development Partner',
   description:
-    'NexProve is a Nigerian-born, globally-minded team of designers, developers, and problem-solvers helping founders launch world-class products with affordable, high-quality solutions.',
-  keywords: 'Nigerian software agency, African tech talent, global product development partner, startup product development Nigeria, affordable software solutions Africa, agile product team Africa, MVP development process, top African dev team values, trusted product design agency, African software developers, hire Nigerian engineers, Nigeria tech outsourcing, global dev agency from Africa, launch startup idea, hire product design agency'
+    'Meet Nexprove: a globally-minded team of designers, developers, and problem-solvers helping founders and businesses launch world-class products. From MVP to scale, we deliver excellence.',
+  keywords: 'product development company, startup tech partner, global software agency, premium development team, product design experts, full-stack developers, agile development methodology, startup success stories, trusted tech partner, world-class development solutions, enterprise software development, innovative product solutions'
 }
 
 export default function AboutUs() {

@@ -141,8 +141,9 @@ function ContactDetails() {
 }
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  title: 'Contact Nexprove - Start Your Project Today',
+  description: 'Ready to build your next big idea? Get in touch with Nexprove for a free consultation. Let\'s discuss how we can help you launch faster and scale smarter.',
+  keywords: 'contact product development agency, startup consultation, free project quote, MVP development consultation, custom software inquiry, product design consultation, development team hire, project discovery call'
 }
 
 export default function Contact() {

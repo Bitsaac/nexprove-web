@@ -161,8 +161,10 @@ function Services() {
 }
 
 export const metadata: Metadata = {
+  title: 'Nexprove - Premium Product Development Studio | From Idea to Launch',
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Turn your startup idea into reality with Nexprove. We deliver MVP development, full-stack solutions, UI/UX design, and team extension services that help businesses launch faster and scale globally.',
+  keywords: 'product development studio, MVP development, startup app development, full-stack development, UI UX design agency, custom software development, mobile app development, web application development, product design agency, startup tech partner',
 }
 
 export default async function Home() {

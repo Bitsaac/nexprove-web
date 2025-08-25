@@ -12,3 +12,6 @@ yarn-error.log*
 coverage/
 .turbo/
 .eslintcache
+
+# Marketing strategy and internal documents
+marketing-strategy/

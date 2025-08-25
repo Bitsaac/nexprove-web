@@ -12,9 +12,10 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Nexprove Blog - Product Development Insights & Industry Trends',
   description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
+    'Discover expert insights on product development, startup growth, and technology trends. Learn from Nexproves experience building successful digital products.',
+  keywords: 'product development blog, startup insights, technology trends, MVP development tips, full-stack development guides, product design insights, software development best practices, startup success stories'
 }
 
 export default async function Blog() {
