@@ -15,6 +15,10 @@ import { StylizedImage } from '@/components/StylizedImage'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
+import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
+import imageBlakeReid from '@/images/team/blake-reid.jpg'
+import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
+import imageDriesVincent from '@/images/team/dries-vincent.jpg'
 
 function Hero() {
   return (
@@ -207,6 +211,38 @@ function GlobalReach() {
 }
 
 function Team() {
+  const team = [
+    {
+      name: 'Kevin Dimoko',
+      role: 'Visual and Motion Designer',
+      image: { src: imageBenjaminRussel },
+      linkedin: 'https://www.linkedin.com/in/kevin-dimoko-b2526219a/',
+      behance: 'https://www.behance.net/kevindimoko',
+    },
+    {
+      name: 'Isaac Gideon',
+      role: 'Frontend Web Developer',
+      image: { src: imageBlakeReid },
+      linkedin: 'https://www.linkedin.com/in/isaac-gideon-0813b11b3/',
+      github: 'https://github.com/kleenpulse',
+      portfolio: 'https://vxrcel-studios.vercel.app',
+    },
+    {
+      name: 'Adaobi Cynthia Onwuzulike',
+      role: 'Product Manager',
+      image: { src: imageChelseaHagon },
+      linkedin: 'https://www.linkedin.com/in/adaobi-onwuzulike-089858199',
+    },
+    {
+      name: 'Muhammed Yuguda',
+      role: 'AI Engineer',
+      image: { src: imageDriesVincent },
+      linkedin: 'https://linkedin.com/in/yuguda',
+      github: 'https://github.com/yuguda999',
+      portfolio: 'https://yuguda999.github.io/portfolio-v2/',
+    },
+  ]
+
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <SectionIntro
@@ -218,29 +254,70 @@ function Team() {
       </SectionIntro>
 
       <div className="mt-16">
-        <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 xl:gap-x-20">
-          <div className="flex justify-center">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
-            </FadeIn>
-          </div>
-          <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none">
-            <FadeIn>
-              <div className="space-y-6 text-base text-neutral-600">
-                <p>
-                  Our diverse team brings together the best of African talent with global experience. From seasoned designers who understand international markets to developers skilled in the latest technologies, we combine local insight with world-class execution.
-                </p>
-                <p>
-                  Every team member is carefully vetted and committed to our mission of delivering exceptional products that help businesses succeed on the global stage.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {team.map((person) => (
+            <li key={person.name}>
+              <FadeIn>
+                <div className="flex items-center gap-x-6">
+                  <Image {...person.image} alt="" className="h-16 w-16 rounded-full" unoptimized />
+                  <div>
+                    <h3 className="font-display text-lg font-semibold text-neutral-950">
+                      {person.name}
+                    </h3>
+                    <p className="text-sm text-neutral-600">{person.role}</p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <ul role="list" className="flex flex-wrap gap-x-4 gap-y-2">
+                    {person.linkedin && (
+                      <li>
+                        <Link
+                          href={person.linkedin}
+                          className="text-sm text-neutral-600 transition hover:text-neutral-950"
+                        >
+                          LinkedIn
+                        </Link>
+                      </li>
+                    )}
+                    {person.github && (
+                      <li>
+                        <Link
+                          href={person.github}
+                          className="text-sm text-neutral-600 transition hover:text-neutral-950"
+                        >
+                          GitHub
+                        </Link>
+                      </li>
+                    )}
+                    {person.portfolio && (
+                      <li>
+                        <Link
+                          href={person.portfolio}
+                          className="text-sm text-neutral-600 transition hover:text-neutral-950"
+                        >
+                          Portfolio
+                        </Link>
+                      </li>
+                    )}
+                     {person.behance && (
+                      <li>
+                        <Link
+                          href={person.behance}
+                          className="text-sm text-neutral-600 transition hover:text-neutral-950"
+                        >
+                          Behance
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              </FadeIn>
+            </li>
+          ))}
+        </ul>
       </div>
     </Container>
   )

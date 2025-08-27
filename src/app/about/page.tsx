@@ -58,24 +58,29 @@ const team = [
     title: 'Leadership',
     people: [
       {
-        name: 'Avi',
+        name: 'David Olatunji',
         role: 'Co-founder, Strategy & Product',
         image: { src: imageLeslieAlexander },
       },
       {
-        name: 'Seun',
+        name: 'Oluwaseun Adedoyin',
         role: 'Co-founder, Operations & Growth',
         image: { src: imageMichaelFoster },
       },
       {
-        name: 'John',
-        role: 'Partner, Web3 & Client Development',
+        name: 'John Olatunji',
+        role: 'Partner, Design & Business Development',
         image: { src: imageDriesVincent },
       },
       {
-        name: 'Michelle',
-        role: 'Partner, Business Development & Culture',
+        name: 'Bill Lawrence',
+        role: 'Partner, Lead Engineer',
         image: { src: imageEmmaDorsey },
+      },
+      {
+        name: 'Jane Mayowa',
+        role: 'Partner, Marketing Strategist',
+        image: { src: imageMichaelFoster },
       },
     ],
   },
@@ -83,24 +88,24 @@ const team = [
     title: 'The Team',
     people: [
       {
-        name: 'Bitsaac Community',
-        role: 'Developers & Designers',
-        image: { src: imageChelseaHagon },
+        name: 'Kevin Dimoko',
+        role: 'Visual and Motion Designer',
+        image: { src: imageBenjaminRussel },
       },
       {
-        name: 'Creative Professionals',
-        role: 'Content & Strategy',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Technical Specialists',
-        role: 'Web2 & Web3 Development',
+        name: 'Isaac Gideon',
+        role: 'Frontend Web Developer',
         image: { src: imageBlakeReid },
       },
       {
-        name: 'Growing Network',
-        role: 'Vetted Talent Pool',
-        image: { src: imageKathrynMurphy },
+        name: 'Adaobi Cynthia Onwuzulike',
+        role: 'Product Manager',
+        image: { src: imageChelseaHagon },
+      },
+      {
+        name: 'Muhammed Yuguda',
+        role: 'AI Engineer',
+        image: { src: imageDriesVincent },
       },
     ],
   },
