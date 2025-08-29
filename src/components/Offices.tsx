@@ -32,17 +32,17 @@ export function Offices({
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Ikoyi" invert={invert}>
-          4, Rumens Road,
+        <Office name="Lagos (HQ)" invert={invert}>
+          11, Mogbonjubola Street
           <br />
-          Ikoyi, Lagos
+          Gbagada, Lagos State, Nigeria
         </Office>
       </li>
       <li>
-        <Office name="Gbagada" invert={invert}>
-          11, Mogbonjubola street
+        <Office name="Abuja" invert={invert}>
+          Suite B12, Central Business District
           <br />
-          Gbagada, Lagos
+          Abuja, FCT, Nigeria
         </Office>
       </li>
     </ul>

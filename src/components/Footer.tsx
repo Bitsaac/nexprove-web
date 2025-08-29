@@ -3,16 +3,27 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
+import { SocialMedia } from '@/components/SocialMedia'
+import { NewsletterFormWithAlert } from '@/components/NewsletterFormWithAlert'
 
 const navigation = [
   {
+    title: 'Company',
+    links: [
+      { title: 'About', href: '/about' },
+      { title: 'Process', href: '/process' },
+      { title: 'Blog', href: '/blog' },
+      { title: 'Contact us', href: '/contact' },
+      { title: 'Our Community', href: '/community' },
+    ],
+  },
+  {
     title: 'Work',
     links: [
-      { title: 'BASSSE3', href: '/work/bassse3' },
-      { title: 'ELLUM', href: '/work/ellum' },
-      { title: 'BLUETIDE', href: '/work/bluetide' },
-      { title: 'SIMOLES', href: '/work/simoles' },
+      { title: 'Bassse3', href: '/work/bassse3' },
+      { title: 'Ellum', href: '/work/ellum' },
+      { title: 'Bluetide', href: '/work/bluetide' },
+      { title: 'Simoles', href: '/work/simoles' },
       {
         title: (
           <>
@@ -24,17 +35,14 @@ const navigation = [
     ],
   },
   {
-    title: 'Company',
+    title: 'Services',
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'Product Design', href: '/services#product-design' },
+      { title: 'Product Development', href: '/services#product-development' },
+      { title: 'Team Extension', href: '/services#team-extension' },
+      { title: 'Consultation', href: '/services#consultation' },
+      { title: 'Branding & Marketing', href: '/services#branding-marketing' },
     ],
-  },
-  {
-    title: 'Connect',
-    links: socialMediaProfiles,
   },
 ]
 
@@ -66,65 +74,24 @@ function Navigation() {
   )
 }
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-      />
-    </svg>
-  )
-}
-
-function NewsletterForm() {
-  return (
-    <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
-      </h2>
-      <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
-      </p>
-      <div className="relative mt-6">
-        <input
-          type="email"
-          placeholder="Email address"
-          autoComplete="email"
-          aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pr-20 pl-6 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden"
-        />
-        <div className="absolute inset-y-1 right-1 flex justify-end">
-          <button
-            type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
-          >
-            <ArrowIcon className="w-4" />
-          </button>
-        </div>
-      </div>
-    </form>
-  )
-}
 
 export function Footer() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
       <FadeIn>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 pb-20">
           <Navigation />
           <div className="flex lg:justify-end">
-            <NewsletterForm />
+            <NewsletterFormWithAlert />
           </div>
         </div>
-        <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <div className=' py-12 border-t border-neutral-950/10 '>
           <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+            <Logo className="w-screen" fillOnHover />
           </Link>
+        </div>
+        <div className=" mb-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+          <SocialMedia />
           <p className="text-sm text-neutral-700">
             © NexProve Agency Inc. {new Date().getFullYear()}
           </p>

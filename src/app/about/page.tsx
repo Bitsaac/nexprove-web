@@ -175,14 +175,14 @@ export default async function About() {
         <p>
           Nexprove is a forward-thinking venture group at the intersection of technology, talent, and innovation. We build, partner, and scale ideas into sustainable businesses across digital, Web2, and Web3 ecosystems.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
+        {/* <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
             We operate as a group company, with each venture or brand under our umbrella retaining its own leadership while contributing a small share to the group. This ensures both autonomy and collective growth.
           </p>
           <p>
             Our approach combines agency services, venture building, and talent development through Bitsaac — creating an ecosystem where ideas can thrive, talent can grow, and businesses can scale globally.
           </p>
-        </div>
+        </div> */}
       </PageIntro>
       <Container className="mt-16">
         <StatList>

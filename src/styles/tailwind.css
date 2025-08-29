@@ -39,3 +39,63 @@
 
   --font-display-length: 2;
 }
+
+/* Custom SweetAlert2 Styling for NexProve */
+.swal2-popup {
+  font-family: 'Mona Sans', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.swal2-title {
+  font-family: 'Mona Sans', ui-sans-serif, system-ui, sans-serif !important;
+  font-variation-settings: 'wdth' 125 !important;
+}
+
+.swal2-html-container {
+  font-family: 'Mona Sans', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #0f0f0f !important;
+  border: none !important;
+  font-family: 'Mona Sans', ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.swal2-styled.swal2-confirm:hover {
+  background-color: #1f1f1f !important;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 2px #0f0f0f, 0 0 0 4px rgba(15, 15, 15, 0.1) !important;
+}
+
+/* Error button styling */
+.swal2-styled.swal2-confirm[style*="background-color: rgb(220, 38, 38)"] {
+  background-color: #dc2626 !important;
+}
+
+.swal2-styled.swal2-confirm[style*="background-color: rgb(220, 38, 38)"]:hover {
+  background-color: #b91c1c !important;
+}
+
+.swal2-styled.swal2-confirm[style*="background-color: rgb(220, 38, 38)"]:focus {
+  box-shadow: 0 0 0 2px #dc2626, 0 0 0 4px rgba(220, 38, 38, 0.1) !important;
+}
+
+/* Sticky Navigation Enhancement */
+@supports (backdrop-filter: blur(12px)) {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+@supports not (backdrop-filter: blur(12px)) {
+  .backdrop-blur-md {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+}
+
+/* Smooth scroll behavior for better UX with sticky nav */
+html {
+  scroll-behavior: smooth;
+}
