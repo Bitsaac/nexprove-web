@@ -62,7 +62,7 @@ function Header({
 
   return (
     <Container>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between py-4">
         <Link
           href="/"
           aria-label="Home"
@@ -172,18 +172,26 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       }
     }
 
+    function onScroll() {
+      if (expanded) {
+        setExpanded(false)
+      }
+    }
+
     window.addEventListener('click', onClick)
+    window.addEventListener('scroll', onScroll, { passive: true })
 
     return () => {
       window.removeEventListener('click', onClick)
+      window.removeEventListener('scroll', onScroll)
     }
-  }, [])
+  }, [expanded])
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-          className="absolute top-2 right-0 left-0 z-40 pt-14"
+          className="fixed top-0 right-0 left-0 z-40 backdrop-blur-md bg-white/85 border-b border-neutral-100/50 transition-all duration-300"
           aria-hidden={expanded ? 'true' : undefined}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}
@@ -205,14 +213,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+          style={{ height: expanded ? 'auto' : '0rem' }}
+          className="fixed top-0 left-0 right-0 z-50 overflow-hidden bg-neutral-950"
           aria-hidden={expanded ? undefined : 'true'}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pt-14 pb-16">
+            <div ref={navRef} className="bg-neutral-950 pt-4 pb-16">
               <Header
                 invert
                 panelId={panelId}
@@ -256,11 +264,11 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-white pt-20"
       >
         <motion.div
           layout
-          className="relative isolate flex w-full flex-col pt-9"
+          className="relative isolate flex w-full flex-col"
         >
           <GridPattern
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"

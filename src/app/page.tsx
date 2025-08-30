@@ -14,7 +14,7 @@ import logoBassse3 from '@/images/clients/Bassse3/logo-light.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-light.svg'
 import logoEllum from '@/images/clients/Ellum/logo-light.svg'
 import logoRebrand from '@/images/clients/rebrand/logo-light.svg'
-import logoSeiChat from '@/images/clients/SeiChat/logo-light.svg'
+import logoSeiChat from '@/images/clients/Seichat/logo-light.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -189,9 +189,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'BASSSE3', logo: logoBassse3 }}
+        client={{ name: 'Ellum', logo: logoEllum }}
       >
-        {'Nexprove transformed our Web3 mentorship vision into reality. Their deep understanding of blockchain technology and platform development made BASSSE3 the specialized solution our community needed.'}
+        {'The team delivered exactly what we needed, on time and within budget. Great communication throughout.'}
       </Testimonial>
 
       <Services />

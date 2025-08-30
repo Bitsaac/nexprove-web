@@ -14,7 +14,7 @@ import logoBassse3 from '@/images/clients/Bassse3/logo-dark.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-dark.svg'
 import logoEllum from '@/images/clients/Ellum/logo-dark.svg'
 import logoRebrand from '@/images/clients/rebrand/logo-dark.svg'
-import logoSeiChat from '@/images/clients/SeiChat/logo-dark.svg'
+import logoSeiChat from '@/images/clients/Seichat/logo-dark.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -158,9 +158,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'BASSSE3', logo: logoBassse3 }}
+        client={{ name: 'Simoles', logo: logoSimoles }}
       >
-        We approached <em>Nexprove</em> because we needed partners who understood both technical excellence and the Web3 ecosystem. They delivered a comprehensive mentorship platform that perfectly bridges the knowledge gap in our industry.
+        {'Working with Nexprove was seamless. They understood our vision and brought it to life with clean code and smart solutions.'}
       </Testimonial>
 
       <Clients />
