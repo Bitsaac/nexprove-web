@@ -76,7 +76,7 @@ export function ContactFormWithAlert() {
             container: 'font-sans',
             popup: 'rounded-3xl shadow-2xl border-0',
             title: 'font-display font-semibold text-xl text-neutral-950 mb-2',
-            htmlContainer: 'font-sans text-base text-neutral-700 leading-relaxed',
+            htmlContainer: 'rounded-3xl font-sans text-base text-neutral-700 leading-relaxed',
             confirmButton: 'rounded-full px-6 py-3 font-semibold text-sm transition-all hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2'
           },
           buttonsStyling: false

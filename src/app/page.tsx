@@ -189,9 +189,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'BASSSE3', logo: logoBassse3 }}
+        client={{ name: 'Ellum', logo: logoEllum }}
       >
-        {'Nexprove transformed our Web3 mentorship vision into reality. Their deep understanding of blockchain technology and platform development made BASSSE3 the specialized solution our community needed.'}
+        {'The team delivered exactly what we needed, on time and within budget. Great communication throughout.'}
       </Testimonial>
 
       <Services />

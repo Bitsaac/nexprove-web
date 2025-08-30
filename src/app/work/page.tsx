@@ -158,9 +158,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'BASSSE3', logo: logoBassse3 }}
+        client={{ name: 'Simoles', logo: logoSimoles }}
       >
-        We approached <em>Nexprove</em> because we needed partners who understood both technical excellence and the Web3 ecosystem. They delivered a comprehensive mentorship platform that perfectly bridges the knowledge gap in our industry.
+        {'Working with Nexprove was seamless. They understood our vision and brought it to life with clean code and smart solutions.'}
       </Testimonial>
 
       <Clients />
