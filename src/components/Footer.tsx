@@ -87,7 +87,7 @@ export function Footer() {
         </div>
         <div className=' py-12 border-t border-neutral-950/10 '>
           <Link href="/" aria-label="Home">
-            <Logo className="w-screen" fillOnHover />
+            <Logo className="w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64" fillOnHover />
           </Link>
         </div>
         <div className=" mb-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
