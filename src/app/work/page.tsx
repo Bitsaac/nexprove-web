@@ -13,7 +13,6 @@ import { Testimonial } from '@/components/Testimonial'
 import logoBassse3 from '@/images/clients/Bassse3/logo-dark.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-dark.svg'
 import logoEllum from '@/images/clients/Ellum/logo-dark.svg'
-import logoRebrand from '@/images/clients/rebrand/logo-dark.svg'
 import logoSeiChat from '@/images/clients/Seichat/logo-dark.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
@@ -98,7 +97,6 @@ const clients = [
   ['BASSSE3', logoBassse3],
   ['BLUETIDE', logoBlueTide],
   ['ELLUM', logoEllum],
-  ['REBRAND CLIENT', logoRebrand],
   ['SeiChat', logoSeiChat],
   ['SIMOLES', logoSimoles],
 ]
