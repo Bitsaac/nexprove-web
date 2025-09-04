@@ -39,10 +39,10 @@ export function Offices({
         </Office>
       </li>
       <li>
-        <Office name="Abuja" invert={invert}>
-          Suite B12, Central Business District
+        <Office name="Coming Soon" invert={invert}>
+          Abuja - Coming Soon
           <br />
-          Abuja, FCT, Nigeria
+          Ghana - Coming Soon
         </Office>
       </li>
     </ul>

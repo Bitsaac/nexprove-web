@@ -60,7 +60,7 @@ function Navigation() {
                 <li key={linkIndex} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-neutral-950 whitespace-nowrap"
                   >
                     {link.title}
                   </Link>
@@ -79,15 +79,18 @@ export function Footer() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
       <FadeIn>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 pb-20">
-          <Navigation />
-          <div className="flex lg:justify-end">
-            <NewsletterFormWithAlert />
+        <div className="pb-20">
+          {/* Navigation takes full width on mobile and tablets, shares space with newsletter on desktop */}
+          <div className="grid grid-cols-1 gap-x-8 gap-y-16 xl:grid-cols-2">
+            <Navigation />
+            <div className="flex xl:justify-end">
+              <NewsletterFormWithAlert />
+            </div>
           </div>
         </div>
-        <div className=' py-12 border-t border-neutral-950/10 '>
-          <Link href="/" aria-label="Home">
-            <Logo className="w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64" fillOnHover />
+        <div className='py-12 border-t border-neutral-950/10 w-full'>
+          <Link href="/" aria-label="Home" className="block w-full">
+            <Logo className="w-full h-auto" fillOnHover />
           </Link>
         </div>
         <div className=" mb-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
