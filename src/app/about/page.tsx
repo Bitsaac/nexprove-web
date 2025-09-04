@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 import { Border } from '@/components/Border'
 import { ContactSection } from '@/components/ContactSection'
@@ -10,19 +10,57 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+// import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
+// import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
+// import imageBlakeReid from '@/images/team/blake-reid.jpg'
+// import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
+// import imageDriesVincent from '@/images/team/dries-vincent.jpg'
+// import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
+// import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
+// import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
+// import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
+// import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
+// import imageMichaelFoster from '@/images/team/michael-foster.jpg'
+// import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
+
+function getInitials(name: string): string {
+  return name
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase())
+    .join('')
+}
+
+function getPastelColor(name: string): string {
+  const pastelColors = [
+    'bg-pink-200',
+    'bg-purple-200', 
+    'bg-indigo-200',
+    'bg-blue-200',
+    'bg-cyan-200',
+    'bg-teal-200',
+    'bg-emerald-200',
+    'bg-green-200',
+    'bg-lime-200',
+    'bg-yellow-200',
+    'bg-amber-200',
+    'bg-orange-200',
+    'bg-rose-200',
+    'bg-fuchsia-200',
+    'bg-violet-200',
+    'bg-sky-200',
+  ]
+  
+  // Create a consistent hash from the name
+  let hash = 0
+  for (let i = 0; i < name.length; i++) {
+    const char = name.charCodeAt(i)
+    hash = ((hash << 5) - hash) + char
+    hash = hash & hash // Convert to 32bit integer
+  }
+  
+  return pastelColors[Math.abs(hash) % pastelColors.length]
+}
 
 function Culture() {
   return (
@@ -60,27 +98,27 @@ const team = [
       {
         name: 'David Olatunji',
         role: 'Co-founder, Strategy & Product',
-        image: { src: imageLeslieAlexander },
+        // image: { src: imageLeslieAlexander },
       },
       {
         name: 'Oluwaseun Adedoyin',
         role: 'Co-founder, Operations & Growth',
-        image: { src: imageMichaelFoster },
+        // image: { src: imageMichaelFoster },
       },
       {
         name: 'John Olatunji',
         role: 'Partner, Design & Business Development',
-        image: { src: imageDriesVincent },
+        // image: { src: imageDriesVincent },
       },
       {
         name: 'Bill Lawrence',
         role: 'Partner, Lead Engineer',
-        image: { src: imageEmmaDorsey },
+        // image: { src: imageEmmaDorsey },
       },
       {
         name: 'Jane Mayowa',
         role: 'Partner, Marketing Strategist',
-        image: { src: imageMichaelFoster },
+        // image: { src: imageMichaelFoster },
       },
     ],
   },
@@ -90,22 +128,22 @@ const team = [
       {
         name: 'Kevin Dimoko',
         role: 'Visual and Motion Designer',
-        image: { src: imageBenjaminRussel },
+        // image: { src: imageBenjaminRussel },
       },
       {
         name: 'Isaac Gideon',
         role: 'Frontend Web Developer',
-        image: { src: imageBlakeReid },
+        // image: { src: imageBlakeReid },
       },
       {
         name: 'Adaobi Cynthia Onwuzulike',
         role: 'Product Manager',
-        image: { src: imageChelseaHagon },
+        // image: { src: imageChelseaHagon },
       },
       {
         name: 'Muhammed Yuguda',
         role: 'AI Engineer',
-        image: { src: imageDriesVincent },
+        // image: { src: imageDriesVincent },
       },
     ],
   },
@@ -133,11 +171,16 @@ function Team() {
                     <li key={person.name}>
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
+                          {/* <Image
                             alt=""
                             {...person.image}
                             className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
+                          /> */}
+                          <div className={`h-96 w-full flex items-center justify-center ${getPastelColor(person.name)} transition duration-500 motion-safe:group-hover:scale-105`}>
+                            <span className="text-6xl font-bold text-neutral-700">
+                              {getInitials(person.name)}
+                            </span>
+                          </div>
                           <div className="absolute inset-0 flex flex-col justify-end bg-linear-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
                               {person.name}
