@@ -14,7 +14,6 @@ import logoBassse3 from '@/images/clients/Bassse3/logo-light.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-light.svg'
 import logoBlueTide2 from '@/images/clients/BlueTide/logo-dark.svg'
 import logoEllum from '@/images/clients/Ellum/logo-light.svg'
-import logoSeiChat from '@/images/clients/Seichat/logo-light.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -23,7 +22,6 @@ const clients = [
   ['BASSSE3', logoBassse3],
   ['BLUETIDE', logoBlueTide],
   ['ELLUM', logoEllum],
-  ['SeiChat', logoSeiChat],
   ['SIMOLES', logoSimoles],
 ]
 
