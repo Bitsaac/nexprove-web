@@ -5,6 +5,7 @@ import { RootLayout } from '@/components/RootLayout'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://nexprove.com'),
   title: {
     template: '%s - Nexprove',
     default: 'Nexprove - Premium Product Development Studio | MVP to Scale',

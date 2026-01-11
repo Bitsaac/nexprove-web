@@ -53,7 +53,8 @@ export function ContactFormWithAlert() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
 
     try {
       const response = await fetch('/api/contact', {
@@ -81,8 +82,8 @@ export function ContactFormWithAlert() {
           },
           buttonsStyling: false
         })
-        // Reset form
-        e.currentTarget.reset()
+        // Reset form safely
+        form.reset()
       } else {
         await Swal.fire({
           title: 'Something went wrong',

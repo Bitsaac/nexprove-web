@@ -14,7 +14,7 @@ const navigation = [
       { title: 'Process', href: '/process' },
       { title: 'Blog', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
-      { title: 'Our Community', href: '/community' },
+      { title: 'Internship', href: '/internship' },
     ],
   },
   {

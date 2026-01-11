@@ -23,7 +23,8 @@ export function NewsletterFormWithAlert() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    const formData = new FormData(e.currentTarget)
+    const form = e.currentTarget
+    const formData = new FormData(form)
 
     try {
       const response = await fetch('/api/newsletter', {
@@ -51,8 +52,8 @@ export function NewsletterFormWithAlert() {
           },
           buttonsStyling: false
         })
-        // Reset form
-        e.currentTarget.reset()
+        // Reset form safely
+        form.reset()
       } else {
         await Swal.fire({
           title: 'Oops!',

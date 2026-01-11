@@ -1,5 +1,60 @@
 # Changelog
 
+## 2025-01-11 (Internship Pages - SEO & Accessibility)
+
+### Internship Program Launch
+
+- **[NEW]** Created comprehensive Bitsaac apprenticeship program pages:
+  - Main landing page (`/internship`) with program overview
+  - How it works page with 4-phase structure (Screening, Foundation, Contribution, Specialization)
+  - Code of Conduct page with community standards
+  - Why Exits Happen page for transparency and accountability
+  - Cohort 01 page with timeline and success criteria
+  - FAQ page with common questions
+  - Application page with form integration
+
+### SEO Implementation
+
+- Added comprehensive metadata to 5 server component internship pages
+- Implemented OpenGraph tags for Facebook/LinkedIn sharing (1200x630px images)
+- Added Twitter Card metadata for Twitter/X sharing
+- Included targeted keywords for apprenticeship, career development, work experience
+- Added canonical URLs for all internship pages
+- Added metadataBase to root layout for proper OG image URLs
+
+### Accessibility Improvements
+
+- Fixed 64 SVG accessibility warnings across all internship pages
+- Added `aria-hidden="true"` to all decorative SVG elements
+- Improved screen reader experience while maintaining visual design
+
+### Architecture & Code Quality
+
+- Created `/internship/layout.tsx` for global InternshipCTA component
+- Removed duplicate CTA imports from individual pages
+- Fixed Biome linter warnings:
+  - Sorted imports alphabetically
+  - Changed to proper TypeScript type-only import syntax (`import type`)
+  - Sorted exports alphabetically in component index files
+- All pages build successfully (32 static pages)
+
+### Build & Deployment
+
+- Verified successful Vercel build
+- Zero TypeScript errors
+- All linter checks passing (except optional GA warning)
+- Production ready
+
+### Pending Work
+
+- OG images need to be created (1200x630px):
+  - `/images/og/internship-main.png`
+  - `/images/og/internship-how-it-works.png`
+  - `/images/og/internship-exits.png`
+  - `/images/og/internship-code-of-conduct.png`
+  - `/images/og/internship-cohort-01.png`
+- Client component SEO (apply and faq pages) needs alternative approach
+
 ## 2025-07-23 (Recent Updates)
 
 ### SEO & Metadata Overhaul

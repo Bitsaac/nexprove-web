@@ -16,3 +16,6 @@ coverage/
 # Marketing strategy and internal documents
 marketing-strategy/
 .vercel
+docs/
+/docs
+CLAUDE.md
