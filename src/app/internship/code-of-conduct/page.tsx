@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'community standards',
     'professional behavior',
     'workplace ethics',
-    'apprenticeship expectations',
+    'internship expectations',
     'professional conduct',
     'respectful workplace',
     'Bitsaac community',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Code of Conduct | Bitsaac Community Standards',
     description:
-      'Clear community standards for the Bitsaac apprenticeship. Learn about expectations for respectful communication, professional behavior, and accountability.',
+      'Clear community standards for the Bitsaac internship. Learn about expectations for respectful communication, professional behavior, and accountability.',
     url: 'https://nexprove.com/internship/code-of-conduct',
     siteName: 'Nexprove',
     locale: 'en_US',

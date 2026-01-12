@@ -1,0 +1,43 @@
+# AI Crawler Information for Nexprove
+# https://nexprove.com/ai.txt
+
+# Company Information
+Company-Name: Nexprove
+Industry: Product Development Studio
+Website: https://nexprove.com
+Contact: info@nexprove.com
+
+# Services
+Services: MVP Development, Full-Stack Solutions, UI/UX Design, Team Extension, Consultation, Branding & Marketing, Automation & AI Integration
+
+# Key Pages
+Homepage: https://nexprove.com
+Services: https://nexprove.com/services
+About: https://nexprove.com/about-us
+Contact: https://nexprove.com/contact
+Case Studies: https://nexprove.com/work
+Blog: https://nexprove.com/blog
+
+# Bitsaac Internship Program
+Program-Name: Bitsaac by Nexprove
+Program-Type: Structured Internship Program
+Program-URL: https://nexprove.com/internship
+Program-Description: 3-6 month structured internship for early-career professionals gaining real-world work experience
+Application-URL: https://nexprove.com/internship/apply
+Current-Cohort: Cohort 01
+Application-Period: January 20 - February 16, 2026
+Tracks: Engineering, Design, Product, Marketing, Operations & Growth
+
+# Additional Resources
+LLM-Context: /llm.txt
+Sitemap: /sitemap.xml
+Robots: /robots.txt
+
+# Content Topics
+Topics: Product Development, MVP Development, Startup Strategy, Full-Stack Development, UI/UX Design, Web3, Team Scaling, Brand Strategy, Career Development, Mentorship
+
+# Technology Stack
+Tech-Stack: React, Next.js, TypeScript, Tailwind CSS, Supabase, Framer Motion, MDX
+
+# Last Updated
+Last-Modified: 2026-01-12

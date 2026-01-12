@@ -9,27 +9,27 @@ import { GridList, GridListItem } from '@/components/GridList'
 import { SectionIntro } from '@/components/SectionIntro'
 
 export const metadata: Metadata = {
-  title: 'Bitsaac Apprenticeship Program by Nexprove | Real Work Experience',
+  title: 'Bitsaac internship Program by Nexprove | Real Work Experience',
   description:
-    'Join Bitsaac, a 3-6 month structured apprenticeship program by Nexprove. Gain real, verifiable work experience building actual products. Perfect for early-career professionals ready to prove their skills.',
+    'Join Bitsaac, a 3-6 month structured internship program by Nexprove. Gain real, verifiable work experience building actual products. Perfect for early-career professionals ready to prove their skills.',
   keywords: [
-    'apprenticeship program',
+    'internship program',
     'early career development',
     'work experience program',
-    'software development apprenticeship',
-    'tech apprenticeship',
+    'software development internship',
+    'tech internship',
     'real work experience',
     'professional development',
     'portfolio building',
     'career development',
     'Bitsaac',
-    'Nexprove apprenticeship',
+    'Nexprove internship',
   ],
   authors: [{ name: 'Nexprove' }],
   openGraph: {
-    title: 'Bitsaac Apprenticeship Program | Real Work Experience by Nexprove',
+    title: 'Bitsaac internship Program | Real Work Experience by Nexprove',
     description:
-      'A 3-6 month structured apprenticeship helping early-career professionals gain real, verifiable work experience by building actual products.',
+      'A 3-6 month structured internship helping early-career professionals gain real, verifiable work experience by building actual products.',
     url: 'https://nexprove.com/internship',
     siteName: 'Nexprove',
     locale: 'en_US',
@@ -39,15 +39,15 @@ export const metadata: Metadata = {
         url: '/images/og/internship-main.png', // You'll need to create this
         width: 1200,
         height: 630,
-        alt: 'Bitsaac Apprenticeship Program by Nexprove',
+        alt: 'Bitsaac internship Program by Nexprove',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bitsaac Apprenticeship | Real Work Experience',
+    title: 'Bitsaac internship | Real Work Experience',
     description:
-      '3-6 month apprenticeship program helping early-career professionals gain real work experience building actual products.',
+      '3-6 month internship program helping early-career professionals gain real work experience building actual products.',
     images: ['/images/og/internship-main.png'],
   },
   alternates: {
@@ -75,7 +75,7 @@ function Hero() {
           </h1>
 
           <p className="mt-8 text-2xl font-medium text-neutral-700 [text-wrap:balance]">
-            A structured apprenticeship for real-world experience
+            A structured internship for real-world experience
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-neutral-600">
@@ -87,7 +87,7 @@ function Hero() {
               <strong className="font-semibold text-neutral-950">Bitsaac by Nexprove</strong> exists to close that gap.
             </p>
             <p>
-              This is a 3–6 month apprenticeship program designed for early-career
+              This is a 3–6 month internship program designed for early-career
               professionals who already have foundational skills and want to apply
               them in a real team, on real products.
             </p>
@@ -145,7 +145,7 @@ function WhatItIs() {
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>A <strong className="font-semibold text-neutral-950">learning-by-doing apprenticeship</strong></span>
+                  <span>A <strong className="font-semibold text-neutral-950">learning-by-doing internship</strong></span>
                 </li>
                 <li className="flex gap-x-3 items-start">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-green-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -292,7 +292,7 @@ function HowItWorks() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <SectionIntro title="How the program works">
         <p>
-          The Bitsaac apprenticeship is structured in clear phases, each
+          The Bitsaac internship is structured in clear phases, each
           building on the previous one.
         </p>
       </SectionIntro>

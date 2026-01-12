@@ -113,6 +113,17 @@ export function InternshipCTA() {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/internship/mentorship"
+                  className="group flex items-center gap-2 text-sm text-neutral-300 transition hover:text-white"
+                >
+                  <span>Become a mentor</span>
+                  <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </li>
+              <li>
                 <a
                   href="mailto:info@nexprove.com"
                   className="group flex items-center gap-2 text-sm text-neutral-300 transition hover:text-white"

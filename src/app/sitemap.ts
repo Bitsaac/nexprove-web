@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://nexprove.com'
@@ -100,6 +100,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
-    
+
+    // Internship pages (Bitsaac)
+    {
+      url: `${baseUrl}/internship`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/internship/apply`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/internship/cohort-01`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/internship/how-it-works`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/internship/faq`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/internship/why-exits-happen`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/internship/code-of-conduct`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/internship/mentorship`,
+      lastModified: '2026-01-12T00:00:00.000Z',
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+
   ]
 }

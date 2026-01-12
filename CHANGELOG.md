@@ -1,111 +1,66 @@
 # Changelog
 
-## 2025-01-11 (Internship Pages - SEO & Accessibility)
+## 2026-01-12 - SEO, Sitemap & AI Crawler Updates
 
-### Internship Program Launch
+### Added
+- ✅ Complete SEO metadata for `/internship/apply` page (via layout.tsx)
+- ✅ Complete SEO metadata for `/internship/faq` page (via layout.tsx)
+- ✅ All 8 internship pages to sitemap.xml with appropriate priorities
+- ✅ Created `/public/ai.txt` for AI crawlers with Bitsaac program information
+- ✅ Updated `/public/llm.txt` with Bitsaac internship program details
 
-- **[NEW]** Created comprehensive Bitsaac apprenticeship program pages:
-  - Main landing page (`/internship`) with program overview
-  - How it works page with 4-phase structure (Screening, Foundation, Contribution, Specialization)
-  - Code of Conduct page with community standards
-  - Why Exits Happen page for transparency and accountability
-  - Cohort 01 page with timeline and success criteria
-  - FAQ page with common questions
-  - Application page with form integration
+### Sitemap Updates
+- ✅ Added `/internship` (priority: 0.9, weekly updates)
+- ✅ Added `/internship/apply` (priority: 0.8, weekly updates)
+- ✅ Added `/internship/cohort-01` (priority: 0.8, weekly updates)
+- ✅ Added `/internship/how-it-works` (priority: 0.7, monthly)
+- ✅ Added `/internship/faq` (priority: 0.7, monthly)
+- ✅ Added `/internship/why-exits-happen` (priority: 0.6, monthly)
+- ✅ Added `/internship/code-of-conduct` (priority: 0.6, monthly)
+- ✅ Added `/internship/mentorship` (priority: 0.7, monthly)
 
-### SEO Implementation
+### AI Crawler Files
+- ✅ `/public/ai.txt` - Structured format for AI crawlers
+- ✅ `/public/llm.txt` - Enhanced with Bitsaac program information
+- ✅ Removed duplicate `/llm.txt` from root directory
 
-- Added comprehensive metadata to 5 server component internship pages
-- Implemented OpenGraph tags for Facebook/LinkedIn sharing (1200x630px images)
-- Added Twitter Card metadata for Twitter/X sharing
-- Included targeted keywords for apprenticeship, career development, work experience
-- Added canonical URLs for all internship pages
-- Added metadataBase to root layout for proper OG image URLs
+### Updated
+- ✅ OG image README status: marked all images as created and optimized
+- ✅ Documented compression results (93-96% size reduction, all <370KB)
 
-### Accessibility Improvements
+### Removed
+- 🗑️ Deleted `/docs/internship/` directory (5 outdated content files)
+- 🗑️ Deleted `/docs/FORMS_BUG_FIX.md` (historical documentation)
+- 🗑️ Deleted `/docs/INTERNSHIP_DESIGN_PLAN.md` (implementation completed)
+- 🗑️ Deleted duplicate `/llm.txt` from root (kept `/public/llm.txt`)
 
-- Fixed 64 SVG accessibility warnings across all internship pages
-- Added `aria-hidden="true"` to all decorative SVG elements
-- Improved screen reader experience while maintaining visual design
+### Remaining Documentation
+- ✅ `/docs/BITSAAC_APPLICATION_SETUP.md` - Email and application setup guide
+- ✅ `/docs/EMAIL_TROUBLESHOOTING.md` - Email troubleshooting guide
+- ✅ `/docs/GOOGLE_SHEETS_SETUP.md` - Google Sheets integration guide
+- ✅ `/docs/ai-generation-prompts.json` - AI prompts for OG image generation
+- ✅ `/public/images/og/README.md` - OG image specifications and status
 
-### Architecture & Code Quality
+### SEO & Discovery Status
+**All 8 internship pages now have:**
+1. ✅ Complete SEO metadata (title, description, keywords, OpenGraph, Twitter cards)
+2. ✅ Sitemap entries with appropriate priorities and update frequencies
+3. ✅ AI crawler documentation (ai.txt, llm.txt)
+4. ✅ Optimized OG images for social sharing
 
-- Created `/internship/layout.tsx` for global InternshipCTA component
-- Removed duplicate CTA imports from individual pages
-- Fixed Biome linter warnings:
-  - Sorted imports alphabetically
-  - Changed to proper TypeScript type-only import syntax (`import type`)
-  - Sorted exports alphabetically in component index files
-- All pages build successfully (32 static pages)
+### Build Status
+- ✅ Build passing: 33 pages generated
+- ✅ No TypeScript errors
+- ✅ No ESLint errors (only pre-existing GA warning)
+- ✅ All routes functional
+- ✅ Sitemap.xml generated successfully
 
-### Build & Deployment
-
-- Verified successful Vercel build
-- Zero TypeScript errors
-- All linter checks passing (except optional GA warning)
-- Production ready
-
-### Pending Work
-
-- OG images need to be created (1200x630px):
-  - `/images/og/internship-main.png`
-  - `/images/og/internship-how-it-works.png`
-  - `/images/og/internship-exits.png`
-  - `/images/og/internship-code-of-conduct.png`
-  - `/images/og/internship-cohort-01.png`
-- Client component SEO (apply and faq pages) needs alternative approach
-
-## 2025-07-23 (Recent Updates)
-
-### SEO & Metadata Overhaul
-
-- **[BREAKING]** Updated all page metadata with client acquisition-focused SEO copy
-- Removed geographic references from branding (Denmark → Premium global positioning)
-- Updated main layout title: "Premium Product Development Studio | MVP to Scale"
-- Enhanced home page metadata with startup-focused keywords
-- Optimized services page for "Product Development Services | Full-Stack Solutions"
-- Repositioned about page as "Your Premium Product Development Partner"
-- Contact page now uses action-oriented "Start Your Project Today" messaging
-- Blog page focuses on "Product Development Insights & Industry Trends"
-
-### UI/UX Fixes
-
-- Fixed white text visibility issue on CTA button in services page
-- Added explicit hover text color to maintain readability
-- Conducted responsive design audit for /services and /about-us pages
-
-### Build & Performance
-
-- Verified successful builds with npm run build (20 static pages generated)
-- Fixed apostrophe syntax error in contact page metadata
-- All ESLint checks passing with no warnings
-- Confirmed Vercel deployment readiness
-
-### Documentation Updates
-
-- Complete README.md overhaul with project details, tech stack, and structure
-- Added comprehensive project documentation
-- Updated getting started instructions and build commands
-
-## 2025-02-10
-
-- Update template to Tailwind CSS v4.0.6
+---
 
 ## Previous Changes
 
-### Website Rebranding
-
-- Complete Nexprove rebrand from previous template
-- Added services and about-us pages with custom content
-- Integrated case studies for BASSSE3, BlueTide, Ellum, Simoles, and rebrand projects
-- Added animated hero text switching between "Studio", "Africa", and "Our Kitchen"
-- Custom Nexprove logo and branding implementation
-
-### Technical Implementation
-
-- Next.js 14 app router setup with TypeScript
-- Framer Motion animations throughout the site
-- Custom components: Container, StylizedImage, AnimatedText
-- MDX processing for blog posts and case studies
-- Responsive design with Tailwind CSS 4.0
-- Zustand state management integration
+See git history for earlier changes including:
+- OG image creation and compression
+- Mentorship page creation
+- Route reversion from "apprenticeship" back to "internship"
+- InternshipCTA component updates

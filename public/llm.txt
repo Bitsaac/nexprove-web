@@ -31,6 +31,17 @@
 - **Build Tools**: Next.js app router, Vercel deployment ready
 - **Styling**: Utility-first CSS with custom components
 
+## Programs & Initiatives
+### Bitsaac Internship Program
+- **Name**: Bitsaac by Nexprove
+- **Type**: Structured 3-6 month internship program for early-career professionals
+- **Focus**: Real-world work experience on actual products
+- **Structure**: 4 phases - Screening, Foundation & Trial, Contribution, Specialization
+- **Tracks**: Engineering, Design, Product, Marketing, Operations & Growth
+- **Features**: Mentorship, verifiable proof of work, recommendations, certificates
+- **Website**: nexprove.com/internship
+- **Current Cohort**: Cohort 01 (Applications: Jan 20 - Feb 16, 2026)
+
 ## Content Topics & Expertise Areas
 - Product development methodologies
 - Startup launch strategies
@@ -41,6 +52,8 @@
 - Web3 and blockchain development
 - Brand strategy and marketing
 - Technology consulting and advisory
+- Career development and internship programs
+- Mentorship and professional growth
 
 ## Company Values & Approach
 - **Excellence**: Quality products with no shortcuts

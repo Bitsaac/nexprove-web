@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'Is this free labour?',
     answer:
-      "No. Participants join a structured apprenticeship focused on learning and employability. All work is supervised, credited, and designed to help participants build real proof of experience.",
+      "No. Participants join a structured internship focused on learning and employability. All work is supervised, credited, and designed to help participants build real proof of experience.",
   },
   {
     question: 'Are participants paid?',
@@ -125,7 +125,7 @@ export default function FAQPage() {
     <>
       <PageIntro eyebrow="FAQ" title="Common questions about Bitsaac">
         <p>
-          Answers to common questions about the Bitsaac apprenticeship program,
+          Answers to common questions about the Bitsaac internship program,
           including pay, exits, equity, and placements.
         </p>
       </PageIntro>

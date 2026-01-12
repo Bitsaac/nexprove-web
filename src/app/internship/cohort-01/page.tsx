@@ -8,21 +8,21 @@ import { Border } from '@/components/Border'
 import { ApplyCTAButton } from '@/components/internship'
 
 export const metadata: Metadata = {
-  title: 'Cohort 01 | Bitsaac Apprenticeship Applications Open',
+  title: 'Cohort 01 | Bitsaac internship Applications Open',
   description:
     'Join Bitsaac Cohort 01 (Feb-Aug 2026). Learn about the timeline, program phases, success criteria, and completion badge. Applications open January 20, 2026. Limited capacity.',
   keywords: [
     'cohort 01',
-    'apprenticeship cohort',
+    'internship cohort',
     'program timeline',
     'applications open',
     'Bitsaac 2026',
-    'apprenticeship enrollment',
+    'internship enrollment',
     'completion badge',
     'success criteria',
   ],
   openGraph: {
-    title: 'Cohort 01 | Bitsaac Apprenticeship Applications Open',
+    title: 'Cohort 01 | Bitsaac internship Applications Open',
     description:
       'Join Bitsaac Cohort 01 starting February 2026. Learn about the timeline, success criteria, and completion recognition. Limited capacity - applications open January 20.',
     url: 'https://nexprove.com/internship/cohort-01',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cohort 01 | Bitsaac Apprenticeship',
+    title: 'Cohort 01 | Bitsaac internship',
     description:
       'Applications open Jan 20, 2026. Limited capacity. Learn about timeline, success criteria, and completion recognition.',
     images: ['/images/og/internship-cohort-01.png'],
@@ -448,7 +448,7 @@ export default function Cohort01Page() {
               <li className="flex gap-x-3">
                 <span className="text-neutral-950">✓</span>
                 <span>
-                  Completed at least 3 months of the Bitsaac Apprenticeship
+                  Completed at least 3 months of the Bitsaac internship
                 </span>
               </li>
               <li className="flex gap-x-3">

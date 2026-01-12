@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     'Transparent explanation of why program exits occur at Bitsaac. Learn about accountability standards, common reasons for exits, and how they\'re handled with respect and clarity.',
   keywords: [
     'program accountability',
-    'apprenticeship standards',
+    'internship standards',
     'professional expectations',
     'program transparency',
     'exit policy',
-    'apprenticeship requirements',
+    'internship requirements',
     'Bitsaac standards',
   ],
   openGraph: {
@@ -54,7 +54,7 @@ export default function WhyExitsHappenPage() {
     <>
       <PageIntro eyebrow="Transparency" title="Why exits happen">
         <p>
-          Bitsaac is a structured apprenticeship. Structure means expectations,
+          Bitsaac is a structured internship. Structure means expectations,
           boundaries, and accountability.
         </p>
         <p className="mt-4">

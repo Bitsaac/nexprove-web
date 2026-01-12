@@ -9,21 +9,21 @@ import { ApplyCTAButton } from '@/components/internship'
 export const metadata: Metadata = {
   title: 'How Bitsaac Works | Program Structure & Phases',
   description:
-    'Discover the Bitsaac apprenticeship structure: from screening to specialization. Learn about each phase, focus areas, key outcomes, and success criteria for the 3-6 month program.',
+    'Discover the Bitsaac internship structure: from screening to specialization. Learn about each phase, focus areas, key outcomes, and success criteria for the 3-6 month program.',
   keywords: [
-    'apprenticeship structure',
+    'internship structure',
     'program phases',
     'internship timeline',
-    'apprenticeship expectations',
+    'internship expectations',
     'career development program',
     'work experience phases',
     'professional training',
     'Bitsaac program',
   ],
   openGraph: {
-    title: 'How Bitsaac Works | Apprenticeship Program Structure',
+    title: 'How Bitsaac Works | internship Program Structure',
     description:
-      'Learn about Bitsaac\'s 4-phase apprenticeship structure: Screening, Foundation & Trial, Contribution, and Specialization. Clear expectations and outcomes for each phase.',
+      'Learn about Bitsaac\'s 4-phase internship structure: Screening, Foundation & Trial, Contribution, and Specialization. Clear expectations and outcomes for each phase.',
     url: 'https://nexprove.com/internship/how-it-works',
     siteName: 'Nexprove',
     locale: 'en_US',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: '/images/og/internship-how-it-works.png',
         width: 1200,
         height: 630,
-        alt: 'Bitsaac Apprenticeship Program Structure',
+        alt: 'Bitsaac internship Program Structure',
       },
     ],
   },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'How Bitsaac Works | Program Structure',
     description:
-      '4-phase apprenticeship structure with clear expectations and outcomes at each stage.',
+      '4-phase internship structure with clear expectations and outcomes at each stage.',
     images: ['/images/og/internship-how-it-works.png'],
   },
   alternates: {
@@ -138,7 +138,7 @@ export default function HowItWorksPage() {
     <>
       <PageIntro eyebrow="Program Structure" title="How Bitsaac works">
         <p>
-          The Bitsaac apprenticeship is built on clear phases, each designed to
+          The Bitsaac internship is built on clear phases, each designed to
           help you grow from learning to contributing to specializing.
         </p>
         <p className="mt-4">
