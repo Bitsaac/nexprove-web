@@ -1,6 +1,6 @@
 'use client'
 
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import { useState } from 'react'
 
 import { Container } from '@/components/Container'

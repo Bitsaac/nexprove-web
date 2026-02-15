@@ -1,13 +1,13 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { Border } from '@/components/Border'
+import { ContactFormWithAlert } from '@/components/ContactFormWithAlert'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
-import { ContactFormWithAlert } from '@/components/ContactFormWithAlert'
 
 
 function ContactDetails() {

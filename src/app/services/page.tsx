@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -485,6 +485,7 @@ export const metadata: Metadata = {
 export default function Services() {
   return (
     <>
+      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Required for JSON-LD SEO structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

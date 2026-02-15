@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -252,10 +252,7 @@ function Team() {
       </SectionIntro>
 
       <div className="mt-16">
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
-        >
+        <ul className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((person) => (
             <li key={person.name}>
               <FadeIn>
@@ -269,7 +266,7 @@ function Team() {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <ul role="list" className="flex flex-wrap gap-x-4 gap-y-2">
+                  <ul className="flex flex-wrap gap-x-4 gap-y-2">
                     {person.linkedin && (
                       <li>
                         <Link
@@ -378,6 +375,7 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <>
+      {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Required for JSON-LD SEO structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

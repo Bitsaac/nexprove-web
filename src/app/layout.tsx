@@ -1,4 +1,5 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
+import Script from 'next/script'
 
 import { RootLayout } from '@/components/RootLayout'
 
@@ -16,21 +17,20 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4MTNEYDHY0"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-4MTNEYDHY0');
-            `,
-          }}
-        />
-      </head>
       <body className="flex min-h-full flex-col">
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4MTNEYDHY0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-4MTNEYDHY0');
+          `}
+        </Script>
         <RootLayout>{children}</RootLayout>
       </body>
     </html>

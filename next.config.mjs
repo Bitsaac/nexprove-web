@@ -14,6 +14,15 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  async redirects() {
+    return [
+      {
+        source: '/about',
+        destination: '/about-us',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 function remarkMDXLayout(source, metaName) {
