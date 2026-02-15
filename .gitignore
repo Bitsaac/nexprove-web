@@ -18,7 +18,29 @@ marketing-strategy/
 .vercel
 docs/
 /docs
-.claude
-CLAUDE.md
 scripts
 ./public/images/og/ai-generation-prompts
+
+# Claude Code & AI Assistant files
+.claude/
+.claude/**/*
+*.claude
+.claude.json
+claude.json
+CLAUDE.md
+CLAUDE.local.md
+
+# Claude Skills
+skills/
+.skills/
+*/skills/
+**/.skills/
+
+# AI Agent outputs and tracking (keep project docs in repo)
+# LEAD_CAPTURE_PROJECT.md - Keep this tracked
+agent-outputs/
+.agent-cache/
+
+# MCP Server configs (keep local only)
+.mcp/
+mcp-config.json
