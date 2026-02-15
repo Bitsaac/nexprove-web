@@ -454,12 +454,99 @@ export const metadata: Metadata = {
   title: 'Product Development Services | Full-Stack Solutions & MVP Development',
   description:
     'Complete product development services for startups and enterprises. Expert UI/UX design, full-stack development, team extension, consultation, and branding solutions. Launch faster, scale smarter.',
-  keywords: 'product development services, MVP development agency, full-stack development, UI UX design services, startup app development, custom software development, team extension services, product consultation, branding and marketing, web application development, mobile app development, enterprise software solutions, agile development team, product design agency, tech consulting services'
+  keywords: 'product development services, MVP development agency, full-stack development, UI UX design services, startup app development, custom software development, team extension services, product consultation, branding and marketing, web application development, mobile app development, enterprise software solutions, agile development team, product design agency, tech consulting services',
+  alternates: {
+    canonical: 'https://nexprove.com/services',
+  },
+  openGraph: {
+    title: 'Product Development Services - Full-Stack Solutions & MVP Development',
+    description: 'Complete product development services: UI/UX design, full-stack development, team extension, consultation, and branding.',
+    url: 'https://nexprove.com/services',
+    siteName: 'Nexprove',
+    images: [
+      {
+        url: '/images/og/services.png',
+        width: 1200,
+        height: 630,
+        alt: 'Nexprove Product Development Services',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Product Development Services - Full-Stack Solutions & MVP Development',
+    description: 'Complete product development services: UI/UX design, full-stack development, team extension, consultation, and branding.',
+    images: ['/images/og/services.png'],
+  },
 }
 
 export default function Services() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Product Development Services',
+            provider: {
+              '@type': 'Organization',
+              name: 'Nexprove',
+              url: 'https://nexprove.com',
+            },
+            areaServed: 'Worldwide',
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Product Development Services',
+              itemListElement: [
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'MVP & App Development',
+                    description: 'Fast, functional prototypes and scalable products using modern tech stacks.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Product Design',
+                    description: 'UI/UX design, branding, prototyping, and usability testing.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Team Extension',
+                    description: 'Dedicated developers and agile teams for long-term support.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Marketing & Launch Support',
+                    description: 'Brand identity, content strategy, and campaign ideas.',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Automation & AI Integration',
+                    description: 'Workflow automation and smart tools implementation.',
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />
       <Hero />
       <ServicesOverview />
       <ProductDesign />

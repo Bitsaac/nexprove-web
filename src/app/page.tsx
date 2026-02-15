@@ -19,10 +19,10 @@ import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
-  ['BASSSE3', logoBassse3],
-  ['BLUETIDE', logoBlueTide],
-  ['ELLUM', logoEllum],
-  ['SIMOLES', logoSimoles],
+  ['BASSSE3', logoBassse3, 'BASSSE3 Web3 mentorship platform - Nexprove client'],
+  ['BLUETIDE', logoBlueTide, 'BlueTide project - Nexprove development client'],
+  ['ELLUM', logoEllum, 'Ellum digital solution - Nexprove client'],
+  ['SIMOLES', logoSimoles, 'Simoles Web3 communication platform - Nexprove client'],
 ]
 
 function Clients() {
@@ -40,10 +40,10 @@ function Clients() {
             role="list"
             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
-            {clients.map(([client, logo]) => (
+            {clients.map(([client, logo, altText]) => (
               <li key={client}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image src={logo} alt={altText} unoptimized />
                 </FadeIn>
               </li>
             ))}
@@ -81,7 +81,7 @@ function CaseStudies({
                     <span className="absolute inset-0 rounded-3xl" />
                     <Image
                       src={caseStudy.logo}
-                      alt={caseStudy.client}
+                      alt={`${caseStudy.client} - ${caseStudy.service} project by Nexprove`}
                       className="h-16 w-16"
                       unoptimized
                     />
@@ -162,17 +162,64 @@ export const metadata: Metadata = {
   description:
     'Turn your startup idea into reality with Nexprove. We deliver MVP development, full-stack solutions, UI/UX design, and team extension services that help businesses launch faster and scale globally.',
   keywords: 'product development studio, MVP development, startup app development, full-stack development, UI UX design agency, custom software development, mobile app development, web application development, product design agency, startup tech partner',
+  alternates: {
+    canonical: 'https://nexprove.com',
+  },
+  openGraph: {
+    title: 'Nexprove - Premium Product Development Studio',
+    description: 'Turn your startup idea into reality. MVP development, full-stack solutions, and team extension services.',
+    url: 'https://nexprove.com',
+    siteName: 'Nexprove',
+    images: [
+      {
+        url: '/images/og/home.png',
+        width: 1200,
+        height: 630,
+        alt: 'Nexprove - Premium Product Development Studio',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nexprove - Premium Product Development Studio',
+    description: 'Turn your startup idea into reality. MVP development, full-stack solutions, and team extension services.',
+    images: ['/images/og/home.png'],
+  },
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
+  const caseStudies = (await loadCaseStudies()).slice(0, 3)
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Nexprove',
+            url: 'https://nexprove.com',
+            logo: 'https://nexprove.com/logo.png',
+            description: 'Premium product development studio helping startups launch MVPs and scale globally',
+            sameAs: [
+              'https://twitter.com/nexprove',
+              'https://linkedin.com/company/nexprove',
+            ],
+            contactPoint: {
+              '@type': 'ContactPoint',
+              email: 'info@nexprove.com',
+              contactType: 'Customer Service',
+            },
+          }),
+        }}
+      />
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            From  <b> <AnimatedText words={['Our Studio', 'Africa', "Our Kitchen"]} /> </b>to the World
+            Premium Product Development Studio — From MVP to Scale
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
             We are a growing tech collective focused on solving problems for startups and businesses with AI, design, development, and a strong community of rising talent. YES, we are building next-gen experiences.

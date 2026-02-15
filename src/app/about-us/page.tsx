@@ -2,17 +2,15 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
-import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { FadeIn } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
-import { PageIntro } from '@/components/PageIntro'
+
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
-import imageLaptop from '@/images/laptop.jpg'
+
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
 import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
@@ -25,10 +23,10 @@ function Hero() {
     <Container className="mt-24 sm:mt-32 md:mt-56">
       <FadeIn className="max-w-4xl">
         <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-          We&apos;re More Than a Tech Agency. We&apos;re Your Product Partner.
+          About Nexprove — Your Trusted Product Development Partner
         </h1>
         <p className="mt-6 text-xl text-neutral-600">
-          NexProve is a Nigerian-born, globally-minded team of designers, developers, and problem-solvers helping founders and businesses launch world-class products.
+          NexProve is a globally-minded team of designers, developers, and problem-solvers helping founders and businesses launch world-class products.
         </p>
         <div className="mt-10 flex gap-x-6">
           <Button href="/work">See Our Work</Button>
@@ -262,7 +260,7 @@ function Team() {
             <li key={person.name}>
               <FadeIn>
                 <div className="flex items-center gap-x-6">
-                  <Image {...person.image} alt="" className="h-16 w-16 rounded-full" unoptimized />
+                  <Image {...person.image} alt={`${person.name} - ${person.role} at Nexprove`} className="h-16 w-16 rounded-full" unoptimized />
                   <div>
                     <h3 className="font-display text-lg font-semibold text-neutral-950">
                       {person.name}
@@ -349,12 +347,85 @@ export const metadata: Metadata = {
   title: 'About Nexprove - Your Premium Product Development Partner',
   description:
     'Meet Nexprove: a globally-minded team of designers, developers, and problem-solvers helping founders and businesses launch world-class products. From MVP to scale, we deliver excellence.',
-  keywords: 'product development company, startup tech partner, global software agency, premium development team, product design experts, full-stack developers, agile development methodology, startup success stories, trusted tech partner, world-class development solutions, enterprise software development, innovative product solutions'
+  keywords: 'product development company, startup tech partner, global software agency, premium development team, product design experts, full-stack developers, agile development methodology, startup success stories, trusted tech partner, world-class development solutions, enterprise software development, innovative product solutions',
+  alternates: {
+    canonical: 'https://nexprove.com/about-us',
+  },
+  openGraph: {
+    title: 'About Nexprove - Your Premium Product Development Partner',
+    description: 'Meet our globally-minded team of designers, developers, and problem-solvers helping founders launch world-class products.',
+    url: 'https://nexprove.com/about-us',
+    siteName: 'Nexprove',
+    images: [
+      {
+        url: '/images/og/about.png',
+        width: 1200,
+        height: 630,
+        alt: 'About Nexprove - Premium Product Development Team',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Nexprove - Your Premium Product Development Partner',
+    description: 'Meet our globally-minded team of designers, developers, and problem-solvers helping founders launch world-class products.',
+    images: ['/images/og/about.png'],
+  },
 }
 
 export default function AboutUs() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Nexprove',
+            url: 'https://nexprove.com',
+            logo: 'https://nexprove.com/logo.png',
+            description: 'Premium product development studio helping startups and businesses launch world-class products',
+            foundingLocation: {
+              '@type': 'Place',
+              name: 'Lagos, Nigeria',
+            },
+            areaServed: 'Worldwide',
+            sameAs: [
+              'https://twitter.com/nexprove',
+              'https://linkedin.com/company/nexprove',
+            ],
+            employee: [
+              {
+                '@type': 'Person',
+                name: 'Kevin Dimoko',
+                jobTitle: 'Visual and Motion Designer',
+                sameAs: ['https://www.linkedin.com/in/kevin-dimoko-b2526219a/', 'https://www.behance.net/kevindimoko'],
+              },
+              {
+                '@type': 'Person',
+                name: 'Isaac Gideon',
+                jobTitle: 'Frontend Web Developer',
+                sameAs: ['https://www.linkedin.com/in/isaac-gideon-0813b11b3/', 'https://github.com/kleenpulse', 'https://vxrcel-studios.vercel.app'],
+              },
+              {
+                '@type': 'Person',
+                name: 'Adaobi Cynthia Onwuzulike',
+                jobTitle: 'Product Manager',
+                sameAs: ['https://www.linkedin.com/in/adaobi-onwuzulike-089858199'],
+              },
+              {
+                '@type': 'Person',
+                name: 'Muhammed Yuguda',
+                jobTitle: 'AI Engineer',
+                sameAs: ['https://linkedin.com/in/yuguda', 'https://github.com/yuguda999', 'https://yuguda999.github.io/portfolio-v2/'],
+              },
+            ],
+          }),
+        }}
+      />
       <Hero />
       <MissionAndStory />
       <Approach />

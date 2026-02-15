@@ -15,11 +15,36 @@ export const metadata: Metadata = {
   title: 'Nexprove Blog - Product Development Insights & Industry Trends',
   description:
     'Discover expert insights on product development, startup growth, and technology trends. Learn from Nexproves experience building successful digital products.',
-  keywords: 'product development blog, startup insights, technology trends, MVP development tips, full-stack development guides, product design insights, software development best practices, startup success stories'
+  keywords: 'product development blog, startup insights, technology trends, MVP development tips, full-stack development guides, product design insights, software development best practices, startup success stories',
+  alternates: {
+    canonical: 'https://nexprove.com/blog',
+  },
+  openGraph: {
+    title: 'Nexprove Blog - Product Development Insights & Industry Trends',
+    description: 'Expert insights on product development, startup growth, and technology trends from the Nexprove team.',
+    url: 'https://nexprove.com/blog',
+    siteName: 'Nexprove',
+    images: [
+      {
+        url: '/images/og/blog.png',
+        width: 1200,
+        height: 630,
+        alt: 'Nexprove Blog - Product Development Insights',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nexprove Blog - Product Development Insights & Industry Trends',
+    description: 'Expert insights on product development, startup growth, and technology trends from the Nexprove team.',
+    images: ['/images/og/blog.png'],
+  },
 }
 
 export default async function Blog() {
-  let articles = await loadArticles()
+  const articles = await loadArticles()
 
   return (
     <>
@@ -51,7 +76,7 @@ export default async function Blog() {
                         <dd className="mt-6 flex gap-x-4">
                           <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
                             <Image
-                              alt=""
+                              alt={`${article.author.name} - ${article.author.role}`}
                               {...article.author.image}
                               className="h-12 w-12 object-cover grayscale"
                             />
