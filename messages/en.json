@@ -47,13 +47,38 @@
     "title": "Let's work together",
     "description": "We can't wait to hear from you.",
     "form": {
+      "heading": "Work inquiries",
       "name": "Name",
       "email": "Email",
       "company": "Company",
       "phone": "Phone",
       "message": "Message",
       "budget": "Budget",
-      "submit": "Let's work together"
+      "budgetOptions": {
+        "25": "$25K – $50K",
+        "50": "$50K – $100K",
+        "100": "$100K – $150K",
+        "150": "More than $150K"
+      },
+      "submit": "Let's work together",
+      "submitting": "Sending..."
+    },
+    "alerts": {
+      "success": {
+        "title": "Thank You!",
+        "message": "We've received your message and will get back to you soon!",
+        "button": "Great!"
+      },
+      "error": {
+        "title": "Something went wrong",
+        "message": "Please try again or contact us directly.",
+        "button": "Try Again"
+      },
+      "network": {
+        "title": "Network Error",
+        "message": "Please check your connection and try again.",
+        "button": "Try Again"
+      }
     }
   },
   "common": {

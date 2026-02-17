@@ -47,13 +47,38 @@
     "title": "Lassen Sie uns zusammenarbeiten",
     "description": "Wir freuen uns auf Ihre Nachricht.",
     "form": {
+      "heading": "Projektanfragen",
       "name": "Name",
       "email": "E-Mail",
       "company": "Unternehmen",
       "phone": "Telefon",
       "message": "Nachricht",
       "budget": "Budget",
-      "submit": "Lassen Sie uns zusammenarbeiten"
+      "budgetOptions": {
+        "25": "25.000 $ – 50.000 $",
+        "50": "50.000 $ – 100.000 $",
+        "100": "100.000 $ – 150.000 $",
+        "150": "Mehr als 150.000 $"
+      },
+      "submit": "Lassen Sie uns zusammenarbeiten",
+      "submitting": "Wird gesendet..."
+    },
+    "alerts": {
+      "success": {
+        "title": "Vielen Dank!",
+        "message": "Wir haben Ihre Nachricht erhalten und werden uns bald bei Ihnen melden!",
+        "button": "Super!"
+      },
+      "error": {
+        "title": "Etwas ist schief gelaufen",
+        "message": "Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+        "button": "Erneut versuchen"
+      },
+      "network": {
+        "title": "Netzwerkfehler",
+        "message": "Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+        "button": "Erneut versuchen"
+      }
     }
   },
   "common": {

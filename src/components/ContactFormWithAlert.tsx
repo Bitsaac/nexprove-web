@@ -1,6 +1,7 @@
 'use client'
 
 import { useId, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import Swal from 'sweetalert2'
 import { Button } from '@/components/Button'
 import { FadeIn } from '@/components/FadeIn'
@@ -47,6 +48,7 @@ function RadioInput({
 }
 
 export function ContactFormWithAlert() {
+  const t = useTranslations('contact')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -66,10 +68,10 @@ export function ContactFormWithAlert() {
 
       if (response.ok) {
         await Swal.fire({
-          title: 'Thank You!',
-          text: result.message || "We've received your message and will get back to you soon!",
+          title: t('alerts.success.title'),
+          text: result.message || t('alerts.success.message'),
           icon: 'success',
-          confirmButtonText: 'Great!',
+          confirmButtonText: t('alerts.success.button'),
           confirmButtonColor: '#0f0f0f',
           background: '#ffffff',
           color: '#0f0f0f',
@@ -86,10 +88,10 @@ export function ContactFormWithAlert() {
         form.reset()
       } else {
         await Swal.fire({
-          title: 'Something went wrong',
-          text: result.error || 'Please try again or contact us directly.',
+          title: t('alerts.error.title'),
+          text: result.error || t('alerts.error.message'),
           icon: 'error',
-          confirmButtonText: 'Try Again',
+          confirmButtonText: t('alerts.error.button'),
           confirmButtonColor: '#dc2626',
           background: '#ffffff',
           color: '#0f0f0f',
@@ -105,10 +107,10 @@ export function ContactFormWithAlert() {
       }
     } catch (error) {
       await Swal.fire({
-        title: 'Network Error',
-        text: 'Please check your connection and try again.',
+        title: t('alerts.network.title'),
+        text: t('alerts.network.message'),
         icon: 'error',
-        confirmButtonText: 'Try Again',
+        confirmButtonText: t('alerts.network.button'),
         confirmButtonColor: '#dc2626',
         background: '#ffffff',
         color: '#0f0f0f',
@@ -130,42 +132,42 @@ export function ContactFormWithAlert() {
     <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Work inquiries
+          {t('form.heading')}
         </h2>
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
-          <TextInput label="Name" name="name" autoComplete="name" required />
+          <TextInput label={t('form.name')} name="name" autoComplete="name" required />
           <TextInput
-            label="Email"
+            label={t('form.email')}
             type="email"
             name="email"
             autoComplete="email"
             required
           />
           <TextInput
-            label="Company"
+            label={t('form.company')}
             name="company"
             autoComplete="organization"
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
-          <TextInput label="Message" name="message" />
+          <TextInput label={t('form.phone')} type="tel" name="phone" autoComplete="tel" />
+          <TextInput label={t('form.message')} name="message" />
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
-              <legend className="text-base/6 text-neutral-500">Budget</legend>
+              <legend className="text-base/6 text-neutral-500">{t('form.budget')}</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
+                <RadioInput label={t('form.budgetOptions.25')} name="budget" value="25" />
+                <RadioInput label={t('form.budgetOptions.50')} name="budget" value="50" />
+                <RadioInput label={t('form.budgetOptions.100')} name="budget" value="100" />
+                <RadioInput label={t('form.budgetOptions.150')} name="budget" value="150" />
               </div>
             </fieldset>
           </div>
         </div>
-        <Button 
-          type="submit" 
-          className="mt-10" 
+        <Button
+          type="submit"
+          className="mt-10"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Sending...' : "Let's work together"}
+          {isSubmitting ? t('form.submitting') : t('form.submit')}
         </Button>
       </form>
     </FadeIn>
