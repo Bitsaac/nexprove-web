@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "blog": "Blog",
+    "contact": "Contact",
+    "process": "Process",
+    "internship": "Internship"
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "newsletter": {
+      "title": "Sign up for our newsletter",
+      "description": "Subscribe to get the latest design news, articles, resources and inspiration.",
+      "placeholder": "Email address",
+      "button": "Sign up",
+      "success": "Thank you for subscribing!",
+      "error": "Something went wrong. Please try again."
+    },
+    "copyright": "NexProve Agency Inc."
+  },
+  "cta": {
+    "getStarted": "Get Started",
+    "bookCall": "Book a Free Discovery Call",
+    "learnMore": "Learn More",
+    "seeOurWork": "See Our Work",
+    "startProject": "Start a Project",
+    "contactUs": "Contact Us",
+    "readMore": "Read More",
+    "viewAll": "See all"
+  },
+  "contact": {
+    "title": "Let's work together",
+    "description": "We can't wait to hear from you.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "message": "Message",
+      "budget": "Budget",
+      "submit": "Let's work together"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "backHome": "Back to home"
+  }
+}

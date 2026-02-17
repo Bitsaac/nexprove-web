@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "work": "Arbeiten",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "process": "Prozess",
+    "internship": "Praktikum"
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "services": "Dienstleistungen",
+    "newsletter": {
+      "title": "Newsletter abonnieren",
+      "description": "Abonnieren Sie unseren Newsletter für die neuesten Design-News, Artikel, Ressourcen und Inspiration.",
+      "placeholder": "E-Mail-Adresse",
+      "button": "Anmelden",
+      "success": "Vielen Dank für Ihre Anmeldung!",
+      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut."
+    },
+    "copyright": "NexProve Agency Inc."
+  },
+  "cta": {
+    "getStarted": "Jetzt starten",
+    "bookCall": "Kostenlose Beratung buchen",
+    "learnMore": "Mehr erfahren",
+    "seeOurWork": "Unsere Arbeiten ansehen",
+    "startProject": "Projekt starten",
+    "contactUs": "Kontakt aufnehmen",
+    "readMore": "Weiterlesen",
+    "viewAll": "Alle ansehen"
+  },
+  "contact": {
+    "title": "Lassen Sie uns zusammenarbeiten",
+    "description": "Wir freuen uns auf Ihre Nachricht.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Unternehmen",
+      "phone": "Telefon",
+      "message": "Nachricht",
+      "budget": "Budget",
+      "submit": "Lassen Sie uns zusammenarbeiten"
+    }
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Ein Fehler ist aufgetreten",
+    "notFound": "Seite nicht gefunden",
+    "backHome": "Zurück zur Startseite"
+  }
+}

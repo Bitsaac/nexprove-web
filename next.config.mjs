@@ -10,6 +10,9 @@ import { remarkRehypeWrap } from 'remark-rehype-wrap'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import shiki from 'shiki'
 import { unifiedConditional } from 'unified-conditional'
+import createNextIntlPlugin from 'next-intl/plugin'
+
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -17,8 +20,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/about',
-        destination: '/about-us',
+        source: '/:locale/about',
+        destination: '/:locale/about-us',
         permanent: true,
       },
     ]
@@ -88,5 +91,5 @@ export default async function config() {
     },
   })
 
-  return withMDX(nextConfig)
+  return withNextIntl(withMDX(nextConfig))
 }
