@@ -17,6 +17,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
+import { LanguageSwitcherCompact } from '@/components/LanguageSwitcher'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
@@ -81,6 +82,7 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
+          <LanguageSwitcherCompact className="hidden sm:flex" />
           <Button href="/contact" invert={invert}>
             Contact us
           </Button>
