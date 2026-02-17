@@ -103,5 +103,49 @@
       "automation": "Automation & AI Integration",
       "automationDesc": "From content agents to workflow automation and knowledge bots — we help you implement smart tools that save time and scale effortlessly."
     }
+  },
+  "metadata": {
+    "home": {
+      "title": "Nexprove - Premium Product Development Studio | From Idea to Launch",
+      "description": "Turn your startup idea into reality with Nexprove. We deliver MVP development, full-stack solutions, UI/UX design, and team extension services that help businesses launch faster and scale globally.",
+      "ogTitle": "Nexprove - Premium Product Development Studio",
+      "ogDescription": "Turn your startup idea into reality. MVP development, full-stack solutions, and team extension services."
+    },
+    "about": {
+      "title": "About Nexprove - Your Premium Product Development Partner",
+      "description": "Meet the team behind Nexprove. We're a global product development studio helping startups and businesses build world-class digital products with modern technology and expert talent.",
+      "ogTitle": "About Nexprove - Premium Product Development Studio",
+      "ogDescription": "Global product development studio building world-class digital products for startups and businesses."
+    },
+    "services": {
+      "title": "Our Services - Full-Stack Solutions & MVP Development | Nexprove",
+      "description": "Comprehensive product development services: MVP development, UI/UX design, team extension, marketing support, and AI automation. Launch your product faster with Nexprove.",
+      "ogTitle": "Product Development Services - Nexprove",
+      "ogDescription": "MVP development, UI/UX design, team extension, and AI automation services for startups."
+    },
+    "contact": {
+      "title": "Contact Nexprove - Start Your Product Development Project Today",
+      "description": "Ready to build your product? Get in touch with Nexprove for a free consultation. We help startups and businesses launch successful digital products.",
+      "ogTitle": "Contact Nexprove - Start Your Project",
+      "ogDescription": "Get in touch for a free consultation. Let's build your product together."
+    },
+    "blog": {
+      "title": "Nexprove Blog - Product Development Insights & Industry Trends",
+      "description": "Expert insights on MVP development, startup growth, product design, and modern tech stacks. Learn from real-world case studies and industry best practices.",
+      "ogTitle": "Nexprove Blog - Product Development Insights",
+      "ogDescription": "Expert insights on MVP development, startup growth, and product design."
+    },
+    "work": {
+      "title": "Our Work - Product Development Case Studies | Nexprove",
+      "description": "Explore our portfolio of successful product launches. Real case studies showing how we help startups and businesses build and scale digital products.",
+      "ogTitle": "Case Studies - Nexprove Portfolio",
+      "ogDescription": "Portfolio of successful product launches and case studies."
+    },
+    "process": {
+      "title": "Our Process - How We Build Products | Nexprove",
+      "description": "Discover Nexprove's proven product development process. From discovery to launch, we follow a structured approach that delivers results on time and within budget.",
+      "ogTitle": "Our Development Process - Nexprove",
+      "ogDescription": "Our proven product development process from discovery to launch."
+    }
   }
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 
 import { Blockquote } from '@/components/Blockquote'
 import { ContactSection } from '@/components/ContactSection'
@@ -11,6 +12,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
+import type { Locale } from '@/i18n'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
@@ -237,10 +239,39 @@ function Values() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Our Process',
-  description:
-    'Our proven methodology combines strategic thinking, technical expertise, and collaborative partnerships to deliver exceptional results.',
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata.process' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    alternates: {
+      canonical: `https://nexprove.com/${locale}/process`,
+      languages: {
+        'en': 'https://nexprove.com/en/process',
+        'de': 'https://nexprove.com/de/process',
+        'x-default': 'https://nexprove.com/en/process',
+      },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://nexprove.com/${locale}/process`,
+      siteName: 'Nexprove',
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      alternateLocale: locale === 'en' ? 'de_DE' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+    },
+  }
 }
 
 export default function Process() {

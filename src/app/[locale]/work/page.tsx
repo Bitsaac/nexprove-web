@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
@@ -129,10 +130,39 @@ function Clients() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Our Work',
-  description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata.work' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    alternates: {
+      canonical: `https://nexprove.com/${locale}/work`,
+      languages: {
+        'en': 'https://nexprove.com/en/work',
+        'de': 'https://nexprove.com/de/work',
+        'x-default': 'https://nexprove.com/en/work',
+      },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://nexprove.com/${locale}/work`,
+      siteName: 'Nexprove',
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      alternateLocale: locale === 'en' ? 'de_DE' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+    },
+  }
 }
 
 export default async function Work({

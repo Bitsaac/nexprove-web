@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/lib/navigation'
 
 import { ContactSection } from '@/components/ContactSection'
@@ -115,36 +116,49 @@ function CaseStudies({
 }
 
 
-export const metadata: Metadata = {
-  title: 'Nexprove - Premium Product Development Studio | From Idea to Launch',
-  description:
-    'Turn your startup idea into reality with Nexprove. We deliver MVP development, full-stack solutions, UI/UX design, and team extension services that help businesses launch faster and scale globally.',
-  keywords: 'product development studio, MVP development, startup app development, full-stack development, UI UX design agency, custom software development, mobile app development, web application development, product design agency, startup tech partner',
-  alternates: {
-    canonical: 'https://nexprove.com',
-  },
-  openGraph: {
-    title: 'Nexprove - Premium Product Development Studio',
-    description: 'Turn your startup idea into reality. MVP development, full-stack solutions, and team extension services.',
-    url: 'https://nexprove.com',
-    siteName: 'Nexprove',
-    images: [
-      {
-        url: '/images/og/home.png',
-        width: 1200,
-        height: 630,
-        alt: 'Nexprove - Premium Product Development Studio',
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata.home' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'product development studio, MVP development, startup app development, full-stack development, UI UX design agency, custom software development, mobile app development, web application development, product design agency, startup tech partner',
+    alternates: {
+      canonical: `https://nexprove.com/${locale}`,
+      languages: {
+        'en': 'https://nexprove.com/en',
+        'de': 'https://nexprove.com/de',
+        'x-default': 'https://nexprove.com/en',
       },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Nexprove - Premium Product Development Studio',
-    description: 'Turn your startup idea into reality. MVP development, full-stack solutions, and team extension services.',
-    images: ['/images/og/home.png'],
-  },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://nexprove.com/${locale}`,
+      siteName: 'Nexprove',
+      images: [
+        {
+          url: '/images/og/home.png',
+          width: 1200,
+          height: 630,
+          alt: t('ogTitle'),
+        },
+      ],
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      alternateLocale: locale === 'en' ? 'de_DE' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ['/images/og/home.png'],
+    },
+  }
 }
 
 export default async function Home({

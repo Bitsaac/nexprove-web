@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
@@ -12,36 +13,49 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
 import { Link } from '@/lib/navigation'
 
-export const metadata: Metadata = {
-  title: 'Nexprove Blog - Product Development Insights & Industry Trends',
-  description:
-    'Discover expert insights on product development, startup growth, and technology trends. Learn from Nexproves experience building successful digital products.',
-  keywords: 'product development blog, startup insights, technology trends, MVP development tips, full-stack development guides, product design insights, software development best practices, startup success stories',
-  alternates: {
-    canonical: 'https://nexprove.com/blog',
-  },
-  openGraph: {
-    title: 'Nexprove Blog - Product Development Insights & Industry Trends',
-    description: 'Expert insights on product development, startup growth, and technology trends from the Nexprove team.',
-    url: 'https://nexprove.com/blog',
-    siteName: 'Nexprove',
-    images: [
-      {
-        url: '/images/og/blog.png',
-        width: 1200,
-        height: 630,
-        alt: 'Nexprove Blog - Product Development Insights',
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata.blog' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'product development blog, startup insights, technology trends, MVP development tips, full-stack development guides, product design insights, software development best practices, startup success stories',
+    alternates: {
+      canonical: `https://nexprove.com/${locale}/blog`,
+      languages: {
+        'en': 'https://nexprove.com/en/blog',
+        'de': 'https://nexprove.com/de/blog',
+        'x-default': 'https://nexprove.com/en/blog',
       },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Nexprove Blog - Product Development Insights & Industry Trends',
-    description: 'Expert insights on product development, startup growth, and technology trends from the Nexprove team.',
-    images: ['/images/og/blog.png'],
-  },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://nexprove.com/${locale}/blog`,
+      siteName: 'Nexprove',
+      images: [
+        {
+          url: '/images/og/blog.png',
+          width: 1200,
+          height: 630,
+          alt: t('ogTitle'),
+        },
+      ],
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      alternateLocale: locale === 'en' ? 'de_DE' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ['/images/og/blog.png'],
+    },
+  }
 }
 
 export default async function Blog({

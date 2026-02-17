@@ -103,5 +103,49 @@
       "automation": "Automatisierung & KI-Integration",
       "automationDesc": "Von Content-Agenten über Workflow-Automatisierung bis zu Wissens-Bots — wir helfen Ihnen, smarte Tools zu implementieren, die Zeit sparen und mühelos skalieren."
     }
+  },
+  "metadata": {
+    "home": {
+      "title": "Nexprove - Premium Produktentwicklungsstudio | Von der Idee zum Launch",
+      "description": "Verwandeln Sie Ihre Startup-Idee in die Realität mit Nexprove. Wir liefern MVP-Entwicklung, Full-Stack-Lösungen, UI/UX-Design und Team-Erweiterung, die Unternehmen helfen, schneller zu starten und global zu skalieren.",
+      "ogTitle": "Nexprove - Premium Produktentwicklungsstudio",
+      "ogDescription": "Verwandeln Sie Ihre Startup-Idee in die Realität. MVP-Entwicklung, Full-Stack-Lösungen und Team-Erweiterung."
+    },
+    "about": {
+      "title": "Über Nexprove - Ihr Premium Produktentwicklungspartner",
+      "description": "Lernen Sie das Team hinter Nexprove kennen. Wir sind ein globales Produktentwicklungsstudio, das Startups und Unternehmen hilft, erstklassige digitale Produkte mit moderner Technologie und Expertentalent zu entwickeln.",
+      "ogTitle": "Über Nexprove - Premium Produktentwicklungsstudio",
+      "ogDescription": "Globales Produktentwicklungsstudio für erstklassige digitale Produkte für Startups und Unternehmen."
+    },
+    "services": {
+      "title": "Unsere Dienstleistungen - Full-Stack-Lösungen & MVP-Entwicklung | Nexprove",
+      "description": "Umfassende Produktentwicklungsdienstleistungen: MVP-Entwicklung, UI/UX-Design, Team-Erweiterung, Marketing-Support und KI-Automatisierung. Starten Sie Ihr Produkt schneller mit Nexprove.",
+      "ogTitle": "Produktentwicklungsdienstleistungen - Nexprove",
+      "ogDescription": "MVP-Entwicklung, UI/UX-Design, Team-Erweiterung und KI-Automatisierung für Startups."
+    },
+    "contact": {
+      "title": "Kontakt Nexprove - Starten Sie Ihr Produktentwicklungsprojekt heute",
+      "description": "Bereit, Ihr Produkt zu entwickeln? Kontaktieren Sie Nexprove für eine kostenlose Beratung. Wir helfen Startups und Unternehmen, erfolgreiche digitale Produkte zu starten.",
+      "ogTitle": "Kontakt Nexprove - Starten Sie Ihr Projekt",
+      "ogDescription": "Kontaktieren Sie uns für eine kostenlose Beratung. Lassen Sie uns Ihr Produkt gemeinsam entwickeln."
+    },
+    "blog": {
+      "title": "Nexprove Blog - Einblicke in Produktentwicklung & Branchentrends",
+      "description": "Experteneinblicke zu MVP-Entwicklung, Startup-Wachstum, Produktdesign und modernen Tech-Stacks. Lernen Sie aus realen Fallstudien und Best Practices der Branche.",
+      "ogTitle": "Nexprove Blog - Einblicke in Produktentwicklung",
+      "ogDescription": "Experteneinblicke zu MVP-Entwicklung, Startup-Wachstum und Produktdesign."
+    },
+    "work": {
+      "title": "Unsere Arbeiten - Produktentwicklungs-Fallstudien | Nexprove",
+      "description": "Erkunden Sie unser Portfolio erfolgreicher Produktlaunches. Echte Fallstudien zeigen, wie wir Startups und Unternehmen helfen, digitale Produkte zu entwickeln und zu skalieren.",
+      "ogTitle": "Fallstudien - Nexprove Portfolio",
+      "ogDescription": "Portfolio erfolgreicher Produktlaunches und Fallstudien."
+    },
+    "process": {
+      "title": "Unser Prozess - Wie wir Produkte entwickeln | Nexprove",
+      "description": "Entdecken Sie Nexproves bewährten Produktentwicklungsprozess. Von der Entdeckung bis zum Launch folgen wir einem strukturierten Ansatz, der Ergebnisse pünktlich und im Budget liefert.",
+      "ogTitle": "Unser Entwicklungsprozess - Nexprove",
+      "ogDescription": "Unser bewährter Produktentwicklungsprozess von der Entdeckung bis zum Launch."
+    }
   }
 }

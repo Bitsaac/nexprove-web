@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/lib/navigation'
 
 import { Button } from '@/components/Button'
@@ -11,6 +12,7 @@ import { GridPattern } from '@/components/GridPattern'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { getSchemaAddresses, getSchemaContactPoints } from '@/lib/offices'
+import type { Locale } from '@/i18n'
 
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
@@ -341,36 +343,49 @@ function FinalCTA() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'About Nexprove - Your Premium Product Development Partner',
-  description:
-    'Meet Nexprove: a globally-minded team of designers, developers, and problem-solvers helping founders and businesses launch world-class products. From MVP to scale, we deliver excellence.',
-  keywords: 'product development company, startup tech partner, global software agency, premium development team, product design experts, full-stack developers, agile development methodology, startup success stories, trusted tech partner, world-class development solutions, enterprise software development, innovative product solutions',
-  alternates: {
-    canonical: 'https://nexprove.com/about-us',
-  },
-  openGraph: {
-    title: 'About Nexprove - Your Premium Product Development Partner',
-    description: 'Meet our globally-minded team of designers, developers, and problem-solvers helping founders launch world-class products.',
-    url: 'https://nexprove.com/about-us',
-    siteName: 'Nexprove',
-    images: [
-      {
-        url: '/images/og/about.png',
-        width: 1200,
-        height: 630,
-        alt: 'About Nexprove - Premium Product Development Team',
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata.about' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'product development company, startup tech partner, global software agency, premium development team, product design experts, full-stack developers, agile development methodology, startup success stories, trusted tech partner, world-class development solutions, enterprise software development, innovative product solutions',
+    alternates: {
+      canonical: `https://nexprove.com/${locale}/about-us`,
+      languages: {
+        'en': 'https://nexprove.com/en/about-us',
+        'de': 'https://nexprove.com/de/about-us',
+        'x-default': 'https://nexprove.com/en/about-us',
       },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'About Nexprove - Your Premium Product Development Partner',
-    description: 'Meet our globally-minded team of designers, developers, and problem-solvers helping founders launch world-class products.',
-    images: ['/images/og/about.png'],
-  },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://nexprove.com/${locale}/about-us`,
+      siteName: 'Nexprove',
+      images: [
+        {
+          url: '/images/og/about.png',
+          width: 1200,
+          height: 630,
+          alt: t('ogTitle'),
+        },
+      ],
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      alternateLocale: locale === 'en' ? 'de_DE' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ['/images/og/about.png'],
+    },
+  }
 }
 
 export default function AboutUs() {

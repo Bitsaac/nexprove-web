@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/lib/navigation'
 
 import { Border } from '@/components/Border'
@@ -8,6 +9,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
+import type { Locale } from '@/i18n'
 
 
 function ContactDetails() {
@@ -57,10 +59,40 @@ function ContactDetails() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Contact Nexprove - Start Your Project Today',
-  description: 'Ready to build your next big idea? Get in touch with Nexprove for a free consultation. Let\'s discuss how we can help you launch faster and scale smarter.',
-  keywords: 'contact product development agency, startup consultation, free project quote, MVP development consultation, custom software inquiry, product design consultation, development team hire, project discovery call'
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata.contact' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'contact product development agency, startup consultation, free project quote, MVP development consultation, custom software inquiry, product design consultation, development team hire, project discovery call',
+    alternates: {
+      canonical: `https://nexprove.com/${locale}/contact`,
+      languages: {
+        'en': 'https://nexprove.com/en/contact',
+        'de': 'https://nexprove.com/de/contact',
+        'x-default': 'https://nexprove.com/en/contact',
+      },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://nexprove.com/${locale}/contact`,
+      siteName: 'Nexprove',
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      alternateLocale: locale === 'en' ? 'de_DE' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+    },
+  }
 }
 
 export default function Contact() {

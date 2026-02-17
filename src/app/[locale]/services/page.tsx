@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/lib/navigation'
 
 import { Blockquote } from '@/components/Blockquote'
@@ -13,6 +14,7 @@ import { List, ListItem } from '@/components/List'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
+import type { Locale } from '@/i18n'
 import { TagList, TagListItem } from '@/components/TagList'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
@@ -450,36 +452,49 @@ function FinalCTA() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Product Development Services | Full-Stack Solutions & MVP Development',
-  description:
-    'Complete product development services for startups and enterprises. Expert UI/UX design, full-stack development, team extension, consultation, and branding solutions. Launch faster, scale smarter.',
-  keywords: 'product development services, MVP development agency, full-stack development, UI UX design services, startup app development, custom software development, team extension services, product consultation, branding and marketing, web application development, mobile app development, enterprise software solutions, agile development team, product design agency, tech consulting services',
-  alternates: {
-    canonical: 'https://nexprove.com/services',
-  },
-  openGraph: {
-    title: 'Product Development Services - Full-Stack Solutions & MVP Development',
-    description: 'Complete product development services: UI/UX design, full-stack development, team extension, consultation, and branding.',
-    url: 'https://nexprove.com/services',
-    siteName: 'Nexprove',
-    images: [
-      {
-        url: '/images/og/services.png',
-        width: 1200,
-        height: 630,
-        alt: 'Nexprove Product Development Services',
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'metadata.services' })
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: 'product development services, MVP development agency, full-stack development, UI UX design services, startup app development, custom software development, team extension services, product consultation, branding and marketing, web application development, mobile app development, enterprise software solutions, agile development team, product design agency, tech consulting services',
+    alternates: {
+      canonical: `https://nexprove.com/${locale}/services`,
+      languages: {
+        'en': 'https://nexprove.com/en/services',
+        'de': 'https://nexprove.com/de/services',
+        'x-default': 'https://nexprove.com/en/services',
       },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Product Development Services - Full-Stack Solutions & MVP Development',
-    description: 'Complete product development services: UI/UX design, full-stack development, team extension, consultation, and branding.',
-    images: ['/images/og/services.png'],
-  },
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: `https://nexprove.com/${locale}/services`,
+      siteName: 'Nexprove',
+      images: [
+        {
+          url: '/images/og/services.png',
+          width: 1200,
+          height: 630,
+          alt: t('ogTitle'),
+        },
+      ],
+      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      alternateLocale: locale === 'en' ? 'de_DE' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ['/images/og/services.png'],
+    },
+  }
 }
 
 export default function Services() {
