@@ -5,6 +5,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { SocialMedia } from '@/components/SocialMedia'
 import { NewsletterFormWithAlert } from '@/components/NewsletterFormWithAlert'
+import { offices } from '@/lib/offices'
 
 const navigation = [
   {
@@ -88,6 +89,33 @@ export function Footer() {
             </div>
           </div>
         </div>
+
+        {/* Global Offices Section */}
+        <div className="border-t border-neutral-950/10 pt-16 pb-8">
+          <h3 className="font-display text-sm font-semibold tracking-wider text-neutral-950 mb-8">
+            Global Offices
+          </h3>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {offices.map((office) => (
+              <div key={office.id} className="text-sm">
+                <p className="font-semibold text-neutral-950">
+                  {office.name}
+                  {office.isPrimary && ' (HQ)'}
+                </p>
+                <address className="mt-2 not-italic text-neutral-600">
+                  {office.address.street}
+                  <br />
+                  {office.address.city}, {office.address.region}
+                  <br />
+                  {office.address.postalCode}
+                  <br />
+                  {office.address.country}
+                </address>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className='py-12 border-t border-neutral-950/10 w-full'>
           <Link href="/" aria-label="Home" className="block w-full">
             <Logo className="w-full h-auto" fillOnHover />

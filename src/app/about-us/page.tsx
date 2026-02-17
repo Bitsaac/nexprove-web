@@ -10,6 +10,7 @@ import { GridPattern } from '@/components/GridPattern'
 
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
+import { getSchemaAddresses, getSchemaContactPoints } from '@/lib/offices'
 
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
@@ -66,7 +67,7 @@ function MissionAndStory() {
             </h2>
             <div className="mt-6 space-y-6 text-base text-neutral-600">
               <p>
-                Founded in Lagos, Nigeria, NexProve started with a simple idea: global product development shouldn&apos;t be slow, overpriced, or out of reach. With a talented team across design, engineering, and marketing, we&apos;ve grown into a trusted partner for founders worldwide.
+                NexProve started with a simple idea: global product development shouldn&apos;t be slow, overpriced, or out of reach. With a talented team across design, engineering, and marketing distributed across multiple continents, we&apos;ve grown into a trusted partner for founders worldwide.
               </p>
             </div>
           </FadeIn>
@@ -182,14 +183,14 @@ function GlobalReach() {
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:order-first">
           <FadeIn>
             <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-              Local Roots, Global Reach
+              Global Operations, Local Expertise
             </h2>
             <div className="mt-6 space-y-6 text-base text-neutral-600">
               <p>
-                With HQ in Nigeria and clients across continents, NexProve combines Africa&apos;s rising talent with global delivery standards. Lower overhead means competitive pricing—without compromising quality.
+                With offices across Canada, the United States, Germany, and Nigeria, NexProve operates as a truly global product development studio. Our international presence enables us to serve clients worldwide with premium development services tailored to local market needs.
               </p>
               <p>
-                Our distributed team works across time zones to provide round-the-clock support, bringing diverse perspectives and cost-effective solutions to every project.
+                Our distributed team works seamlessly across time zones to provide comprehensive support, bringing diverse perspectives and expertise to every project. From North America to Europe and Africa, we combine regional insights with world-class engineering standards.
               </p>
             </div>
           </FadeIn>
@@ -247,7 +248,7 @@ function Team() {
         title="The People Behind NexProve"
       >
         <p>
-          UI/UX Designers, Full-Stack Engineers, and Growth Marketers working across Nigeria and beyond, united by our passion for building exceptional products.
+          UI/UX Designers, Full-Stack Engineers, and Growth Marketers distributed globally, united by our passion for building exceptional products.
         </p>
       </SectionIntro>
 
@@ -386,11 +387,12 @@ export default function AboutUs() {
             url: 'https://nexprove.com',
             logo: 'https://nexprove.com/logo.png',
             description: 'Premium product development studio helping startups and businesses launch world-class products',
-            foundingLocation: {
+            address: getSchemaAddresses(),
+            contactPoint: getSchemaContactPoints(),
+            areaServed: {
               '@type': 'Place',
-              name: 'Lagos, Nigeria',
+              name: 'Worldwide',
             },
-            areaServed: 'Worldwide',
             sameAs: [
               'https://twitter.com/nexprove',
               'https://linkedin.com/company/nexprove',

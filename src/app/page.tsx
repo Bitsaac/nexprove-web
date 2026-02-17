@@ -17,6 +17,7 @@ import logoEllum from '@/images/clients/Ellum/logo-light.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { getSchemaAddresses, getSchemaContactPoints, getPrimaryOffice } from '@/lib/offices'
 
 const clients = [
   ['BASSSE3', logoBassse3, 'BASSSE3 Web3 mentorship platform - Nexprove client'],
@@ -205,15 +206,16 @@ export default async function Home() {
             url: 'https://nexprove.com',
             logo: 'https://nexprove.com/logo.png',
             description: 'Premium product development studio helping startups launch MVPs and scale globally',
+            address: getSchemaAddresses(),
+            contactPoint: getSchemaContactPoints(),
+            areaServed: {
+              '@type': 'Place',
+              name: 'Worldwide',
+            },
             sameAs: [
               'https://twitter.com/nexprove',
               'https://linkedin.com/company/nexprove',
             ],
-            contactPoint: {
-              '@type': 'ContactPoint',
-              email: 'info@nexprove.com',
-              contactType: 'Customer Service',
-            },
           }),
         }}
       />

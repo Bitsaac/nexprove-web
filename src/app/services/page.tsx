@@ -203,14 +203,14 @@ function ProductDevelopment() {
 
 function TeamExtension() {
   return (
-    <Section 
-      id="team-extension" 
-      title="Extend Your Team with Top African Talent" 
+    <Section
+      id="team-extension"
+      title="Extend Your Team with Global Development Talent"
       image={{ src: imageMeeting, shape: 2 }}
     >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Need extra hands? We provide dedicated developers and designers who integrate seamlessly with your team, offering quality at globally competitive rates.
+          Need extra hands? We provide dedicated developers and designers who integrate seamlessly with your team, offering premium quality with flexible engagement models to match your project needs.
         </p>
       </div>
 
