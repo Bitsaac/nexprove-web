@@ -65,18 +65,18 @@
   "home": {
     "hero": {
       "title": "Premium Produktentwicklungsstudio — Vom MVP zur Skalierung",
-      "description": "Wir helfen Startups und Unternehmen, erstklassige digitale Produkte auf den Markt zu bringen. Von der Idee zum marktreifen MVP in Wochen, nicht Monaten."
+      "description": "Wir sind ein wachsendes Tech-Kollektiv, das sich darauf konzentriert, Probleme für Startups und Unternehmen mit KI, Design, Entwicklung und einer starken Gemeinschaft aufstrebender Talente zu lösen. JA, wir bauen Next-Gen-Erlebnisse."
     },
     "services": {
-      "title": "Was wir tun",
+      "title": "Wir helfen dabei, Erlebnisse zu schaffen, die Ihre Bedürfnisse widerspiegeln",
       "mvp": "MVP & App-Entwicklung",
-      "mvpDesc": "React, Next.js, Tailwind, moderne Tech-Stacks",
-      "team": "Team-Erweiterung",
-      "teamDesc": "Dedizierte Entwickler und agile Teams",
+      "mvpDesc": "Wir entwickeln schnelle, funktionale Prototypen und skalierbare Produkte mit modernen Tech-Stacks — React, Next.js, Tailwind, Supabase und mehr.",
+      "team": "Talent-Outsourcing",
+      "teamDesc": "Brauchen Sie zusätzliche Hände? Unsere Community verbindet Sie mit ausgebildeten Junior-Talenten, die von unserem Kernteam betreut werden — perfekt für langfristige Unterstützung oder Sprints.",
       "marketing": "Marketing & Launch-Support",
-      "marketingDesc": "Markenidentität, Content, Kampagnen",
+      "marketingDesc": "Wir hören nicht beim Launch auf. Unser Kreativteam unterstützt Sie mit Markenidentität, Landingpages, Pitch Decks, Content-Strategie und Kampagnenideen, um Ihr Publikum zu erreichen.",
       "automation": "Automatisierung & KI-Integration",
-      "automationDesc": "Workflow-Automatisierung, smarte Tools"
+      "automationDesc": "Von Content-Agenten über Workflow-Automatisierung bis zu Wissens-Bots — wir helfen Ihnen, smarte Tools zu implementieren, die Zeit sparen und mühelos skalieren."
     }
   }
 }

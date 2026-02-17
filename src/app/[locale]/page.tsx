@@ -2,22 +2,21 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Link } from '@/lib/navigation'
 
-import { AnimatedText } from '@/components/AnimatedText'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
+import { Hero } from '@/components/home/Hero'
+import { Services } from '@/components/home/Services'
 import logoBassse3 from '@/images/clients/Bassse3/logo-light.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-light.svg'
 import logoBlueTide2 from '@/images/clients/BlueTide/logo-dark.svg'
 import logoEllum from '@/images/clients/Ellum/logo-light.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-light.svg'
-import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
-import { getSchemaAddresses, getSchemaContactPoints, getPrimaryOffice } from '@/lib/offices'
+import { getSchemaAddresses, getSchemaContactPoints } from '@/lib/offices'
+import type { Locale } from '@/i18n'
 
 const clients = [
   ['BASSSE3', logoBassse3, 'BASSSE3 Web3 mentorship platform - Nexprove client'],
@@ -115,48 +114,6 @@ function CaseStudies({
   )
 }
 
-function Services() {
-  return (
-    <>
-      <SectionIntro
-        eyebrow="Services"
-        title="We help create experiences that reflect your needs"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          Knowing that your ideas might be one or more - we provide the tools and skills to bring them to life.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <div className="lg:flex lg:items-center lg:justify-end">
-          <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
-              <StylizedImage
-                src={imageLaptop}
-                sizes="(min-width: 1024px) 41rem, 31rem"
-                className="justify-center lg:justify-end"
-              />
-            </FadeIn>
-          </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="MVP & App Development">
-              We build fast, functional prototypes and scalable products using modern tech stacks — React, Next.js, Tailwind, Supabase, and more.
-            </ListItem>
-            <ListItem title="Talent Outsourcing">
-              Need extra hands? Our community connects you with trained junior talent, mentored by our core team — perfect for long-term support or sprints.
-            </ListItem>
-            <ListItem title="Marketing & Launch Support">
-              We don’t stop at launch. Our creative team supports you with brand identity, landing pages, pitch decks, content strategy, and campaign ideas to help you reach your audience.
-            </ListItem>
-            <ListItem title="Automation & AI Integration">
-              From content agents to workflow automation and knowledge bots — we help you implement smart tools that save time and scale effortlessly.
-            </ListItem>
-          </List>
-        </div>
-      </Container>
-    </>
-  )
-}
 
 export const metadata: Metadata = {
   title: 'Nexprove - Premium Product Development Studio | From Idea to Launch',
@@ -190,8 +147,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function Home() {
-  const caseStudies = (await loadCaseStudies()).slice(0, 3)
+export default async function Home({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}) {
+  const caseStudies = (await loadCaseStudies(locale)).slice(0, 3)
 
   return (
     <>
@@ -219,16 +180,7 @@ export default async function Home() {
           }),
         }}
       />
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-            Premium Product Development Studio — From MVP to Scale
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We are a growing tech collective focused on solving problems for startups and businesses with AI, design, development, and a strong community of rising talent. YES, we are building next-gen experiences.
-          </p>
-        </FadeIn>
-      </Container>
+      <Hero />
 
       <Clients />
 

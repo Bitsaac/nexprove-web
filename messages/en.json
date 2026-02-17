@@ -65,18 +65,18 @@
   "home": {
     "hero": {
       "title": "Premium Product Development Studio — From MVP to Scale",
-      "description": "We help startups and businesses launch world-class digital products. From idea to market-ready MVP in weeks, not months."
+      "description": "We are a growing tech collective focused on solving problems for startups and businesses with AI, design, development, and a strong community of rising talent. YES, we are building next-gen experiences."
     },
     "services": {
-      "title": "What We Do",
+      "title": "We help create experiences that reflect your needs",
       "mvp": "MVP & App Development",
-      "mvpDesc": "React, Next.js, Tailwind, modern tech stacks",
-      "team": "Team Extension",
-      "teamDesc": "Dedicated developers and agile teams",
+      "mvpDesc": "We build fast, functional prototypes and scalable products using modern tech stacks — React, Next.js, Tailwind, Supabase, and more.",
+      "team": "Talent Outsourcing",
+      "teamDesc": "Need extra hands? Our community connects you with trained junior talent, mentored by our core team — perfect for long-term support or sprints.",
       "marketing": "Marketing & Launch Support",
-      "marketingDesc": "Brand identity, content, campaigns",
+      "marketingDesc": "We don't stop at launch. Our creative team supports you with brand identity, landing pages, pitch decks, content strategy, and campaign ideas to help you reach your audience.",
       "automation": "Automation & AI Integration",
-      "automationDesc": "Workflow automation, smart tools"
+      "automationDesc": "From content agents to workflow automation and knowledge bots — we help you implement smart tools that save time and scale effortlessly."
     }
   }
 }
