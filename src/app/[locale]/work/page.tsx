@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
@@ -8,6 +7,7 @@ import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { type Locale } from '@/i18n'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
 import logoBassse3 from '@/images/clients/Bassse3/logo-dark.svg'
@@ -16,6 +16,7 @@ import logoEllum from '@/images/clients/Ellum/logo-dark.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { Link } from '@/lib/navigation'
 
 function CaseStudies({
   caseStudies,
@@ -134,8 +135,12 @@ export const metadata: Metadata = {
     'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
 }
 
-export default async function Work() {
-  let caseStudies = await loadCaseStudies()
+export default async function Work({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}) {
+  let caseStudies = await loadCaseStudies(locale)
 
   return (
     <>

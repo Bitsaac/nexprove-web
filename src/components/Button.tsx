@@ -1,5 +1,6 @@
-import Link from 'next/link'
 import clsx from 'clsx'
+
+import { Link } from '@/lib/navigation'
 
 type ButtonProps = {
   invert?: boolean

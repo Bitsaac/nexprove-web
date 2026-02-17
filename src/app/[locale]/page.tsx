@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/lib/navigation'
 
 import { AnimatedText } from '@/components/AnimatedText'
 import { ContactSection } from '@/components/ContactSection'

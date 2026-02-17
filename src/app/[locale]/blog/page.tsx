@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
+import { type Locale } from '@/i18n'
 import { PageIntro } from '@/components/PageIntro'
 import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
+import { Link } from '@/lib/navigation'
 
 export const metadata: Metadata = {
   title: 'Nexprove Blog - Product Development Insights & Industry Trends',
@@ -43,8 +44,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function Blog() {
-  const articles = await loadArticles()
+export default async function Blog({
+  params: { locale },
+}: {
+  params: { locale: Locale }
+}) {
+  const articles = await loadArticles(locale)
 
   return (
     <>

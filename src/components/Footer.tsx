@@ -1,8 +1,7 @@
-import Link from 'next/link'
-
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
+import { Link } from '@/lib/navigation'
 import { SocialMedia } from '@/components/SocialMedia'
 import { NewsletterFormWithAlert } from '@/components/NewsletterFormWithAlert'
 import { offices } from '@/lib/offices'
