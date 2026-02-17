@@ -1,3 +1,7 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
@@ -6,47 +10,49 @@ import { SocialMedia } from '@/components/SocialMedia'
 import { NewsletterFormWithAlert } from '@/components/NewsletterFormWithAlert'
 import { offices } from '@/lib/offices'
 
-const navigation = [
-  {
-    title: 'Company',
-    links: [
-      { title: 'About', href: '/about-us' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
-      { title: 'Internship', href: '/internship' },
-    ],
-  },
-  {
-    title: 'Work',
-    links: [
-      { title: 'Bassse3', href: '/work/bassse3' },
-      { title: 'Ellum', href: '/work/ellum' },
-      { title: 'Bluetide', href: '/work/bluetide' },
-      { title: 'Simoles', href: '/work/simoles' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
-    ],
-  },
-  {
-    title: 'Services',
-    links: [
-      { title: 'Product Design', href: '/services#product-design' },
-      { title: 'Product Development', href: '/services#product-development' },
-      { title: 'Team Extension', href: '/services#team-extension' },
-      { title: 'Consultation', href: '/services#consultation' },
-      { title: 'Branding & Marketing', href: '/services#branding-marketing' },
-    ],
-  },
-]
-
 function Navigation() {
+  const t = useTranslations('footer')
+
+  const navigation = [
+    {
+      title: t('company'),
+      links: [
+        { title: t('about'), href: '/about-us' },
+        { title: t('process'), href: '/process' },
+        { title: t('blog'), href: '/blog' },
+        { title: t('contactUs'), href: '/contact' },
+        { title: t('internship'), href: '/internship' },
+      ],
+    },
+    {
+      title: t('work'),
+      links: [
+        { title: 'Bassse3', href: '/work/bassse3' },
+        { title: 'Ellum', href: '/work/ellum' },
+        { title: 'Bluetide', href: '/work/bluetide' },
+        { title: 'Simoles', href: '/work/simoles' },
+        {
+          title: (
+            <>
+              {t('seeAll')} <span aria-hidden="true">&rarr;</span>
+            </>
+          ),
+          href: '/work',
+        },
+      ],
+    },
+    {
+      title: t('services'),
+      links: [
+        { title: t('productDesign'), href: '/services#product-design' },
+        { title: t('productDevelopment'), href: '/services#product-development' },
+        { title: t('teamExtension'), href: '/services#team-extension' },
+        { title: t('consultation'), href: '/services#consultation' },
+        { title: t('brandingMarketing'), href: '/services#branding-marketing' },
+      ],
+    },
+  ]
+
   return (
     <nav>
       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
@@ -76,6 +82,8 @@ function Navigation() {
 
 
 export function Footer() {
+  const t = useTranslations('footer')
+
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
       <FadeIn>
@@ -123,7 +131,7 @@ export function Footer() {
         <div className=" mb-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <SocialMedia />
           <p className="text-sm text-neutral-700">
-            © NexProve Agency Inc. {new Date().getFullYear()}
+            © {t('copyright')} {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>
