@@ -1,7 +1,8 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from '@/lib/navigation'
+import { usePathname } from '@/lib/navigation'
+import { useRouter } from 'next/navigation'
 import clsx from 'clsx'
 
 import { type Locale, locales } from '@/i18n'
@@ -24,8 +25,10 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const switchLocale = (newLocale: Locale) => {
     if (newLocale === locale) return
 
-    // Use next-intl's router which handles locale switching properly
-    router.replace(pathname, { locale: newLocale })
+    // Construct the new path with the new locale
+    // pathname is already locale-free thanks to next-intl's usePathname
+    const newPath = `/${newLocale}${pathname}`
+    router.replace(newPath)
   }
 
   return (
@@ -63,8 +66,10 @@ export function LanguageSwitcherCompact({ className }: { className?: string }) {
   const switchLocale = (newLocale: Locale) => {
     if (newLocale === locale) return
 
-    // Use next-intl's router which handles locale switching properly
-    router.replace(pathname, { locale: newLocale })
+    // Construct the new path with the new locale
+    // pathname is already locale-free thanks to next-intl's usePathname
+    const newPath = `/${newLocale}${pathname}`
+    router.replace(newPath)
   }
 
   return (
