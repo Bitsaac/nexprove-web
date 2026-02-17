@@ -90,8 +90,8 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Global Offices Section */}
-        <div className="border-t border-neutral-950/10 pt-16 pb-8">
+        {/* Global Offices Section - Commented out for now, uncomment when addresses are finalized */}
+        {/* <div className="border-t border-neutral-950/10 pt-16 pb-8">
           <h3 className="font-display text-sm font-semibold tracking-wider text-neutral-950 mb-8">
             Global Offices
           </h3>
@@ -114,7 +114,7 @@ export function Footer() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className='py-12 border-t border-neutral-950/10 w-full'>
           <Link href="/" aria-label="Home" className="block w-full">

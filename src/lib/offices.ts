@@ -57,7 +57,7 @@ export const offices: Office[] = [
     region: 'CA',
     isPrimary: true,
     address: {
-      street: '[YOUR CANADA VIRTUAL OFFICE ADDRESS]',
+      street: '_',
       city: 'Toronto',
       region: 'Ontario',
       postalCode: 'M5H 2N2',
@@ -93,7 +93,7 @@ export const offices: Office[] = [
     region: 'US',
     isPrimary: false,
     address: {
-      street: '[YOUR US VIRTUAL OFFICE ADDRESS]',
+      street: '_',
       city: 'New York',
       region: 'NY',
       postalCode: '10001',
@@ -129,7 +129,7 @@ export const offices: Office[] = [
     region: 'DE',
     isPrimary: false,
     address: {
-      street: '[YOUR GERMANY VIRTUAL OFFICE ADDRESS]',
+      street: '_',
       city: 'Berlin',
       region: 'Berlin',
       postalCode: '10115',
