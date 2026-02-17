@@ -96,23 +96,15 @@ export async function POST(req: NextRequest) {
       })
     ])
 
-    // Log for backup
-    console.log('Newsletter subscription processed:', {
-      email,
-      timestamp: newsletterData.timestamp
-    })
-
     return NextResponse.json({ 
       success: true, 
       message: 'Welcome aboard! Check your email for a special welcome message.' 
     })
 
   } catch (error) {
-    console.error('Newsletter subscription error:', error)
-    
-    // Check if it's a Resend API error
-    if (error && typeof error === 'object' && 'message' in error) {
-      console.error('Resend API error:', error.message)
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Newsletter subscription error:', error)
     }
 
     return NextResponse.json(

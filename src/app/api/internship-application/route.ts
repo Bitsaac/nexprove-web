@@ -109,35 +109,20 @@ export async function POST(req: NextRequest) {
       </div>
     `
 
-    console.log('=== BITSAAC APPLICATION RECEIVED ===')
-    console.log('Applicant:', applicationData.name)
-    console.log('Role:', applicationData.role)
-    console.log('Email:', applicationData.email)
-    console.log('RESEND_API_KEY configured:', !!process.env.RESEND_API_KEY)
-    console.log('FROM_EMAIL:', process.env.FROM_EMAIL)
-    console.log('CONTACT_EMAIL:', process.env.CONTACT_EMAIL)
-
-    console.log('=== ATTEMPTING TO SEND EMAIL ===')
-
     // Send email notification to team
-    let emailResult
     try {
-      emailResult = await resend.emails.send({
+      await resend.emails.send({
         from: process.env.FROM_EMAIL || 'onboarding@resend.dev',
         to: process.env.CONTACT_EMAIL || 'admin@nexprove.com',
         subject: `🎯 Bitsaac Application: ${applicationData.name} (${applicationData.role})`,
         html: emailHtml,
         replyTo: applicationData.email,
       })
-
-      console.log('=== EMAIL SENT SUCCESSFULLY ===')
-      console.log('Email ID:', emailResult.data?.id)
-      console.log('Full email result:', JSON.stringify(emailResult, null, 2))
-    } catch (emailError: any) {
-      console.error('=== EMAIL SEND FAILED ===')
-      console.error('Error message:', emailError.message)
-      console.error('Error stack:', emailError.stack)
-      console.error('Full error:', JSON.stringify(emailError, null, 2))
+    } catch (emailError) {
+      // Only log in development
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Email send failed:', emailError)
+      }
       // Continue anyway - we'll still log the application
     }
 
@@ -163,20 +148,13 @@ export async function POST(req: NextRequest) {
             team_experience: applicationData.team_experience,
           }),
         })
-        console.log('=== LOGGED TO GOOGLE SHEETS ===')
       } catch (sheetsError) {
         // Don't fail the request if sheets logging fails
-        console.error('Google Sheets logging failed:', sheetsError)
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Google Sheets logging failed:', sheetsError)
+        }
       }
     }
-
-    // Log for backup
-    console.log('Bitsaac application processed:', {
-      name: applicationData.name,
-      email: applicationData.email,
-      role: applicationData.role,
-      timestamp: applicationData.timestamp,
-    })
 
     return NextResponse.json({
       success: true,
@@ -184,10 +162,9 @@ export async function POST(req: NextRequest) {
         "Thank you for applying to Bitsaac Cohort 01! We've received your application and will review it within 5-7 business days. Check your email for confirmation.",
     })
   } catch (error) {
-    console.error('Bitsaac application error:', error)
-
-    if (error && typeof error === 'object' && 'message' in error) {
-      console.error('Error message:', error.message)
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Bitsaac application error:', error)
     }
 
     return NextResponse.json(

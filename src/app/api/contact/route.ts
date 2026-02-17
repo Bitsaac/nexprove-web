@@ -35,21 +35,9 @@ export async function POST(req: NextRequest) {
     }
 
     // Format budget display
-    const budgetDisplay = contactData.budget 
+    const budgetDisplay = contactData.budget
       ? `$${contactData.budget}K${contactData.budget === '150' ? '+' : ` - $${parseInt(contactData.budget) + 25}K`}`
       : 'Not specified'
-
-    // Debug: Log environment variables (without revealing full API key)
-    console.log('=== EMAIL DEBUG INFO ===')
-    console.log('RESEND_API_KEY configured:', !!process.env.RESEND_API_KEY)
-    console.log('FROM_EMAIL:', process.env.FROM_EMAIL)
-    console.log('CONTACT_EMAIL:', process.env.CONTACT_EMAIL)
-    console.log('Contact data:', {
-      name: contactData.name,
-      email: contactData.email,
-      company: contactData.company || 'N/A',
-      budgetDisplay
-    })
 
     // Send email notification to your team
     const emailHtml = `
@@ -103,41 +91,12 @@ export async function POST(req: NextRequest) {
       </div>
     `
 
-    console.log('=== ATTEMPTING TO SEND EMAIL ===')
-    
-    try {
-      const emailResult = await resend.emails.send({
-        from: process.env.FROM_EMAIL || 'noreply@nexprove.com',
-        to: process.env.CONTACT_EMAIL || 'hello@nexprove.com',
-        subject: `🚀 New Lead: ${contactData.name} from ${contactData.company || 'N/A'} (${budgetDisplay})`,
-        html: emailHtml,
-        replyTo: contactData.email,
-      })
-
-      console.log('=== EMAIL SEND SUCCESS ===')
-      console.log('Resend response:', emailResult)
-      console.log('Email ID:', emailResult.data?.id)
-      
-    } catch (emailError) {
-      console.error('=== EMAIL SEND FAILED ===')
-      console.error('Resend error details:', emailError)
-      
-      if (emailError && typeof emailError === 'object') {
-        console.error('Error name:', (emailError as any).name)
-        console.error('Error message:', (emailError as any).message)
-        console.error('Error response:', (emailError as any).response?.data)
-      }
-      
-      throw emailError // Re-throw to trigger the main catch block
-    }
-
-    // Log for backup (optional)
-    console.log('Contact form submission processed:', {
-      name: contactData.name,
-      email: contactData.email,
-      company: contactData.company,
-      budget: budgetDisplay,
-      timestamp: contactData.timestamp
+    await resend.emails.send({
+      from: process.env.FROM_EMAIL || 'noreply@nexprove.com',
+      to: process.env.CONTACT_EMAIL || 'hello@nexprove.com',
+      subject: `🚀 New Lead: ${contactData.name} from ${contactData.company || 'N/A'} (${budgetDisplay})`,
+      html: emailHtml,
+      replyTo: contactData.email,
     })
 
     return NextResponse.json({ 
@@ -146,11 +105,9 @@ export async function POST(req: NextRequest) {
     })
 
   } catch (error) {
-    console.error('Contact form error:', error)
-    
-    // Check if it's a Resend API error
-    if (error && typeof error === 'object' && 'message' in error) {
-      console.error('Resend API error:', error.message)
+    // Only log in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Contact form error:', error)
     }
 
     return NextResponse.json(
