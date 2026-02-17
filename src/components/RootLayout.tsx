@@ -10,6 +10,7 @@ import {
 } from 'react'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
@@ -59,6 +60,7 @@ function Header({
   invert?: boolean
 }) {
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
+  const t = useTranslations('cta')
 
   return (
     <Container>
@@ -83,7 +85,7 @@ function Header({
         <div className="flex items-center gap-x-8">
           <LanguageSwitcherCompact className="hidden sm:flex" />
           <Button href="/contact" invert={invert}>
-            Contact us
+            {t('contactUs')}
           </Button>
           <button
             ref={toggleRef}
@@ -141,15 +143,17 @@ function NavigationItem({
 }
 
 function Navigation() {
+  const t = useTranslations('nav')
+
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about-us">About Us</NavigationItem>
+        <NavigationItem href="/work">{t('work')}</NavigationItem>
+        <NavigationItem href="/about-us">{t('about')}</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/process">{t('process')}</NavigationItem>
+        <NavigationItem href="/blog">{t('blog')}</NavigationItem>
       </NavigationRow>
     </nav>
   )

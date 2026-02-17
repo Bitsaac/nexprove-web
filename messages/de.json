@@ -49,5 +49,22 @@
     "error": "Ein Fehler ist aufgetreten",
     "notFound": "Seite nicht gefunden",
     "backHome": "Zurück zur Startseite"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Produktentwicklungsstudio — Vom MVP zur Skalierung",
+      "description": "Wir helfen Startups und Unternehmen, erstklassige digitale Produkte auf den Markt zu bringen. Von der Idee zum marktreifen MVP in Wochen, nicht Monaten."
+    },
+    "services": {
+      "title": "Was wir tun",
+      "mvp": "MVP & App-Entwicklung",
+      "mvpDesc": "React, Next.js, Tailwind, moderne Tech-Stacks",
+      "team": "Team-Erweiterung",
+      "teamDesc": "Dedizierte Entwickler und agile Teams",
+      "marketing": "Marketing & Launch-Support",
+      "marketingDesc": "Markenidentität, Content, Kampagnen",
+      "automation": "Automatisierung & KI-Integration",
+      "automationDesc": "Workflow-Automatisierung, smarte Tools"
+    }
   }
 }

@@ -49,5 +49,22 @@
     "error": "An error occurred",
     "notFound": "Page not found",
     "backHome": "Back to home"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Product Development Studio — From MVP to Scale",
+      "description": "We help startups and businesses launch world-class digital products. From idea to market-ready MVP in weeks, not months."
+    },
+    "services": {
+      "title": "What We Do",
+      "mvp": "MVP & App Development",
+      "mvpDesc": "React, Next.js, Tailwind, modern tech stacks",
+      "team": "Team Extension",
+      "teamDesc": "Dedicated developers and agile teams",
+      "marketing": "Marketing & Launch Support",
+      "marketingDesc": "Brand identity, content, campaigns",
+      "automation": "Automation & AI Integration",
+      "automationDesc": "Workflow automation, smart tools"
+    }
   }
 }
