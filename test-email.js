@@ -7,7 +7,7 @@ const FROM_EMAIL = 'onboarding@resend.dev';
 const CONTACT_EMAIL = 'nexprove@gmail.com';
 
 const resend = new Resend(RESEND_API_KEY);
-
+4
 async function testContactForm() {
   console.log('\n=== Testing Contact Form Email ===');
   
