@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
-import { ContactSection } from '@/components/ContactSection'
+import { RegionalLeadForm } from '@/components/RegionalLeadForm'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
@@ -243,6 +243,57 @@ function CaseStudyPreview() {
   )
 }
 
+function Pricing() {
+  return (
+    <Container className="mt-24 sm:mt-32">
+      <FadeIn>
+        <Border className="border-t border-neutral-200 pt-16">
+          <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            Investition & Zeitplan
+          </h2>
+          <div className="mt-6 space-y-6 text-base text-neutral-600">
+            <p>
+              Maßgeschneiderte Logistikautomatisierung liegt typischerweise zwischen{' '}
+              <strong>€65.000 und €220.000</strong>, abhängig von Umfang und Komplexität.
+              Die meisten Projekte amortisieren sich innerhalb von 12-18 Monaten durch
+              operative Einsparungen.
+            </p>
+            <div className="grid gap-8 sm:grid-cols-3">
+              <div>
+                <h3 className="font-semibold text-neutral-950">
+                  Phase 1: Analyse
+                </h3>
+                <p className="mt-2 text-sm">
+                  2-3 Wochen: Prozessanalyse, Anforderungsaufnahme und technische
+                  Architektur-Design.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-950">
+                  Phase 2: Entwicklung
+                </h3>
+                <p className="mt-2 text-sm">
+                  10-16 Wochen: Iterative Entwicklung mit wöchentlichen Demos und
+                  kontinuierlichem Feedback.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-950">
+                  Phase 3: Einführung
+                </h3>
+                <p className="mt-2 text-sm">
+                  2-4 Wochen: Mitarbeiterschulung, Datenmigration, Parallel-Tests und
+                  Go-Live-Support.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Border>
+      </FadeIn>
+    </Container>
+  )
+}
+
 function Process() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
@@ -401,8 +452,13 @@ export default function LogisticsGermanyPage() {
       <Benefits />
       <Solutions />
       <CaseStudyPreview />
+      <Pricing />
       <Process />
-      <ContactSection />
+
+      {/* Regional Lead Capture Form */}
+      <Container className="mt-24 sm:mt-32 lg:mt-40">
+        <RegionalLeadForm region="DE" vertical="Logistics" />
+      </Container>
     </>
   )
 }
