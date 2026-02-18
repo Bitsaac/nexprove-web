@@ -105,9 +105,9 @@ export const offices: Office[] = [
     },
     contact: {
       phone: {
-        display: '+1 (XXX) XXX-XXXX',
-        e164: '+1XXXXXXXXXX',
-        local: '(XXX) XXX-XXXX'
+        display: process.env.NEXT_PUBLIC_PHONE_US_DISPLAY || '+1 (XXX) XXX-XXXX',
+        e164: process.env.NEXT_PUBLIC_PHONE_US || '+1XXXXXXXXXX',
+        local: process.env.NEXT_PUBLIC_PHONE_US_LOCAL || '(XXX) XXX-XXXX'
       },
       email: 'info@nexprove.com'
     },
