@@ -156,7 +156,7 @@ export default function LogisticsAutomationUSA() {
           <div className="mt-6 space-y-6 text-base text-neutral-600">
             <p>
               We build custom software tailored to your specific logistics
-              operations—whether you're running a regional LTL carrier, managing
+              operations—whether you&apos;re running a regional LTL carrier, managing
               a warehouse network, or operating a last-mile delivery fleet.
             </p>
           </div>

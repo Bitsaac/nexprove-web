@@ -89,7 +89,7 @@ export function RegionalLeadForm({
           Get a Free Consultation
         </h3>
         <p className="mt-2 text-sm text-neutral-600">
-          Share your project details and we'll send you a tailored proposal with timeline and investment breakdown within 48 hours.
+          Share your project details and we&apos;ll send you a tailored proposal with timeline and investment breakdown within 48 hours.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
