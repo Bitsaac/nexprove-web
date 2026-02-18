@@ -57,7 +57,7 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="Discover" image={{ src: imageWhiteboard, alt: "Product discovery phase - team mapping user journeys on whiteboard" }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           We begin every partnership with deep discovery to understand your{' '}
@@ -97,7 +97,7 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Build" image={{ src: imageLaptop, alt: "Development phase - engineer building product features with code on laptop", shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Our development phase leverages the combined expertise of our leadership team
@@ -136,7 +136,7 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Deliver" image={{ src: imageMeeting, alt: "Product delivery phase - team presenting final product to stakeholders", shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Our delivery process focuses on seamless{' '}

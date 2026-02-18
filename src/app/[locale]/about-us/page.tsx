@@ -48,6 +48,7 @@ function MissionAndStory() {
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
             <StylizedImage
               src={imageWhiteboard}
+              alt="Product development team collaborating on whiteboard during brainstorming session"
               sizes="(min-width: 1024px) 41rem, 31rem"
               className="justify-center lg:justify-end"
             />
@@ -201,6 +202,7 @@ function GlobalReach() {
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
             <StylizedImage
               src={imageMeeting}
+              alt="Nexprove team members in collaborative meeting discussing product development strategy"
               sizes="(min-width: 1024px) 41rem, 31rem"
               className="justify-center lg:justify-start"
             />

@@ -8,7 +8,12 @@ export type { Locale }
 
 export default getRequestConfig(async ({ requestLocale }) => {
   // Enable static rendering
-  const locale = await requestLocale
+  let locale = await requestLocale
+
+  // Fallback to default locale if undefined
+  if (!locale) {
+    locale = defaultLocale
+  }
 
   return {
     locale,

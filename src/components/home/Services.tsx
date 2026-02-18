@@ -29,6 +29,7 @@ export function Services() {
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
               <StylizedImage
                 src={imageLaptop}
+                alt="Professional developer building custom web application"
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
               />

@@ -20,13 +20,12 @@ const shapes = [
   },
 ]
 
-type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
-
 export function StylizedImage({
   shape = 0,
   className,
+  alt,
   ...props
-}: ImagePropsWithOptionalAlt & { shape?: 0 | 1 | 2 }) {
+}: ImageProps & { shape?: 0 | 1 | 2 }) {
   let id = useId()
   let { width, height, path } = shapes[shape]
 
@@ -42,7 +41,7 @@ export function StylizedImage({
           <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
             <foreignObject width={width} height={height}>
               <Image
-                alt=""
+                alt={alt}
                 className="w-full bg-neutral-100 object-cover"
                 style={{ aspectRatio: `${width} / ${height}` }}
                 {...props}

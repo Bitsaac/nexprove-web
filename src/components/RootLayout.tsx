@@ -194,6 +194,13 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
+      {/* Skip to main content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:m-4 focus:px-4 focus:py-2 focus:bg-neutral-950 focus:text-white focus:rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-950 focus:ring-offset-2"
+      >
+        Skip to main content
+      </a>
       <header>
         <div
           className="fixed top-0 right-0 left-0 z-40 backdrop-blur-md bg-white/85 border-b border-neutral-100/50 transition-all duration-300"
@@ -281,7 +288,9 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             interactive
           />
 
-          <main className="w-full flex-auto">{children}</main>
+          <main id="main-content" className="w-full flex-auto">
+            {children}
+          </main>
 
           <Footer />
         </motion.div>

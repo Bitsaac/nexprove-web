@@ -1,10 +1,35 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { checkRateLimit, getClientIp } from '@/lib/rate-limiter'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(req: NextRequest) {
   try {
+    // Rate limiting: 3 applications per hour (stricter for applications)
+    const clientIp = getClientIp(req)
+    const rateLimit = checkRateLimit(clientIp, {
+      maxRequests: 3,
+      windowMs: 60 * 60 * 1000, // 1 hour
+    })
+
+    if (!rateLimit.success) {
+      return NextResponse.json(
+        {
+          error:
+            'Too many application attempts. Please try again in an hour.',
+        },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimit.limit.toString(),
+            'X-RateLimit-Remaining': rateLimit.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimit.resetAt).toISOString(),
+          },
+        },
+      )
+    }
+
     const formData = await req.formData()
 
     const applicationData = {

@@ -130,7 +130,7 @@ function Section({
 
 function ProductDesign() {
   return (
-    <Section id="product-design" title="Product Design that Puts Users First" image={{ src: imageWhiteboard }}>
+    <Section id="product-design" title="Product Design that Puts Users First" image={{ src: imageWhiteboard, alt: "Design team sketching user interface wireframes on whiteboard" }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           From branding to UX wireframes, we design products that people love to use. Every pixel and flow is crafted with your users in mind.
@@ -157,9 +157,9 @@ function ProductDesign() {
 function ProductDevelopment() {
   return (
     <Section 
-      id="product-development" 
-      title="Full-Stack Development, Built for Scale" 
-      image={{ src: imageLaptop, shape: 1 }}
+      id="product-development"
+      title="Full-Stack Development, Built for Scale"
+      image={{ src: imageLaptop, alt: "Software developer coding full-stack web application on laptop", shape: 1 }}
       reverse
     >
       <div className="space-y-6 text-base text-neutral-600">
@@ -208,7 +208,7 @@ function TeamExtension() {
     <Section
       id="team-extension"
       title="Extend Your Team with Global Development Talent"
-      image={{ src: imageMeeting, shape: 2 }}
+      image={{ src: imageMeeting, alt: "Distributed development team collaborating in virtual meeting", shape: 2 }}
     >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
@@ -236,9 +236,9 @@ function TeamExtension() {
 function Consultation() {
   return (
     <Section 
-      id="consultation" 
-      title="Expert Product Consultation for Startups & Enterprises" 
-      image={{ src: imageWhiteboard }}
+      id="consultation"
+      title="Expert Product Consultation for Startups & Enterprises"
+      image={{ src: imageWhiteboard, alt: "Product consultant presenting strategic roadmap on whiteboard" }}
       reverse
     >
       <div className="space-y-6 text-base text-neutral-600">
@@ -267,9 +267,9 @@ function Consultation() {
 function BrandingMarketing() {
   return (
     <Section 
-      id="branding-marketing" 
-      title="Build Your Brand. Grow Your Market." 
-      image={{ src: imageLaptop, shape: 1 }}
+      id="branding-marketing"
+      title="Build Your Brand. Grow Your Market."
+      image={{ src: imageLaptop, alt: "Marketing professional creating digital brand strategy on laptop", shape: 1 }}
     >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
