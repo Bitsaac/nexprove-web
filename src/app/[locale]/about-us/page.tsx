@@ -61,7 +61,7 @@ function MissionAndStory() {
             </h2>
             <div className="mt-6 space-y-6 text-base text-neutral-600">
               <p>
-                To empower startups and businesses with affordable, high-quality, and scalable digital products—designed with care, built with precision, and delivered with speed.
+                To empower startups and businesses with exceptional, high-quality digital products that scale—designed with care, built with precision, and delivered with speed.
               </p>
             </div>
             
@@ -70,7 +70,7 @@ function MissionAndStory() {
             </h2>
             <div className="mt-6 space-y-6 text-base text-neutral-600">
               <p>
-                NexProve started with a simple idea: global product development shouldn&apos;t be slow, overpriced, or out of reach. With a talented team across design, engineering, and marketing distributed across multiple continents, we&apos;ve grown into a trusted partner for founders worldwide.
+                NexProve was founded on a clear vision: to deliver world-class product development with uncompromising quality and speed. With a talented team across design, engineering, and marketing distributed across multiple continents, we&apos;ve grown into a trusted partner for ambitious founders worldwide who demand excellence.
               </p>
             </div>
           </FadeIn>
