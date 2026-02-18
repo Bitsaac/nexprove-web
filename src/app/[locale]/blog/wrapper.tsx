@@ -20,6 +20,37 @@ export default async function BlogArticleWrapper({
 
   return (
     <>
+      {/* Article Schema for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: article.title,
+            description: article.description,
+            datePublished: article.date,
+            dateModified: article.date,
+            author: {
+              '@type': 'Person',
+              name: article.author.name,
+              jobTitle: article.author.role,
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'NexProve',
+              url: 'https://nexprove.com',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://nexprove.com/favicon.ico',
+              },
+            },
+            articleSection: 'Product Development',
+            keywords: 'product development, MVP development, startup advice, software engineering, digital products',
+          }),
+        }}
+      />
+
       <Container as="article" className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn>
           <header className="mx-auto flex max-w-5xl flex-col text-center">

@@ -10,6 +10,7 @@ import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 import type { Locale } from '@/i18n'
+import { offices } from '@/lib/offices'
 
 
 function ContactDetails() {
@@ -98,8 +99,52 @@ export async function generateMetadata({
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      {/* LocalBusiness Schema for all global offices */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'NexProve',
+            description: 'Premium product development studio with global presence',
+            url: 'https://nexprove.com',
+            telephone: offices.find((o) => o.isPrimary)?.contact.phone.e164,
+            email: 'info@nexprove.com',
+            address: offices.map((office) => ({
+              '@type': 'PostalAddress',
+              streetAddress: office.address.street,
+              addressLocality: office.address.city,
+              addressRegion: office.address.region,
+              postalCode: office.address.postalCode,
+              addressCountry: office.address.country,
+            })),
+            geo: offices.map((office) => ({
+              '@type': 'GeoCoordinates',
+              latitude: office.coordinates?.latitude,
+              longitude: office.coordinates?.longitude,
+            })),
+            openingHoursSpecification: offices
+              .filter((o) => o.businessHours)
+              .flatMap((office) =>
+                office.businessHours!.schedule.map((day) => ({
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: day.day,
+                  opens: day.open,
+                  closes: day.close,
+                })),
+              ),
+            priceRange: '$$$',
+            areaServed: {
+              '@type': 'Place',
+              name: 'Worldwide',
+            },
+          }),
+        }}
+      />
+
+      <PageIntro eyebrow="Contact us" title="Let&apos;s work together">
+        <p>We can&apos;t wait to hear from you.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">

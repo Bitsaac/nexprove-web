@@ -430,6 +430,56 @@ function CaseStudyProof() {
   )
 }
 
+function IndustrySolutions() {
+  return (
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <SectionIntro
+        title="Industry-Specific Solutions"
+      >
+        <p>
+          We specialize in building custom software for specific industries, understanding unique challenges and regulatory requirements.
+        </p>
+      </SectionIntro>
+
+      <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <FadeIn>
+          <Link
+            href="/en/logistics-automation-usa"
+            className="group relative flex flex-col rounded-3xl p-8 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50"
+          >
+            <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950 group-hover:text-neutral-700">
+              Logistics Automation - USA
+            </h3>
+            <p className="mt-4 text-base text-neutral-600">
+              Custom TMS, WMS, and fleet management solutions for US supply chain companies. Reduce costs by 30-40% and scale efficiently.
+            </p>
+            <div className="mt-6 text-sm font-semibold text-neutral-950 group-hover:text-neutral-700">
+              Explore US Solutions →
+            </div>
+          </Link>
+        </FadeIn>
+
+        <FadeIn>
+          <Link
+            href="/de/logistics-Germany"
+            className="group relative flex flex-col rounded-3xl p-8 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50"
+          >
+            <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950 group-hover:text-neutral-700">
+              Logistics Automation - Germany
+            </h3>
+            <p className="mt-4 text-base text-neutral-600">
+              Enterprise logistics software for German market. GDPR-compliant solutions with German language support and EU data residency.
+            </p>
+            <div className="mt-6 text-sm font-semibold text-neutral-950 group-hover:text-neutral-700">
+              Explore Germany Solutions →
+            </div>
+          </Link>
+        </FadeIn>
+      </div>
+    </Container>
+  )
+}
+
 function FinalCTA() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
@@ -572,6 +622,7 @@ export default function Services() {
       <BrandingMarketing />
       <OurProcess />
       <CaseStudyProof />
+      <IndustrySolutions />
       <FinalCTA />
     </>
   )
