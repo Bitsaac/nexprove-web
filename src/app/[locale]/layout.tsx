@@ -5,7 +5,7 @@ import { getMessages } from 'next-intl/server'
 import Script from 'next/script'
 
 import { RootLayout } from '@/components/RootLayout'
-import { type Locale, locales } from '@/i18n'
+import { type Locale, locales } from '@/routing'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nexprove.com'),
@@ -29,7 +29,8 @@ export default async function LocaleLayout({
   params: { locale: string }
 }) {
   // Validate locale
-  if (!locales.includes(locale as Locale)) {
+  const validLocales: string[] = ['en', 'de']
+  if (!validLocales.includes(locale)) {
     notFound()
   }
 
