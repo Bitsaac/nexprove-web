@@ -21,36 +21,6 @@ export default async function CaseStudyLayout({
 
   return (
     <>
-      {/* CreativeWork Schema for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'CreativeWork',
-            name: caseStudy.title,
-            description: caseStudy.description,
-            datePublished: caseStudy.date,
-            creator: {
-              '@type': 'Organization',
-              name: 'NexProve',
-              url: 'https://nexprove.com',
-            },
-            customer: {
-              '@type': 'Organization',
-              name: caseStudy.client,
-            },
-            genre: caseStudy.service,
-            image: caseStudy.image.src,
-            audience: {
-              '@type': 'Audience',
-              audienceType: 'Business Decision Makers',
-            },
-            keywords: 'case study, product development, MVP development, custom software, digital products',
-          }),
-        }}
-      />
-
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
           <PageIntro eyebrow="Case Study" title={caseStudy.title} centered>
