@@ -96,6 +96,14 @@ interface LeadMagnetDetails {
 
 function getLeadMagnetDetails(magnetName: string): LeadMagnetDetails {
   const magnets: Record<string, LeadMagnetDetails> = {
+    'business-operations-automation-checklist': {
+      title: 'Business Operations Automation Checklist',
+      description:
+        'A comprehensive 70-point checklist to identify automation opportunities across your entire business.',
+      downloadUrl:
+        '/lead-magnets/business-operations-automation-checklist.pdf',
+      fileName: 'business-operations-automation-checklist.pdf',
+    },
     'logistics-automation-audit': {
       title: 'Logistics Automation Audit Checklist',
       description:

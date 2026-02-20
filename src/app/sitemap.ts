@@ -53,6 +53,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...generateLocalizedEntries('/blog/digital-transformation-supply-chain-europe', '2026-02-20T00:00:00.000Z', 'monthly', 0.8),
 
     // Lead magnet resources (all locales)
+    ...generateLocalizedEntries('/resources', currentDate, 'monthly', 0.8),
+    ...generateLocalizedEntries('/resources/business-operations-automation-checklist', currentDate, 'monthly', 0.8),
     ...generateLocalizedEntries('/resources/logistics-automation-audit', currentDate, 'monthly', 0.7),
     ...generateLocalizedEntries('/resources/operational-efficiency-scorecard', currentDate, 'monthly', 0.7),
 
