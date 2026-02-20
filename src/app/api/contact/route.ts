@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { checkRateLimit, getClientIp } from '@/lib/rate-limiter'
+import {
+  createOrUpdateContact,
+  detectRegionFromHeaders,
+} from '@/lib/crm'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -59,6 +63,26 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    // Detect region from request headers
+    const region = detectRegionFromHeaders(req.headers)
+
+    // Create or update contact in HubSpot CRM
+    const crmResult = await createOrUpdateContact({
+      email: contactData.email,
+      firstname: contactData.name,
+      company: contactData.company,
+      phone: contactData.phone,
+      message: contactData.message,
+      budget: contactData.budget,
+      region,
+      lead_source: 'contact_form',
+    })
+
+    if (!crmResult.success) {
+      console.warn('HubSpot CRM integration failed:', crmResult.error)
+      // Continue with email delivery even if CRM fails
+    }
+
     // Format budget display
     const budgetDisplay = contactData.budget
       ? `$${contactData.budget}K${contactData.budget === '150' ? '+' : ` - $${parseInt(contactData.budget) + 25}K`}`
@@ -94,10 +118,19 @@ export async function POST(req: NextRequest) {
               <td style="padding: 8px; font-weight: bold; color: #555;">Budget:</td>
               <td style="padding: 8px;">${budgetDisplay}</td>
             </tr>
+            <tr style="border-bottom: 1px solid #eee;">
+              <td style="padding: 8px; font-weight: bold; color: #555;">Region:</td>
+              <td style="padding: 8px;">${region || 'Unknown'}</td>
+            </tr>
             <tr>
               <td style="padding: 8px; font-weight: bold; color: #555;">Submitted:</td>
               <td style="padding: 8px;">${new Date(contactData.timestamp).toLocaleString()}</td>
             </tr>
+            ${crmResult.success ? `
+            <tr>
+              <td style="padding: 8px; font-weight: bold; color: #555;">HubSpot:</td>
+              <td style="padding: 8px;"><span style="color: green;">✓</span> Contact ${crmResult.contactId}</td>
+            </tr>` : ''}
           </table>
         </div>
 

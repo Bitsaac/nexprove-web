@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import Swal from 'sweetalert2'
 import { Button } from '@/components/Button'
 import { FadeIn } from '@/components/FadeIn'
+import { trackContactFormSubmit, detectUserRegion } from '@/lib/analytics'
 
 function TextInput({
   label,
@@ -67,6 +68,11 @@ export function ContactFormWithAlert() {
       const result = await response.json()
 
       if (response.ok) {
+        // Track successful form submission in GA4
+        const region = detectUserRegion()
+        const budget = formData.get('budget') as string
+        trackContactFormSubmit(region, budget)
+
         await Swal.fire({
           title: t('alerts.success.title'),
           text: result.message || t('alerts.success.message'),

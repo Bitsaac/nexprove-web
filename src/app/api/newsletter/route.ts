@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { checkRateLimit, getClientIp } from '@/lib/rate-limiter'
+import { trackNewsletterSignup } from '@/lib/crm'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -45,6 +46,13 @@ export async function POST(req: NextRequest) {
     const newsletterData = {
       email,
       timestamp: new Date().toISOString(),
+    }
+
+    // Track in HubSpot CRM
+    const crmResult = await trackNewsletterSignup(email)
+    if (!crmResult.success) {
+      console.warn('HubSpot newsletter tracking failed')
+      // Continue with email delivery even if CRM fails
     }
 
     // Send notification email to your team about new subscriber

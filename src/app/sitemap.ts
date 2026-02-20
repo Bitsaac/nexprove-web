@@ -47,6 +47,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...generateLocalizedEntries('/blog/complete-mvp-development-guide-30-days', '2025-01-15T00:00:00.000Z', 'monthly', 0.8),
     ...generateLocalizedEntries('/blog/7-costly-startup-development-mistakes', '2025-01-18T00:00:00.000Z', 'monthly', 0.7),
     ...generateLocalizedEntries('/blog/simoles-case-study-web3-success', '2025-01-20T00:00:00.000Z', 'monthly', 0.7),
+    ...generateLocalizedEntries('/blog/german-logistics-conversion-websites', '2026-02-18T00:00:00.000Z', 'monthly', 0.8),
+    ...generateLocalizedEntries('/blog/logistics-automation-europe', '2026-02-19T00:00:00.000Z', 'monthly', 0.8),
+    ...generateLocalizedEntries('/blog/lead-capture-fleet-management', '2026-02-19T00:00:00.000Z', 'monthly', 0.8),
+    ...generateLocalizedEntries('/blog/digital-transformation-supply-chain-europe', '2026-02-20T00:00:00.000Z', 'monthly', 0.8),
+
+    // Lead magnet resources (all locales)
+    ...generateLocalizedEntries('/resources/logistics-automation-audit', currentDate, 'monthly', 0.7),
+    ...generateLocalizedEntries('/resources/operational-efficiency-scorecard', currentDate, 'monthly', 0.7),
 
     // Internship pages (all locales) - Bitsaac program
     ...generateLocalizedEntries('/internship', '2026-01-12T00:00:00.000Z', 'weekly', 0.9),
