@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import Link from 'next/link'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { PageIntro } from '@/components/PageIntro'
+import { ContactSection } from '@/components/ContactSection'
+import { Border } from '@/components/Border'
+import { Link } from '@/lib/navigation'
 
 export const metadata: Metadata = {
   title: 'Free Resources & Tools',
@@ -44,55 +47,47 @@ const resources = [
 export default function ResourcesPage() {
   return (
     <>
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <FadeIn>
-          {/* Header */}
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="font-display text-sm font-semibold uppercase tracking-wider text-blue-600">
-              Free Resources
-            </p>
-            <h1 className="mt-4 font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl">
-              Tools to Accelerate Your Digital Transformation
-            </h1>
-            <p className="mt-6 text-xl text-neutral-600">
-              Download our expert-created guides, checklists, and assessment
-              tools. No credit card required. Instant access.
-            </p>
-          </div>
+      <PageIntro eyebrow="Free Resources" title="Tools to Accelerate Your Digital Transformation">
+        <p>
+          Download our expert-created guides, checklists, and assessment tools.
+          No credit card required. Instant access.
+        </p>
+      </PageIntro>
 
-          {/* Resources Grid */}
-          <div className="mt-16 space-y-8">
-            {resources.map((resource) => (
-              <Link
-                key={resource.href}
-                href={resource.href}
-                className="block rounded-2xl border border-neutral-200 bg-white p-8 transition hover:border-blue-600 hover:shadow-lg lg:p-12"
-              >
-                <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3">
-                      <span className="inline-block rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-600">
-                        {resource.category}
-                      </span>
-                      <span className="text-xs text-neutral-500">
-                        {resource.downloadFormat}
-                      </span>
-                    </div>
-                    <h2 className="mt-4 font-display text-2xl font-semibold text-neutral-950 lg:text-3xl">
-                      {resource.title}
-                    </h2>
-                    <p className="mt-4 text-neutral-600">
-                      {resource.description}
-                    </p>
-                    <p className="mt-4 text-sm text-neutral-500">
-                      <strong>Industries:</strong> {resource.industries}
-                    </p>
+      <Container className="mt-24 sm:mt-32 lg:mt-40">
+        <FadeInStagger className="space-y-12">
+          {resources.map((resource) => (
+            <FadeIn key={resource.href}>
+              <Border className="grid grid-cols-1 gap-x-8 gap-y-8 pt-16 lg:grid-cols-3">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center rounded-full bg-neutral-950/5 px-3 py-1 text-xs font-semibold text-neutral-950">
+                      {resource.category}
+                    </span>
+                    <span className="text-sm text-neutral-600">
+                      {resource.downloadFormat}
+                    </span>
                   </div>
-                  <div className="flex items-center lg:flex-col lg:items-end">
-                    <span className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700">
+                  <h3 className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                    {resource.title}
+                  </h3>
+                </div>
+                <div className="lg:col-span-2">
+                  <p className="text-base text-neutral-600">
+                    {resource.description}
+                  </p>
+                  <p className="mt-4 text-sm text-neutral-600">
+                    <strong className="font-semibold text-neutral-950">Industries:</strong>{' '}
+                    {resource.industries}
+                  </p>
+                  <div className="mt-6">
+                    <Link
+                      href={resource.href}
+                      className="inline-flex items-center gap-2 rounded-full bg-neutral-950 px-4 py-1.5 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                    >
                       Download Free
                       <svg
-                        className="h-5 w-5"
+                        className="h-4 w-4"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={2}
@@ -105,108 +100,102 @@ export default function ResourcesPage() {
                           d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                         />
                       </svg>
-                    </span>
+                    </Link>
                   </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-
-          {/* Value Proposition */}
-          <div className="mt-16 rounded-2xl bg-neutral-50 p-8 text-center lg:p-12">
-            <h3 className="font-display text-2xl font-semibold text-neutral-950">
-              Why We Create These Resources
-            </h3>
-            <p className="mx-auto mt-4 max-w-2xl text-neutral-600">
-              At Nexprove, we believe every business deserves access to
-              world-class automation strategies—not just the Fortune 500.
-              These resources distill our experience building digital products
-              for startups and enterprises into practical, actionable guides
-              you can use today.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-8 text-sm text-neutral-600">
-              <div className="flex items-center gap-2">
-                <svg
-                  className="h-5 w-5 text-green-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                No signup required
-              </div>
-              <div className="flex items-center gap-2">
-                <svg
-                  className="h-5 w-5 text-green-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Instant download
-              </div>
-              <div className="flex items-center gap-2">
-                <svg
-                  className="h-5 w-5 text-green-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Created by experts
-              </div>
-            </div>
-          </div>
-        </FadeIn>
+              </Border>
+            </FadeIn>
+          ))}
+        </FadeInStagger>
       </Container>
 
-      {/* CTA */}
-      <Container className="mt-16 sm:mt-24">
+      <Container className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn>
-          <div className="mx-auto max-w-3xl rounded-2xl border-2 border-neutral-200 bg-white p-8 text-center">
-            <h3 className="font-display text-xl font-semibold text-neutral-950">
-              Need Custom Solutions?
-            </h3>
-            <p className="mt-4 text-neutral-600">
-              These resources are great starting points, but every business is
-              unique. Let&apos;s discuss how we can build tailored automation
-              solutions for your specific challenges.
-            </p>
-            <div className="mt-6">
-              <Link
-                href="/contact"
-                className="inline-block rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
-              >
-                Schedule a Free Consultation
-              </Link>
+          <Border className="grid grid-cols-1 gap-8 pt-16 lg:grid-cols-2">
+            <div>
+              <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                Why We Create These Resources
+              </h2>
             </div>
-          </div>
+            <div>
+              <p className="text-base text-neutral-600">
+                At Nexprove, we believe every business deserves access to
+                world-class automation strategies—not just the Fortune 500.
+                These resources distill our experience building digital products
+                for startups and enterprises into practical, actionable guides
+                you can use today.
+              </p>
+              <dl className="mt-8 grid grid-cols-1 gap-x-8 gap-y-4 text-sm">
+                <div className="flex items-start">
+                  <dt className="flex-none">
+                    <svg
+                      className="h-5 w-5 text-neutral-950"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </dt>
+                  <dd className="ml-4 text-neutral-600">
+                    No signup required—instant access
+                  </dd>
+                </div>
+                <div className="flex items-start">
+                  <dt className="flex-none">
+                    <svg
+                      className="h-5 w-5 text-neutral-950"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </dt>
+                  <dd className="ml-4 text-neutral-600">
+                    Created by experts with years of implementation experience
+                  </dd>
+                </div>
+                <div className="flex items-start">
+                  <dt className="flex-none">
+                    <svg
+                      className="h-5 w-5 text-neutral-950"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </dt>
+                  <dd className="ml-4 text-neutral-600">
+                    Real-world examples from actual client projects
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </Border>
         </FadeIn>
       </Container>
 
-      {/* Bottom Spacer */}
-      <div className="mt-24 sm:mt-32 lg:mt-40" />
+      <ContactSection />
     </>
   )
 }

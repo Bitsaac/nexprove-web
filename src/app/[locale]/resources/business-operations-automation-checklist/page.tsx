@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { PageIntro } from '@/components/PageIntro'
+import { Border } from '@/components/Border'
+import { ContactSection } from '@/components/ContactSection'
 import LeadMagnetForm from '@/components/LeadMagnetForm'
 
 export const metadata: Metadata = {
@@ -71,25 +74,17 @@ const benefits = [
 export default function BusinessOperationsAutomationChecklistPage() {
   return (
     <>
+      <PageIntro eyebrow="Free Resource" title="Business Operations Automation Checklist">
+        <p>
+          A comprehensive 70-point checklist to identify automation
+          opportunities across your entire business—from sales and customer
+          service to finance and operations. Works for any industry.
+        </p>
+      </PageIntro>
+
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <FadeIn>
-          {/* Hero Section */}
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="font-display text-sm font-semibold uppercase tracking-wider text-blue-600">
-              Free Resource
-            </p>
-            <h1 className="mt-4 font-display text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl">
-              Business Operations Automation Checklist
-            </h1>
-            <p className="mt-6 text-xl text-neutral-600">
-              A comprehensive 70-point checklist to identify automation
-              opportunities across your entire business—from sales and customer
-              service to finance and operations. Works for any industry.
-            </p>
-          </div>
-
-          {/* What's Covered */}
-          <div className="mt-16">
+          <Border className="pt-16">
             <h2 className="font-display text-2xl font-semibold text-neutral-950 sm:text-3xl">
               What&apos;s Covered in This Checklist
             </h2>
@@ -99,130 +94,139 @@ export default function BusinessOperationsAutomationChecklistPage() {
               you can assess in your own business today.
             </p>
 
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <FadeInStagger className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {categories.map((category) => (
-                <div
-                  key={category.title}
-                  className="rounded-lg border border-neutral-200 bg-white p-6"
-                >
-                  <h3 className="font-display text-lg font-semibold text-neutral-950">
-                    {category.title}
-                  </h3>
-                  <ul className="mt-4 space-y-2 text-sm text-neutral-600">
-                    {category.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <svg
-                          className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2}
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <FadeIn key={category.title}>
+                  <div className="rounded-3xl ring-1 ring-neutral-950/5 p-6">
+                    <h3 className="font-display text-lg font-semibold text-neutral-950">
+                      {category.title}
+                    </h3>
+                    <ul className="mt-4 space-y-2 text-sm text-neutral-600">
+                      {category.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2">
+                          <svg
+                            className="mt-0.5 h-4 w-4 flex-shrink-0 text-neutral-950"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </FadeIn>
               ))}
+            </FadeInStagger>
+          </Border>
+        </FadeIn>
+      </Container>
+
+      <Container className="mt-24 sm:mt-32">
+        <FadeIn>
+          <Border className="grid grid-cols-1 gap-8 pt-16 lg:grid-cols-2">
+            <div>
+              <h2 className="font-display text-2xl font-semibold text-neutral-950 sm:text-3xl">
+                Why You Need This Checklist
+              </h2>
+              <p className="mt-4 text-neutral-600">
+                Most businesses waste 30-40% of their team&apos;s time on
+                repetitive tasks that could be automated. This checklist helps you
+                find those hidden time-wasters.
+              </p>
             </div>
-          </div>
-
-          {/* Benefits */}
-          <div className="mt-16 rounded-2xl bg-neutral-50 p-8 lg:p-12">
-            <h2 className="font-display text-2xl font-semibold text-neutral-950 sm:text-3xl">
-              Why You Need This Checklist
-            </h2>
-            <p className="mt-4 text-neutral-600">
-              Most businesses waste 30-40% of their team&apos;s time on
-              repetitive tasks that could be automated. This checklist helps you
-              find those hidden time-wasters.
-            </p>
-
-            <ul className="mt-8 space-y-4">
-              {benefits.map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3">
-                  <svg
-                    className="mt-1 h-6 w-6 flex-shrink-0 text-green-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span className="text-neutral-700">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* How It Works */}
-          <div className="mt-16">
-            <h2 className="font-display text-2xl font-semibold text-neutral-950 sm:text-3xl">
-              How to Use This Checklist
-            </h2>
-            <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 font-display text-lg font-semibold text-blue-600">
-                  1
-                </div>
-                <h3 className="mt-4 font-semibold text-neutral-950">
-                  Download
-                </h3>
-                <p className="mt-2 text-sm text-neutral-600">
-                  Get the comprehensive PDF checklist delivered to your inbox
-                  instantly
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 font-display text-lg font-semibold text-blue-600">
-                  2
-                </div>
-                <h3 className="mt-4 font-semibold text-neutral-950">Assess</h3>
-                <p className="mt-2 text-sm text-neutral-600">
-                  Go department by department, marking processes as automated,
-                  manual, or partially automated
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 font-display text-lg font-semibold text-blue-600">
-                  3
-                </div>
-                <h3 className="mt-4 font-semibold text-neutral-950">
-                  Prioritize
-                </h3>
-                <p className="mt-2 text-sm text-neutral-600">
-                  Score your results and focus on high-impact, low-effort quick
-                  wins first
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 font-display text-lg font-semibold text-blue-600">
-                  4
-                </div>
-                <h3 className="mt-4 font-semibold text-neutral-950">Act</h3>
-                <p className="mt-2 text-sm text-neutral-600">
-                  Implement automations one at a time, starting with the biggest
-                  pain points
-                </p>
-              </div>
+            <div>
+              <ul className="space-y-4">
+                {benefits.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3">
+                    <svg
+                      className="mt-1 h-6 w-6 flex-shrink-0 text-neutral-950"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    <span className="text-neutral-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          </Border>
+        </FadeIn>
+      </Container>
 
-          {/* Social Proof */}
-          <div className="mt-16 border-l-4 border-blue-600 bg-blue-50 p-6">
+      <Container className="mt-24 sm:mt-32">
+        <FadeIn>
+          <h2 className="font-display text-2xl font-semibold text-neutral-950 sm:text-3xl">
+            How to Use This Checklist
+          </h2>
+          <FadeInStagger className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <FadeIn className="text-center">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral-950/5 font-display text-lg font-semibold text-neutral-950">
+                1
+              </div>
+              <h3 className="mt-4 font-semibold text-neutral-950">
+                Download
+              </h3>
+              <p className="mt-2 text-sm text-neutral-600">
+                Get the comprehensive PDF checklist delivered to your inbox
+                instantly
+              </p>
+            </FadeIn>
+            <FadeIn className="text-center">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral-950/5 font-display text-lg font-semibold text-neutral-950">
+                2
+              </div>
+              <h3 className="mt-4 font-semibold text-neutral-950">Assess</h3>
+              <p className="mt-2 text-sm text-neutral-600">
+                Go department by department, marking processes as automated,
+                manual, or partially automated
+              </p>
+            </FadeIn>
+            <FadeIn className="text-center">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral-950/5 font-display text-lg font-semibold text-neutral-950">
+                3
+              </div>
+              <h3 className="mt-4 font-semibold text-neutral-950">
+                Prioritize
+              </h3>
+              <p className="mt-2 text-sm text-neutral-600">
+                Score your results and focus on high-impact, low-effort quick
+                wins first
+              </p>
+            </FadeIn>
+            <FadeIn className="text-center">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral-950/5 font-display text-lg font-semibold text-neutral-950">
+                4
+              </div>
+              <h3 className="mt-4 font-semibold text-neutral-950">Act</h3>
+              <p className="mt-2 text-sm text-neutral-600">
+                Implement automations one at a time, starting with the biggest
+                pain points
+              </p>
+            </FadeIn>
+          </FadeInStagger>
+        </FadeIn>
+      </Container>
+
+      <Container className="mt-24 sm:mt-32">
+        <FadeIn>
+          <Border className="pt-16">
             <blockquote className="text-neutral-700">
               <p className="text-lg font-medium">
                 &ldquo;We used this checklist to audit our operations and found
@@ -235,18 +239,18 @@ export default function BusinessOperationsAutomationChecklistPage() {
                 — Operations Manager, Growing SaaS Company
               </footer>
             </blockquote>
-          </div>
+          </Border>
         </FadeIn>
       </Container>
 
       {/* Download Form Section */}
       <Container className="mt-24 sm:mt-32">
         <FadeIn>
-          <div className="mx-auto max-w-2xl rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 p-8 text-white lg:p-12">
+          <div className="mx-auto max-w-2xl rounded-3xl bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 p-8 text-white lg:p-12">
             <h2 className="font-display text-3xl font-semibold">
               Download Your Free Checklist
             </h2>
-            <p className="mt-4 text-blue-100">
+            <p className="mt-4 text-neutral-300">
               Enter your details below and we&apos;ll send the comprehensive
               checklist directly to your inbox. No credit card required.
             </p>
@@ -265,14 +269,14 @@ export default function BusinessOperationsAutomationChecklistPage() {
       {/* Bonus Content */}
       <Container className="mt-16 sm:mt-24">
         <FadeIn>
-          <div className="rounded-2xl border-2 border-blue-200 bg-blue-50 p-8 lg:p-12">
+          <Border className="pt-16">
             <h3 className="font-display text-xl font-semibold text-neutral-950">
               Bonus: What&apos;s Included
             </h3>
             <ul className="mt-6 space-y-3 text-neutral-700">
               <li className="flex items-start gap-3">
                 <svg
-                  className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600"
+                  className="mt-1 h-5 w-5 flex-shrink-0 text-neutral-950"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -292,7 +296,7 @@ export default function BusinessOperationsAutomationChecklistPage() {
               </li>
               <li className="flex items-start gap-3">
                 <svg
-                  className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600"
+                  className="mt-1 h-5 w-5 flex-shrink-0 text-neutral-950"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -312,7 +316,7 @@ export default function BusinessOperationsAutomationChecklistPage() {
               </li>
               <li className="flex items-start gap-3">
                 <svg
-                  className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600"
+                  className="mt-1 h-5 w-5 flex-shrink-0 text-neutral-950"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -332,7 +336,7 @@ export default function BusinessOperationsAutomationChecklistPage() {
               </li>
               <li className="flex items-start gap-3">
                 <svg
-                  className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600"
+                  className="mt-1 h-5 w-5 flex-shrink-0 text-neutral-950"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -352,7 +356,7 @@ export default function BusinessOperationsAutomationChecklistPage() {
               </li>
               <li className="flex items-start gap-3">
                 <svg
-                  className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600"
+                  className="mt-1 h-5 w-5 flex-shrink-0 text-neutral-950"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
@@ -371,28 +375,11 @@ export default function BusinessOperationsAutomationChecklistPage() {
                 </span>
               </li>
             </ul>
-          </div>
+          </Border>
         </FadeIn>
       </Container>
 
-      {/* Trust Signals */}
-      <Container className="mt-16 sm:mt-24">
-        <FadeIn>
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-neutral-600">
-              Used by Businesses Across Industries
-            </p>
-            <p className="mt-4 text-neutral-600">
-              From SaaS startups to established logistics companies, this
-              checklist has helped businesses of all sizes find automation
-              opportunities they didn&apos;t know existed.
-            </p>
-          </div>
-        </FadeIn>
-      </Container>
-
-      {/* Bottom Spacer */}
-      <div className="mt-24 sm:mt-32 lg:mt-40" />
+      <ContactSection />
     </>
   )
 }

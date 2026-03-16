@@ -2,7 +2,34 @@
 
 **Last Updated:** February 21, 2026
 **Project:** Global Expansion & Lead Generation Infrastructure
-**Status:** Phase 5 Complete | Production Ready (with manual setup required)
+**Status:** Phase 5 Complete | Pre-Production (critical items pending)
+
+---
+
+## 🚨 IMMEDIATE ACTION PLAN
+
+### This Week (Must Do Before Push)
+
+- [ ] **🔴 CRITICAL: Fix resource page designs** - Use existing Nexprove styles/components
+- [ ] **🔴 CRITICAL: Add rate limiting to lead magnet API** - Prevent abuse
+- [ ] **🔴 CRITICAL: Add disclaimers to blog case studies** - Or get client approvals
+- [ ] **🟡 HIGH: Set up Sentry error tracking** - Production monitoring
+- [ ] **🟡 HIGH: Add lead notification system** - Slack/Email alerts for new leads
+- [ ] **🟡 HIGH: Test all forms on mobile** - Ensure responsive design works
+
+### Next Week
+
+- [ ] **🟡 Complete German translations** - Hire native speaker for quality
+- [ ] **🟡 Add locale switcher to header** - Easy language switching for users
+- [ ] **🟡 Create OG images for blog posts** - 7 images needed (1200×630px)
+- [ ] **🟡 Submit sitemap to Google Search Console** - Faster indexing
+- [ ] **🟢 Deploy to production** - After all critical items complete
+
+### User Manual Tasks (Not Code)
+
+- [ ] **Create 3 lead magnet PDFs** - Content ready in markdown, needs design
+- [ ] **Set up HubSpot free tier** - CRM for lead tracking
+- [ ] **Add environment variables** - BASE_URL + HUBSPOT_API_KEY
 
 ---
 

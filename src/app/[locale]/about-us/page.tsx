@@ -16,10 +16,12 @@ import type { Locale } from '@/i18n'
 
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
+import imageKevin from '@/images/team/kelvin.jpeg'
 import imageBlakeReid from '@/images/team/blake-reid.jpg'
 import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
+import imageMuhammed from '@/images/team/muhammed.jpg'
+import imageAvi from '@/images/team/Avi.jpeg'
+import imageSeun from '@/images/team/Seun.jpeg'
 
 function Hero() {
   return (
@@ -216,9 +218,22 @@ function GlobalReach() {
 function Team() {
   const team = [
     {
+      name: 'David Olatunji',
+      role: 'Executive Chairman',
+      image: { src: imageAvi },
+      linkedin: 'https://www.linkedin.com/in/avioflagos',
+      github: 'https://github.com/avioflagos',
+      x: 'https://x.com/avioflagos',
+    },
+    {
+      name: 'Oluwaseun Adedoyin',
+      role: 'Co-founder, Operations & Growth',
+      image: { src: imageSeun },
+    },
+    {
       name: 'Kevin Dimoko',
       role: 'Visual and Motion Designer',
-      image: { src: imageBenjaminRussel },
+      image: { src: imageKevin },
       linkedin: 'https://www.linkedin.com/in/kevin-dimoko-b2526219a/',
       behance: 'https://www.behance.net/kevindimoko',
     },
@@ -239,7 +254,7 @@ function Team() {
     {
       name: 'Muhammed Yuguda',
       role: 'AI Engineer',
-      image: { src: imageDriesVincent },
+      image: { src: imageMuhammed },
       linkedin: 'https://linkedin.com/in/yuguda',
       github: 'https://github.com/yuguda999',
       portfolio: 'https://yuguda999.github.io/portfolio-v2/',
@@ -289,6 +304,16 @@ function Team() {
                           className="text-sm text-neutral-600 transition hover:text-neutral-950"
                         >
                           GitHub
+                        </Link>
+                      </li>
+                    )}
+                    {person.x && (
+                      <li>
+                        <Link
+                          href={person.x}
+                          className="text-sm text-neutral-600 transition hover:text-neutral-950"
+                        >
+                          X
                         </Link>
                       </li>
                     )}
@@ -415,6 +440,17 @@ export default function AboutUs() {
               'https://linkedin.com/company/nexprove',
             ],
             employee: [
+              {
+                '@type': 'Person',
+                name: 'David Olatunji',
+                jobTitle: 'Executive Chairman',
+                sameAs: ['https://www.linkedin.com/in/avioflagos', 'https://github.com/avioflagos', 'https://x.com/avioflagos'],
+              },
+              {
+                '@type': 'Person',
+                name: 'Oluwaseun Adedoyin',
+                jobTitle: 'Co-founder, Operations & Growth',
+              },
               {
                 '@type': 'Person',
                 name: 'Kevin Dimoko',

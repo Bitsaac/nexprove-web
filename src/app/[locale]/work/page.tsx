@@ -11,9 +11,10 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { type Locale } from '@/i18n'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBassse3 from '@/images/clients/Bassse3/logo-dark.svg'
 import logoBlueTide from '@/images/clients/BlueTide/logo-dark.svg'
+import logoDeepEllum from '@/images/clients/DeepEllum/logo-dark.svg'
 import logoEllum from '@/images/clients/Ellum/logo-dark.svg'
+import logoMottars from '@/images/clients/Mottars/logo-dark.svg'
 import logoSimoles from '@/images/clients/Simoles/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -95,9 +96,10 @@ function CaseStudies({
 }
 
 const clients = [
-  ['BASSSE3', logoBassse3],
+  ['DEEPELLUM AI', logoDeepEllum],
   ['BLUETIDE', logoBlueTide],
   ['ELLUM', logoEllum],
+  ['MOTTARS', logoMottars],
   ['SIMOLES', logoSimoles],
 ]
 

@@ -8,7 +8,7 @@ import { Logo } from '@/components/Logo'
 import { Link } from '@/lib/navigation'
 import { SocialMedia } from '@/components/SocialMedia'
 import { NewsletterFormWithAlert } from '@/components/NewsletterFormWithAlert'
-import { offices } from '@/lib/offices'
+// import { offices } from '@/lib/offices' // Commented out until real office addresses are confirmed
 
 function Navigation() {
   const t = useTranslations('footer')
@@ -27,10 +27,11 @@ function Navigation() {
     {
       title: t('work'),
       links: [
-        { title: 'Bassse3', href: '/work/bassse3' },
+        { title: 'DeepEllum AI', href: '/work/deepellum' },
         { title: 'Ellum', href: '/work/ellum' },
         { title: 'Bluetide', href: '/work/bluetide' },
         { title: 'Simoles', href: '/work/simoles' },
+        { title: 'Mottars', href: '/work/mottars' },
         {
           title: (
             <>
@@ -49,13 +50,31 @@ function Navigation() {
         { title: t('teamExtension'), href: '/services#team-extension' },
         { title: t('consultation'), href: '/services#consultation' },
         { title: t('brandingMarketing'), href: '/services#branding-marketing' },
+        { title: 'Logistics — Germany', href: '/logistics-Germany' },
+        { title: 'Logistics — USA', href: '/logistics-automation-usa' },
+      ],
+    },
+    {
+      title: 'Resources',
+      links: [
+        { title: 'Operations Checklist', href: '/resources/business-operations-automation-checklist' },
+        { title: 'Logistics Audit', href: '/resources/logistics-automation-audit' },
+        { title: 'Efficiency Scorecard', href: '/resources/operational-efficiency-scorecard' },
+        {
+          title: (
+            <>
+              All Resources <span aria-hidden="true">&rarr;</span>
+            </>
+          ),
+          href: '/resources',
+        },
       ],
     },
   ]
 
   return (
     <nav>
-      <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+      <ul role="list" className="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4">
         {navigation.map((section, sectionIndex) => (
           <li key={sectionIndex}>
             <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
@@ -87,17 +106,18 @@ export function Footer() {
   return (
     <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
       <FadeIn>
-        <div className="pb-20">
-          {/* Navigation takes full width on mobile and tablets, shares space with newsletter on desktop */}
-          <div className="grid grid-cols-1 gap-x-8 gap-y-16 xl:grid-cols-2">
-            <Navigation />
-            <div className="flex xl:justify-end">
-              <NewsletterFormWithAlert />
-            </div>
-          </div>
+        {/* Navigation — full width across 4 columns */}
+        <div className="pb-16">
+          <Navigation />
         </div>
 
-        {/* Global Offices Section */}
+        {/* Newsletter signup — sits where Global Offices used to be */}
+        <div className="border-t border-neutral-950/10 pt-16 pb-8">
+          <NewsletterFormWithAlert />
+        </div>
+
+        {/* Global Offices Section — commented out until real addresses are confirmed */}
+        {/*
         <div className="border-t border-neutral-950/10 pt-16 pb-8">
           <h3 className="font-display text-sm font-semibold tracking-wider text-neutral-950 mb-8">
             Global Offices
@@ -122,6 +142,7 @@ export function Footer() {
             ))}
           </div>
         </div>
+        */}
 
         <div className='py-12 border-t border-neutral-950/10 w-full'>
           <Link href="/" aria-label="Home" className="block w-full">

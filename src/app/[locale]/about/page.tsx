@@ -97,7 +97,7 @@ const team = [
     people: [
       {
         name: 'David Olatunji',
-        role: 'Co-founder, Strategy & Product',
+        role: 'Executive Chairman & Co-founder',
         // image: { src: imageLeslieAlexander },
       },
       {

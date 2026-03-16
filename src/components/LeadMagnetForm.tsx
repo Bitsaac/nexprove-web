@@ -4,6 +4,15 @@ import { useState } from 'react'
 import Swal from 'sweetalert2'
 import { trackLeadMagnetDownload } from '@/lib/analytics'
 
+/**
+ * Brand Colors (for easy updates):
+ * - Primary Orange: #FF6224 (buttons, focus states, SweetAlert)
+ * - Orange Hover: #EA5515 (button hover state)
+ * - Text on Dark BG: text-white (labels on dark backgrounds)
+ * - Text on Light BG: text-neutral-950 (form input text)
+ * - Privacy Text: text-neutral-300 (muted text on dark backgrounds)
+ */
+
 interface LeadMagnetFormProps {
   magnetName: string
   magnetType: string
@@ -35,7 +44,7 @@ export default function LeadMagnetForm({
         title: 'Missing Information',
         text: 'Please provide your name and email to download.',
         icon: 'warning',
-        confirmButtonColor: '#2563eb',
+        confirmButtonColor: '#FF6224',
       })
       return
     }
@@ -76,7 +85,7 @@ export default function LeadMagnetForm({
           <p class="text-sm text-neutral-600">Check your inbox in the next few minutes. If you don't see it, check your spam folder.</p>
         `,
         icon: 'success',
-        confirmButtonColor: '#2563eb',
+        confirmButtonColor: '#FF6224',
         confirmButtonText: 'Got it!',
       })
 
@@ -110,7 +119,7 @@ export default function LeadMagnetForm({
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-semibold text-neutral-950"
+            className="block text-sm font-semibold text-white"
           >
             Name *
           </label>
@@ -121,7 +130,7 @@ export default function LeadMagnetForm({
             onChange={(e) =>
               setFormData({ ...formData, name: e.target.value })
             }
-            className="mt-2 block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-neutral-950 placeholder:text-neutral-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            className="mt-2 block w-full rounded-lg border border-white/20 bg-white px-4 py-3 text-neutral-950 placeholder:text-neutral-400 transition focus:border-[#FF6224] focus:ring-2 focus:ring-[#FF6224]/20 focus:outline-hidden"
             placeholder="John Doe"
             required
           />
@@ -131,7 +140,7 @@ export default function LeadMagnetForm({
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-semibold text-neutral-950"
+            className="block text-sm font-semibold text-white"
           >
             Work Email *
           </label>
@@ -142,7 +151,7 @@ export default function LeadMagnetForm({
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
-            className="mt-2 block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-neutral-950 placeholder:text-neutral-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            className="mt-2 block w-full rounded-lg border border-white/20 bg-white px-4 py-3 text-neutral-950 placeholder:text-neutral-400 transition focus:border-[#FF6224] focus:ring-2 focus:ring-[#FF6224]/20 focus:outline-hidden"
             placeholder="john@company.com"
             required
           />
@@ -152,7 +161,7 @@ export default function LeadMagnetForm({
         <div>
           <label
             htmlFor="company"
-            className="block text-sm font-semibold text-neutral-950"
+            className="block text-sm font-semibold text-white"
           >
             Company
           </label>
@@ -163,7 +172,7 @@ export default function LeadMagnetForm({
             onChange={(e) =>
               setFormData({ ...formData, company: e.target.value })
             }
-            className="mt-2 block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-neutral-950 placeholder:text-neutral-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            className="mt-2 block w-full rounded-lg border border-white/20 bg-white px-4 py-3 text-neutral-950 placeholder:text-neutral-400 transition focus:border-[#FF6224] focus:ring-2 focus:ring-[#FF6224]/20 focus:outline-hidden"
             placeholder="Acme Logistics GmbH"
           />
         </div>
@@ -172,7 +181,7 @@ export default function LeadMagnetForm({
         <div>
           <label
             htmlFor="country"
-            className="block text-sm font-semibold text-neutral-950"
+            className="block text-sm font-semibold text-white"
           >
             Country
           </label>
@@ -182,7 +191,7 @@ export default function LeadMagnetForm({
             onChange={(e) =>
               setFormData({ ...formData, country: e.target.value })
             }
-            className="mt-2 block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-neutral-950 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            className="mt-2 block w-full rounded-lg border border-white/20 bg-white px-4 py-3 text-neutral-950 transition focus:border-[#FF6224] focus:ring-2 focus:ring-[#FF6224]/20 focus:outline-hidden"
           >
             <option value="">Select country</option>
             <option value="CA">Canada</option>
@@ -199,7 +208,7 @@ export default function LeadMagnetForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full rounded-lg bg-blue-600 px-6 py-4 text-base font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="w-full rounded-lg bg-[#FF6224] px-6 py-4 text-base font-semibold text-white transition hover:bg-[#EA5515] disabled:cursor-not-allowed disabled:opacity-50"
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center gap-2">
@@ -233,7 +242,7 @@ export default function LeadMagnetForm({
       </div>
 
       {/* Privacy Note */}
-      <p className="mt-4 text-xs text-neutral-600">
+      <p className="mt-4 text-xs text-neutral-300">
         By downloading, you agree to receive occasional emails from Nexprove
         about product development insights. Unsubscribe anytime. We respect your
         privacy.
