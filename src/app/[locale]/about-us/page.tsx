@@ -229,6 +229,8 @@ function Team() {
       name: 'Oluwaseun Adedoyin',
       role: 'Co-founder, Operations & Growth',
       image: { src: imageSeun },
+      linkedin: 'https://www.linkedin.com/in/oluwaseunnla-adedoyin-06518315a',
+      x: 'https://x.com/gridzgrey',
     },
     {
       name: 'Kevin Dimoko',
@@ -450,6 +452,7 @@ export default function AboutUs() {
                 '@type': 'Person',
                 name: 'Oluwaseun Adedoyin',
                 jobTitle: 'Co-founder, Operations & Growth',
+                sameAs: ['https://www.linkedin.com/in/oluwaseunnla-adedoyin-06518315a', 'https://x.com/gridzgrey'],
               },
               {
                 '@type': 'Person',
