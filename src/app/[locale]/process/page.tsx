@@ -30,7 +30,7 @@ function Section({
     <Container className="group/section [counter-increment:section]">
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
         <div className="flex justify-center">
-          <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+          <FadeIn>
             <StylizedImage
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
@@ -38,7 +38,7 @@ function Section({
             />
           </FadeIn>
         </div>
-        <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
+        <div className="mt-12 lg:mt-0 lg:min-w-[33%] lg:group-even/section:order-first">
           <FadeIn>
             <div
               className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"

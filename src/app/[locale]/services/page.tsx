@@ -107,7 +107,7 @@ function Section({
     <Container id={id} className="group/section mt-24 sm:mt-32 lg:mt-40">
       <div className={`lg:flex lg:items-center lg:gap-x-8 xl:gap-x-20 ${reverse ? 'lg:flex-row-reverse' : ''}`}>
         <div className="flex justify-center">
-          <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
+          <FadeIn>
             <StylizedImage
               {...image}
               sizes="(min-width: 1024px) 41rem, 31rem"
@@ -115,7 +115,7 @@ function Section({
             />
           </FadeIn>
         </div>
-        <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none">
+        <div className="mt-12 lg:mt-0 lg:min-w-[33%]">
           <FadeIn>
             <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
               {title}
@@ -444,7 +444,7 @@ function IndustrySolutions() {
       <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
         <FadeIn>
           <Link
-            href="/en/logistics-automation-usa"
+            href="/logistics-automation-usa"
             className="group relative flex flex-col rounded-3xl p-8 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50"
           >
             <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950 group-hover:text-neutral-700">
@@ -492,7 +492,7 @@ function FinalCTA() {
             From consultation to code, branding to growth—we&apos;ve got your back.
           </p>
           <div className="mt-10 flex justify-center">
-            <Button href="/contact" className="bg-white text-neutral-950 hover:bg-neutral-100 hover:text-neutral-950">
+            <Button href="/contact" invert>
               Start Your Project with NexProve
             </Button>
           </div>

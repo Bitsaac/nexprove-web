@@ -19,7 +19,8 @@ import { GridPattern } from '@/components/GridPattern'
 import { LanguageSwitcherCompact } from '@/components/LanguageSwitcher'
 import { Logo, Logomark } from '@/components/Logo'
 import { Link, usePathname } from '@/lib/navigation'
-import { Offices } from '@/components/Offices'
+// import { Offices } from '@/components/Offices' // commented out until real addresses are confirmed
+import { BookCallButton } from '@/components/BookCallButton'
 import { SocialMedia } from '@/components/SocialMedia'
 
 const RootLayoutContext = createContext<{
@@ -60,7 +61,6 @@ function Header({
   invert?: boolean
 }) {
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
-  const t = useTranslations('cta')
 
   return (
     <Container>
@@ -85,7 +85,7 @@ function Header({
         <div className="flex items-center gap-x-8">
           <LanguageSwitcherCompact className="hidden sm:flex" />
           <Button href="/contact" invert={invert}>
-            {t('contactUs')}
+            Contact us
           </Button>
           <button
             ref={toggleRef}
@@ -251,6 +251,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:grid-cols-2 sm:pt-16">
+                  {/* Offices section — commented out until real addresses are confirmed
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
                       Our offices
@@ -260,7 +261,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                       className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
                     />
                   </div>
-                  <div className="sm:border-l sm:border-transparent sm:pl-16">
+                  */}
+                  <div className="sm:pl-0">
                     <h2 className="font-display text-base font-semibold text-white">
                       Follow us
                     </h2>
@@ -306,6 +308,7 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
       <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+      <BookCallButton />
     </RootLayoutContext.Provider>
   )
 }

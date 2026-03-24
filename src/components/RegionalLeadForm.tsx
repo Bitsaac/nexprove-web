@@ -216,10 +216,10 @@ export function RegionalLeadForm({
             </label>
             <div className="mt-2 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                { value: '50', label: '$50K-$75K' },
-                { value: '75', label: '$75K-$125K' },
-                { value: '125', label: '$125K-$200K' },
-                { value: '200', label: '$200K+' },
+                { value: '1', label: '$1K-$20K' },
+                { value: '20', label: '$20K-$50K' },
+                { value: '50', label: '$50K-$100K' },
+                { value: '100', label: '$100K+' },
               ].map((budget) => (
                 <label
                   key={budget.value}

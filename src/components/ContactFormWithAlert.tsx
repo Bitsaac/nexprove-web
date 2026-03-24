@@ -160,10 +160,10 @@ export function ContactFormWithAlert() {
             <fieldset>
               <legend className="text-base/6 text-neutral-500">{t('form.budget')}</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label={t('form.budgetOptions.25')} name="budget" value="25" />
+                <RadioInput label={t('form.budgetOptions.1')} name="budget" value="1" />
+                <RadioInput label={t('form.budgetOptions.20')} name="budget" value="20" />
                 <RadioInput label={t('form.budgetOptions.50')} name="budget" value="50" />
                 <RadioInput label={t('form.budgetOptions.100')} name="budget" value="100" />
-                <RadioInput label={t('form.budgetOptions.150')} name="budget" value="150" />
               </div>
             </fieldset>
           </div>

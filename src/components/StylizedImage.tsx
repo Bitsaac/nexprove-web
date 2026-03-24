@@ -33,7 +33,7 @@ export function StylizedImage({
     <div
       className={clsx(
         className,
-        'relative flex aspect-719/680 w-full grayscale',
+        'relative flex aspect-719/680 w-[33.75rem] max-w-full flex-none grayscale md:w-[27rem] lg:w-[36rem]',
       )}
     >
       <svg viewBox={`0 0 ${width} ${height}`} fill="none" className="h-full">

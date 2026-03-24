@@ -55,10 +55,10 @@
       "message": "Message",
       "budget": "Budget",
       "budgetOptions": {
-        "25": "$25K – $50K",
+        "1": "$1K – $20K",
+        "20": "$20K – $50K",
         "50": "$50K – $100K",
-        "100": "$100K – $150K",
-        "150": "More than $150K"
+        "100": "More than $100K"
       },
       "submit": "Let's work together",
       "submitting": "Sending..."
