@@ -296,62 +296,66 @@ function Team() {
       </SectionIntro>
 
       <div className="mt-16">
-        <ul className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((person) => (
             <li key={person.name}>
               <FadeIn>
-                <div className="group relative">
-                  <div className="relative overflow-hidden rounded-xl">
+                <div className="group">
+                  {/* Image container */}
+                  <div className="relative overflow-hidden rounded-3xl bg-neutral-100">
                     <Image
                       {...person.image}
                       alt={`${person.name} - ${person.role} at Nexprove`}
-                      className="aspect-square w-full object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
+                      className="aspect-[3/4] w-full object-cover grayscale transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0"
                       unoptimized
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                    <div className="absolute bottom-0 left-0 right-0 flex justify-start gap-x-3 p-4 opacity-0 translate-y-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    {/* Social icons — bottom left, slide up on hover */}
+                    <div className="absolute bottom-0 left-0 right-0 flex gap-x-2 p-4 opacity-0 translate-y-4 transition-all duration-400 group-hover:opacity-100 group-hover:translate-y-0">
                       {person.linkedin && (
-                        <Link href={person.linkedin} className="rounded-md bg-white/90 p-2 text-neutral-700 transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on LinkedIn`}>
-                          <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                        <Link href={person.linkedin} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-white/20 p-2 text-white/90 backdrop-blur-sm transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on LinkedIn`}>
+                          <svg className="h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                           </svg>
                         </Link>
                       )}
                       {person.github && (
-                        <Link href={person.github} className="rounded-md bg-white/90 p-2 text-neutral-700 transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on GitHub`}>
-                          <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                        <Link href={person.github} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-white/20 p-2 text-white/90 backdrop-blur-sm transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on GitHub`}>
+                          <svg className="h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                             <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
                           </svg>
                         </Link>
                       )}
                       {person.x && (
-                        <Link href={person.x} className="rounded-md bg-white/90 p-2 text-neutral-700 transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on X`}>
-                          <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                        <Link href={person.x} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-white/20 p-2 text-white/90 backdrop-blur-sm transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on X`}>
+                          <svg className="h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                           </svg>
                         </Link>
                       )}
                       {person.portfolio && (
-                        <Link href={person.portfolio} className="rounded-md bg-white/90 p-2 text-neutral-700 transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name}'s portfolio`}>
-                          <svg className="h-5 w-5" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <Link href={person.portfolio} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-white/20 p-2 text-white/90 backdrop-blur-sm transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name}'s portfolio`}>
+                          <svg className="h-4 w-4" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.92 17.92 0 01-8.716-2.247m0 0A8.966 8.966 0 013 12c0-1.264.26-2.467.732-3.558" />
                           </svg>
                         </Link>
                       )}
                       {person.behance && (
-                        <Link href={person.behance} className="rounded-md bg-white/90 p-2 text-neutral-700 transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on Behance`}>
-                          <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                        <Link href={person.behance} target="_blank" rel="noopener noreferrer" className="rounded-sm bg-white/20 p-2 text-white/90 backdrop-blur-sm transition-colors hover:bg-white hover:text-neutral-950" aria-label={`${person.name} on Behance`}>
+                          <svg className="h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
                           </svg>
                         </Link>
                       )}
                     </div>
                   </div>
+                  {/* Name & role outside the image */}
                   <div className="mt-4">
                     <h3 className="font-display text-lg font-semibold text-neutral-950">
                       {person.name}
                     </h3>
-                    <p className="mt-1 text-sm text-neutral-600">{person.role}</p>
+                    <p className="mt-0.5 text-sm text-neutral-600">{person.role}</p>
                   </div>
                 </div>
               </FadeIn>
@@ -395,19 +399,19 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    keywords: 'product development company, startup tech partner, global software agency, premium development team, product design experts, full-stack developers, agile development methodology, startup success stories, trusted tech partner, world-class development solutions, enterprise software development, innovative product solutions',
+    keywords: 'product development company, statrtup tech partner, global software agency, premium development team, product design experts, full-stack developers, agile development methodology, startup success stories, trusted tech partner, world-class development solutions, enterprise software development, innovative product solutions',
     alternates: {
-      canonical: `https://nexprove.com/${locale}/about-us`,
+      canonical: `https://nexprove.com/${locale}/about`,
       languages: {
-        'en': 'https://nexprove.com/en/about-us',
-        'de': 'https://nexprove.com/de/about-us',
-        'x-default': 'https://nexprove.com/en/about-us',
+        'en': 'https://nexprove.com/en/about',
+        'de': 'https://nexprove.com/de/about',
+        'x-default': 'https://nexprove.com/en/about',
       },
     },
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      url: `https://nexprove.com/${locale}/about-us`,
+      url: `https://nexprove.com/${locale}/about`,
       siteName: 'Nexprove',
       images: [
         {

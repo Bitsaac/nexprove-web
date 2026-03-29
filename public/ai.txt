@@ -13,7 +13,7 @@ Services: MVP Development, Full-Stack Solutions, UI/UX Design, Team Extension, C
 # Key Pages
 Homepage: https://nexprove.com
 Services: https://nexprove.com/services
-About: https://nexprove.com/about-us
+About: https://nexprove.com/about
 Contact: https://nexprove.com/contact
 Case Studies: https://nexprove.com/work
 Blog: https://nexprove.com/blog

@@ -17,7 +17,7 @@ function Navigation() {
     {
       title: t('company'),
       links: [
-        { title: t('about'), href: '/about-us' },
+        { title: t('about'), href: '/about' },
         { title: t('process'), href: '/process' },
         { title: t('blog'), href: '/blog' },
         { title: t('contactUs'), href: '/contact' },

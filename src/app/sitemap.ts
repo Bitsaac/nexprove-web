@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Main pages (all locales)
     ...generateLocalizedEntries('/services', currentDate, 'monthly', 0.9),
-    ...generateLocalizedEntries('/about-us', currentDate, 'monthly', 0.8),
+    ...generateLocalizedEntries('/about', currentDate, 'monthly', 0.8),
     ...generateLocalizedEntries('/contact', currentDate, 'monthly', 0.8),
     ...generateLocalizedEntries('/work', currentDate, 'weekly', 0.7),
     ...generateLocalizedEntries('/blog', currentDate, 'weekly', 0.7),

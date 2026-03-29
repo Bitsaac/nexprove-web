@@ -149,7 +149,7 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/work">{t('work')}</NavigationItem>
-        <NavigationItem href="/about-us">{t('about')}</NavigationItem>
+        <NavigationItem href="/about">{t('about')}</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">{t('process')}</NavigationItem>

@@ -20,9 +20,9 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/:locale/about',
-        destination: '/:locale/about-us',
-        permanent: true,
+        source: '/:locale/about-us',
+        destination: '/:locale/about',
+        permanent: false,
       },
     ]
   },
@@ -108,11 +108,15 @@ export default async function config() {
         [
           unifiedConditional,
           [
-            new RegExp(`^${escapeStringRegexp(path.resolve('src/app/[locale]/blog'))}`),
+            new RegExp(
+              `^${escapeStringRegexp(path.resolve('src/app/[locale]/blog'))}`,
+            ),
             [[remarkMDXLayout, '@/app/[locale]/blog/wrapper', 'article']],
           ],
           [
-            new RegExp(`^${escapeStringRegexp(path.resolve('src/app/[locale]/work'))}`),
+            new RegExp(
+              `^${escapeStringRegexp(path.resolve('src/app/[locale]/work'))}`,
+            ),
             [[remarkMDXLayout, '@/app/[locale]/work/wrapper', 'caseStudy']],
           ],
         ],
