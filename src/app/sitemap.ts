@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Regional logistics landing pages (all locales)
     ...generateLocalizedEntries('/logistics-automation-usa', currentDate, 'monthly', 0.9),
-    ...generateLocalizedEntries('/logistics-Germany', currentDate, 'monthly', 0.8),
+    ...generateLocalizedEntries('/logistics-germany', currentDate, 'monthly', 0.8),
 
     // Case studies (all locales)
     ...generateLocalizedEntries('/work/simoles', '2024-12-01T00:00:00.000Z', 'yearly', 0.5),

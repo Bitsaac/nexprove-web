@@ -363,14 +363,14 @@ export const metadata: Metadata = {
   keywords:
     'Logistikautomatisierung Deutschland, Flottenmanagement Software, Lagerverwaltungssystem WMS, Sendungsverfolgung, Transport Management System, Logistik Digitalisierung, Supply Chain Automatisierung, Routenoptimierung, GPS Flottentracking',
   alternates: {
-    canonical: 'https://nexprove.com/de/logistics-Germany',
+    canonical: 'https://nexprove.com/de/logistics-germany',
   },
   openGraph: {
     title:
       'Logistikautomatisierung Deutschland | Flottenmanagement & WMS Software',
     description:
       'Digitale Transformation für deutsche Logistikunternehmen. Betriebskosten senken um bis zu 30%.',
-    url: 'https://nexprove.com/de/logistics-Germany',
+    url: 'https://nexprove.com/de/logistics-germany',
     siteName: 'Nexprove',
     images: [
       {
@@ -424,7 +424,7 @@ export default function LogisticsGermanyPage() {
                   longitude: germanyOffice.coordinates.longitude,
                 }
               : undefined,
-            url: 'https://nexprove.com/de/logistics-Germany',
+            url: 'https://nexprove.com/de/logistics-germany',
             telephone: germanyOffice?.contact.phone.e164,
             priceRange: '€€€',
             openingHoursSpecification: germanyOffice?.businessHours?.schedule.map(

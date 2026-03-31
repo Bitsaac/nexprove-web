@@ -461,7 +461,7 @@ function IndustrySolutions() {
 
         <FadeIn>
           <Link
-            href="/de/logistics-Germany"
+            href="/de/logistics-germany"
             className="group relative flex flex-col rounded-3xl p-8 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50"
           >
             <h3 className="mt-4 font-display text-2xl font-semibold text-neutral-950 group-hover:text-neutral-700">

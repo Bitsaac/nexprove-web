@@ -50,7 +50,7 @@ function Navigation() {
         { title: t('teamExtension'), href: '/services#team-extension' },
         { title: t('consultation'), href: '/services#consultation' },
         { title: t('brandingMarketing'), href: '/services#branding-marketing' },
-        { title: 'Logistics — Germany', href: '/logistics-Germany' },
+        { title: 'Logistics — Germany', href: '/logistics-germany' },
         { title: 'Logistics — USA', href: '/logistics-automation-usa' },
       ],
     },

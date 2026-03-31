@@ -273,11 +273,6 @@ const teamData = [
         image: { src: imageAda },
         linkedin: 'https://www.linkedin.com/in/adaobi-onwuzulike-089858199',
       },
-      {
-        name: 'James',
-        role: 'Senior Full-Stack Developer',
-        image: { src: imageAvi },
-      },
     ],
   },
 ]
@@ -555,11 +550,6 @@ export default async function About() {
                 name: 'Adaobi Cynthia Onwuzulike',
                 jobTitle: 'Product Manager',
                 sameAs: ['https://www.linkedin.com/in/adaobi-onwuzulike-089858199'],
-              },
-              {
-                '@type': 'Person',
-                name: 'James',
-                jobTitle: 'Senior Full-Stack Developer',
               },
             ],
           }),

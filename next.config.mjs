@@ -24,6 +24,11 @@ const nextConfig = {
         destination: '/:locale/about',
         permanent: false,
       },
+      {
+        source: '/:locale/logistics-Germany',
+        destination: '/:locale/logistics-germany',
+        permanent: true,
+      },
     ]
   },
   async headers() {
